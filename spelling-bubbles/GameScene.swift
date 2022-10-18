@@ -13,15 +13,17 @@ class GameScene: SKScene {
     
 //    var gargabeStation: GarbageStation?
     
+    var background: MainGameBackground?
+    
     override func didMove(to view: SKView) {
-        print("entrou aq")
-        
 //        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
-
+        self.background = MainGameBackground(withSize: view.bounds.size)
         
+
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
-                
+        
+
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.05)
         
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
@@ -30,6 +32,8 @@ class GameScene: SKScene {
         self.physicsBody = border
         
 //        gargabeStation?.addToGame(insideScene: self)
+        
+        addChild(background ?? SKNode())
     }
     
     override func update(_ currentTime: TimeInterval) {

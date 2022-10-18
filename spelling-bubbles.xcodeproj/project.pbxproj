@@ -25,6 +25,8 @@
 		0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711328FF248300DA1814 /* DiagonalMovement.swift */; };
 		0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711528FF249700DA1814 /* VerticalMovement.swift */; };
 		0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711828FF24C000DA1814 /* GarbageStation.swift */; };
+		0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711B28FF27BD00DA1814 /* ImageConstants.swift */; };
+		0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711E28FF2E9E00DA1814 /* MainGameBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		0D66711328FF248300DA1814 /* DiagonalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalMovement.swift; sourceTree = "<group>"; };
 		0D66711528FF249700DA1814 /* VerticalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalMovement.swift; sourceTree = "<group>"; };
 		0D66711828FF24C000DA1814 /* GarbageStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageStation.swift; sourceTree = "<group>"; };
+		0D66711B28FF27BD00DA1814 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		0D66711E28FF2E9E00DA1814 /* MainGameBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		0D6670E528FF1FB600DA1814 /* spelling-bubbles */ = {
 			isa = PBXGroup;
 			children = (
+				0D66711D28FF2E8E00DA1814 /* View */,
+				0D66711A28FF27AC00DA1814 /* Constants */,
 				0D66710F28FF245600DA1814 /* Controllers */,
 				0D66710828FF23FC00DA1814 /* Protocols */,
 				0D66710528FF23C900DA1814 /* Extensions */,
@@ -165,6 +171,22 @@
 			path = GarbageObserver;
 			sourceTree = "<group>";
 		};
+		0D66711A28FF27AC00DA1814 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0D66711B28FF27BD00DA1814 /* ImageConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		0D66711D28FF2E8E00DA1814 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D66711E28FF2E9E00DA1814 /* MainGameBackground.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +262,7 @@
 				0D6670FF28FF236100DA1814 /* AvaiablePosition.swift in Sources */,
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
+				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
@@ -250,6 +273,7 @@
 				0D66710428FF239D00DA1814 /* MovementSide.swift in Sources */,
 				0D6670FA28FF231000DA1814 /* ContentView.swift in Sources */,
 				0D6670E728FF1FB600DA1814 /* spelling_bubblesApp.swift in Sources */,
+				0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */,
 				0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
