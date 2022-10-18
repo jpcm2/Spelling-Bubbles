@@ -8,23 +8,33 @@
 import Foundation
 import SpriteKit
 import GameKit
- 
+
 class GameScene: SKScene {
     
 //    var gargabeStation: GarbageStation?
     
     var background: MainGameBackground?
     
+    
+    override init(size: CGSize) {
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func didMove(to view: SKView) {
+
 //        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
-        self.background = MainGameBackground(withSize: view.bounds.size)
+        background = MainGameBackground(withSize: view.bounds.size)
+        
         
 
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
-        
-
-        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.05)
+        physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.05)
         
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
         border.friction = 0
@@ -40,4 +50,6 @@ class GameScene: SKScene {
 //        gargabeStation?.update()
     }
 }
+
+
 
