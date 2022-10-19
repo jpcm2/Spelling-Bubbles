@@ -22,5 +22,6 @@ extension AnyNode {
     }
     
     func setupAdditionalConfiguration(){}
+    func setupPhysicsBody(){}
 }
 

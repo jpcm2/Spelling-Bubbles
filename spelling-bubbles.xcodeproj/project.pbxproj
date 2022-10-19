@@ -30,6 +30,10 @@
 		0D686D2028FF5E4300774265 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D1F28FF5E4300774265 /* GameViewController.swift */; };
 		0D686D2228FF65D200774265 /* ShakeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2128FF65D200774265 /* ShakeHandler.swift */; };
 		0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */; };
+		0D686D2928FF7DBA00774265 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2828FF7DBA00774265 /* TextBox.swift */; };
+		0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2A28FF806C00774265 /* ColorConstants.swift */; };
+		0D686D2E28FF84C100774265 /* TextBoxStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2D28FF84C100774265 /* TextBoxStation.swift */; };
+		0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,10 @@
 		0D686D1F28FF5E4300774265 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0D686D2128FF65D200774265 /* ShakeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeHandler.swift; sourceTree = "<group>"; };
 		0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+ShakeHandler.swift"; sourceTree = "<group>"; };
+		0D686D2828FF7DBA00774265 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
+		0D686D2A28FF806C00774265 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		0D686D2D28FF84C100774265 /* TextBoxStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxStation.swift; sourceTree = "<group>"; };
+		0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Rounded.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				0D6670FE28FF236100DA1814 /* AvaiablePosition.swift */,
-				0D66710028FF237600DA1814 /* Garbage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				0D66710628FF23DF00DA1814 /* Int+Adapted.swift */,
+				0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 		0D66710F28FF245600DA1814 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0D686D2C28FF84AA00774265 /* TextObserver */,
 				0D66711728FF24B200DA1814 /* GarbageObserver */,
 				0D66711028FF246300DA1814 /* Movement */,
 				0D686D1F28FF5E4300774265 /* GameViewController.swift */,
@@ -182,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				0D66711B28FF27BD00DA1814 /* ImageConstants.swift */,
+				0D686D2A28FF806C00774265 /* ColorConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -189,7 +199,8 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0D66711E28FF2E9E00DA1814 /* MainGameBackground.swift */,
+				0D686D2728FF7D6500774265 /* Others */,
+				0D686D2628FF7D5700774265 /* Core */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +213,31 @@
 				0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		0D686D2628FF7D5700774265 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0D66711E28FF2E9E00DA1814 /* MainGameBackground.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0D686D2728FF7D6500774265 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				0D66710028FF237600DA1814 /* Garbage.swift */,
+				0D686D2828FF7DBA00774265 /* TextBox.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		0D686D2C28FF84AA00774265 /* TextObserver */ = {
+			isa = PBXGroup;
+			children = (
+				0D686D2D28FF84C100774265 /* TextBoxStation.swift */,
+			);
+			path = TextObserver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */,
 				0D66710C28FF242700DA1814 /* Moveable.swift in Sources */,
 				0D6670FC28FF233300DA1814 /* GameScene.swift in Sources */,
 				0D6670FF28FF236100DA1814 /* AvaiablePosition.swift in Sources */,
@@ -285,6 +322,7 @@
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
 				0D686D2028FF5E4300774265 /* GameViewController.swift in Sources */,
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
+				0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */,
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
 				0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */,
 				0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */,
@@ -294,7 +332,9 @@
 				0D6670E728FF1FB600DA1814 /* spelling_bubblesApp.swift in Sources */,
 				0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */,
 				0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */,
+				0D686D2928FF7DBA00774265 /* TextBox.swift in Sources */,
 				0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */,
+				0D686D2E28FF84C100774265 /* TextBoxStation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
