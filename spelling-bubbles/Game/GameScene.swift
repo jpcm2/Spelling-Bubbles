@@ -14,6 +14,7 @@ class GameScene: SKScene {
 //    var gargabeStation: GarbageStation?
     
     var background: MainGameBackground?
+    var textbox: TextBoxStation?
     
     
     override init(size: CGSize) {
@@ -29,6 +30,7 @@ class GameScene: SKScene {
 
 //        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
         background = MainGameBackground(withSize: view.bounds.size)
+        textbox = TextBoxStation(withWord: "CAIXA")
         
         
 
@@ -42,8 +44,10 @@ class GameScene: SKScene {
         self.physicsBody = border
         
 //        gargabeStation?.addToGame(insideScene: self)
+        textbox?.addToGame(insideScene: self)
         
         addChild(background ?? SKNode())
+//        addChild(teste)
     }
     
     override func update(_ currentTime: TimeInterval) {

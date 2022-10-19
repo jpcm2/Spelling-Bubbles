@@ -13,7 +13,8 @@ class MainGameBackground: SKSpriteNode, AnyNode {
     
     init(withSize size: CGSize) {
         self.screenSize = size
-        super.init(texture: SKTexture(imageNamed: ImageConstants.MAIN_GAME_BACKGROUND), color: .white, size: size)
+        let backgroundTexture = SKTexture(imageNamed: ImageConstants.MAIN_GAME_BACKGROUND)
+        super.init(texture: backgroundTexture, color: .white, size: size)
         setupNode()
     }
         
@@ -27,5 +28,4 @@ class MainGameBackground: SKSpriteNode, AnyNode {
         self.zPosition = 1
     }
     
-    func setupPhysicsBody() {}
 }
