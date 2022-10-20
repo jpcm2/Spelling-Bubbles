@@ -41,5 +41,10 @@ class Garbage: SKNode, AnyNode {
         self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "object"), size: CGSize(width: image.size.width,
                                                                                                 height: image.size.height))
     }
+    
+    func moveTo(_ newPosition: AvaiablePosition){
+//        SKAction.run
+//        self.position = newPosition.position
+    }
 }
 

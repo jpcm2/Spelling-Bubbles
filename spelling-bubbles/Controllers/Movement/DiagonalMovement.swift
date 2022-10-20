@@ -20,6 +20,10 @@ class DiagonalMovement: Moveable {
     var side: MovementSide = .left
     
     func moving(x: Double) -> Double {
+        if(x == 0 || x == Double(UIScreen.main.bounds.width)){
+            return x
+        }
+        
         current_length += 2
         side = (x + current_length <= Constants.MAX_LENGTH_MOVEMENT) ? .left : .right
         return x + current_length * side.rawValue

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class WaveMovement: Moveable {
     
@@ -17,6 +18,9 @@ class WaveMovement: Moveable {
     }
         
     func moving(x: Double) -> Double {
+        if(x == 0 || x == Double(UIScreen.main.bounds.width)){
+            return x
+        }
         counter += 1
         return x + side.rawValue*sin(counter * Double.pi / 180)
     }

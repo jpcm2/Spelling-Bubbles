@@ -13,16 +13,13 @@ class GarbageStation: GarbageSubscriber {
     private var garbages: [Garbage] = []
     private let garbageQuantity: Int
     
-    private var avaiablePositions: [AvaiablePosition] = []
+    private let garbageManager = GarbageManager()
     
     private let objects: [String] = [
         "box", "bottle", "bag"
     ]
-    
-    var index: Int = 0
-    
+
     struct Constants {
-        static let SPACE_TO_OCCUPY = 6
         static let RANDOM_RANGE_MOVEMENT = 100...900
         static let RANDOM_POSITION = 200...650
     }
@@ -36,21 +33,7 @@ class GarbageStation: GarbageSubscriber {
     
     init(withThisGarbageQuantity quantity: Int){
         self.garbageQuantity = quantity
-        createAvaiableSpawnPosition()
-        self.index = avaiablePositions.count
         setupGarbages()
-
-    }
-    
-    private func createAvaiableSpawnPosition(){
-        for newPosition in 1...Constants.SPACE_TO_OCCUPY {
-            let newPoint = CGPoint(x: Int(UIScreen.main.bounds.width) - 8*newPosition*newPosition,
-                                   y: 700 - 64*newPosition)
-            print(newPoint)
-            let newAvaiablePosition = AvaiablePosition(position: newPoint,
-                                                       isOccupied: false)
-            avaiablePositions.append(newAvaiablePosition)
-        }
     }
     
     private func setupGarbages(){
@@ -60,14 +43,12 @@ class GarbageStation: GarbageSubscriber {
             let objectChoice = randomMovementChoice % objects.count
             let movement = movements[randomMovementChoice]
             
-
-            avaiablePositions[index].isOccupied = true
-            let currentGarbagePosition = avaiablePositions[index]
-            
-            let newGarbage = Garbage(atThisPostion: currentGarbagePosition,
+            let newPosition = garbageManager.getNextAvaiablePosition()
+                        
+            let newGarbage = Garbage(atThisPostion: newPosition,
                                      image: SKSpriteNode(imageNamed: objects[objectChoice]),
                                      andMoveLike: movement)
-            self.garbages.append(newGarbage)
+            garbages.append(newGarbage)
         }
     }
     
@@ -81,6 +62,15 @@ class GarbageStation: GarbageSubscriber {
         garbages.forEach{ garbage in
             garbage.movingThroughAxisX()
         }
+    }
+    
+    func didUserShakeIphone(){
+        garbages.forEach{ garbage in
+            let newPosition = garbageManager.getNextAvaiablePosition()
+            garbage.moveTo(newPosition)
+            
+        }
+        
     }
 }
 
