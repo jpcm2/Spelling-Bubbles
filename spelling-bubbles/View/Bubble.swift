@@ -31,11 +31,14 @@ class Bubble: SKNode, AnyNode {
         self.position = nodePosition.position
         self.addChild(self.image)
         self.addChild(self.letterLabel)
+        self.zPosition = 12
         
     }
     
     func setupBubbleLabel(){
-        self.letterLabel.text = self.letter
+        self.letterLabel.attributedText = NSAttributedString(string: letter,
+                                                             attributes:[.font: UIFont.rounded(ofSize: BubbleConstants.BUBBLE_LETTER_FONT_SIZE, weight: .semibold),
+                                                          .foregroundColor: UIColor(named: ColorConstants.MID_BLACK) ?? .black])
         self.letterLabel.fontColor = .black
         self.letterLabel.fontSize = BubbleConstants.BUBBLE_LETTER_FONT_SIZE
         self.letterLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY - self.image.frame.height/5)
