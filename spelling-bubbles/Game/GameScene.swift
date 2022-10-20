@@ -15,6 +15,7 @@ class GameScene: SKScene {
     
     var background: MainGameBackground?
     var textbox: TextBoxStation?
+    var progressBar: ProgressBar?
     
     
     override init(size: CGSize) {
