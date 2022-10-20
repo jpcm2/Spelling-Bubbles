@@ -21,6 +21,7 @@ class Garbage: SKNode, AnyNode {
         setupNode()
         self.position = avaiablePosition.position
         self.addChild(image)
+        self.zPosition = 20
     }
 
     required init?(coder aDecoder: NSCoder) {

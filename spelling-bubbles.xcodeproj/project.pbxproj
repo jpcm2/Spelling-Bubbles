@@ -39,6 +39,7 @@
 		17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */; };
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
 		17BFB0422901BE76001FE918 /* BoatAngularMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */; };
+		27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27810D992901C93E00E167E1 /* SoundController.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
 		27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6632901B76300789B2A /* BubbleSubscriber.swift */; };
@@ -79,6 +80,7 @@
 		17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatVerticalMoviment.swift; sourceTree = "<group>"; };
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
 		17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatAngularMovement.swift; sourceTree = "<group>"; };
+		27810D992901C93E00E167E1 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		27DDE6632901B76300789B2A /* BubbleSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSubscriber.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		0D66710F28FF245600DA1814 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27810D982901C8DF00E167E1 /* SoundController */,
 				27DDE65E2901B70200789B2A /* BubbleObserver */,
 				0D686D2C28FF84AA00774265 /* TextObserver */,
 				0D66711728FF24B200DA1814 /* GarbageObserver */,
@@ -249,6 +252,14 @@
 				17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */,
 			);
 			path = Boat;
+			sourceTree = "<group>";
+		};
+		27810D982901C8DF00E167E1 /* SoundController */ = {
+			isa = PBXGroup;
+			children = (
+				27810D992901C93E00E167E1 /* SoundController.swift */,
+			);
+			path = SoundController;
 			sourceTree = "<group>";
 		};
 		27DDE65E2901B70200789B2A /* BubbleObserver */ = {
@@ -340,6 +351,7 @@
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
+				27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
