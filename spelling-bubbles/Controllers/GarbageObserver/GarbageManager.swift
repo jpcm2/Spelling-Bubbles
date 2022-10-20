@@ -26,9 +26,8 @@ class GarbageManager {
     
     private func createAvaiableSpawnPosition(){
         for newPosition in 1...Constants.SPACE_TO_OCCUPY {
-            let newPoint = CGPoint(x: Int(UIScreen.main.bounds.width) - 9*newPosition*newPosition,
-                                   y: 700 - 16*newPosition)
-            print(newPoint)
+            let newPoint = CGPoint(x: 140 + 6*newPosition*newPosition,
+                                   y: 650 - 5*newPosition*newPosition)
             let newAvaiablePosition = AvaiablePosition(position: newPoint,
                                                        isOccupied: false)
             avaiablePositions.append(newAvaiablePosition)
@@ -39,15 +38,23 @@ class GarbageManager {
         
         var position: AvaiablePosition?
         
+        if left + 1 == right {
+            right = avaiablePositions.count - 1
+        }
+        
+        if right - 1 == left {
+            left = 0
+        }
+        
+        
         if isLeft {
-            avaiablePositions[left].isOccupied = true
             position = avaiablePositions[left]
             self.left += 1
         } else {
-            avaiablePositions[right].isOccupied = true
             position = avaiablePositions[right]
             self.right -= 1
         }
+        
         
         isLeft.toggle()
         

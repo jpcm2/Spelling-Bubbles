@@ -46,7 +46,7 @@ class GarbageStation: GarbageSubscriber {
             let newPosition = garbageManager.getNextAvaiablePosition()
                         
             let newGarbage = Garbage(atThisPostion: newPosition,
-                                     image: SKSpriteNode(imageNamed: objects[objectChoice]),
+                                     image: objects[objectChoice],
                                      andMoveLike: movement)
             garbages.append(newGarbage)
         }

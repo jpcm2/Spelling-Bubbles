@@ -12,16 +12,19 @@ class Garbage: SKNode, AnyNode {
 
     var movement: Moveable?
     var image: SKSpriteNode?
-    var id: Int?
+    var imageName: String?
     
-    init(atThisPostion avaiablePosition: AvaiablePosition, image: SKSpriteNode, andMoveLike movement: Moveable){
+    
+    init(atThisPostion avaiablePosition: AvaiablePosition, image: String, andMoveLike movement: Moveable){
         super.init()
-        self.image = image
+        self.image = SKSpriteNode(imageNamed: image)
+        self.imageName = image
         self.movement = movement
+        
         setupNode()
+        
         self.position = avaiablePosition.position
-        self.addChild(image)
-        self.zPosition = 13
+        self.addChild(self.image ?? SKSpriteNode())
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -34,16 +37,18 @@ class Garbage: SKNode, AnyNode {
         self.position = CGPoint(x: newXPosition, y: self.position.y)
     }
     
-    func setupPosition() {}
+    func setupPosition() {
+        self.zPosition = 13
+    }
     
     func setupPhysicsBody() {
         guard let image = image else { return }
-        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "object"), size: CGSize(width: image.size.width,
+        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: self.imageName ?? ""), size: CGSize(width: image.size.width,
                                                                                                 height: image.size.height))
     }
     
     func moveTo(_ newPosition: AvaiablePosition){
-        self.run( SKAction.move(to: newPosition.position, duration: 0.6) )
+        self.run( SKAction.move(to: newPosition.position, duration: 0.65) )
     }
     
     func change(_ movement: Moveable){
