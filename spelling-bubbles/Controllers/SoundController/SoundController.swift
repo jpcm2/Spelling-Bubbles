@@ -10,7 +10,7 @@ import AVFoundation
 
 class SoundController {
     
-    // Listar os links pros assets
+    // Listar os nomes e os tipos (mp3) de cada asset.
     let mainMusicName: String?
     let mainMusicType: String?
     var mainMusicAudioPlayer: AVAudioPlayer = AVAudioPlayer()
