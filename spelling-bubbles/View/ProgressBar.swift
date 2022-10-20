@@ -13,8 +13,6 @@ class ProgressBar: SKNode {
     private var progress: CGFloat = 0
     private var maxProgress: CGFloat?
     
-    private var sceneFrame = CGRect()
-    
     private let progressTexture = SKTexture(imageNamed: Constants.PROGRESS_BAR_TEXTURE)
     
     private let progressContainerTexture = SKTexture(imageNamed: Constants.PROGRESS_BAR_CONTAINER)
@@ -26,13 +24,16 @@ class ProgressBar: SKNode {
     struct Constants {
         static let PROGRESS_BAR_TEXTURE = "progress-bar-content"
         static let PROGRESS_BAR_CONTAINER = "progress-bar-container"
+        static let PROGRESS_BAR_CONTAINER_SIZE = CGSize(width: 249.HAdapted,
+                                                        height: 31.VAdapted)
+        static let PROGRESS_BAR_SIZE = CGSize(width: 244.HAdapted,
+                                              height: 27.VAdapted)
     }
     
-    
-    init(withMaxProgress progress: CGFloat, andFrame frame: CGRect) {
+    init(withMaxProgress progress: CGFloat) {
         super.init()
         self.maxProgress = progress
-        self.sceneFrame = frame
+        build()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,17 +42,16 @@ class ProgressBar: SKNode {
     
     private func build(){
         progressBarContainer = SKSpriteNode(texture: progressContainerTexture, size: progressContainerTexture.size())
-        progressBarContainer?.size = CGSize(width: sceneFrame.width * 0.7,
-                                            height: sceneFrame.height * 0.1)
+        progressBarContainer?.size = Constants.PROGRESS_BAR_CONTAINER_SIZE
         
         progressBar = SKSpriteNode(texture: progressTexture, size: progressTexture.size())
-        progressBar?.size = CGSize(width: sceneFrame.width * 0.2, height: sceneFrame.width * 0.08)
+        progressBar?.size = Constants.PROGRESS_BAR_SIZE
         
         guard let progressBar = progressBar,
               let progressBarContainer = progressBarContainer else { return }
         
-        addChild(progressBar)
         addChild(progressBarContainer)
+        addChild(progressBar)
     }
     
 }

@@ -15,7 +15,7 @@ class GameScene: SKScene {
     
     var background: MainGameBackground?
     var textbox: TextBoxStation?
-    var progressBar: ProgressBar?
+    var progressBar = ProgressBar(withMaxProgress: 3)
     
     
     override init(size: CGSize) {
@@ -28,13 +28,8 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-
-//        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
-        background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "CAIXA")
         
         
-
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.05)
@@ -43,11 +38,22 @@ class GameScene: SKScene {
         border.friction = 0
         border.restitution = 1
         self.physicsBody = border
+
+//        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
+        background = MainGameBackground(withSize: view.bounds.size)
+        textbox = TextBoxStation(withWord: "CAIXA")
+        
+        
+
         
 //        gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
         
+        progressBar.zPosition = 10
+        progressBar.position = CGPoint(x: 150, y: 370)
+        
         addChild(background ?? SKNode())
+        addChild(progressBar)
 //        addChild(teste)
     }
     
