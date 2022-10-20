@@ -99,7 +99,9 @@
 		0D6670E528FF1FB600DA1814 /* spelling-bubbles */ = {
 			isa = PBXGroup;
 			children = (
-				0D686D2528FF661200774265 /* Game */,
+				0D6670F928FF231000DA1814 /* ContentView.swift */,
+				0D6670FB28FF233300DA1814 /* GameScene.swift */,
+				0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */,
 				0D66711D28FF2E8E00DA1814 /* View */,
 				0D66711A28FF27AC00DA1814 /* Constants */,
 				0D66710F28FF245600DA1814 /* Controllers */,
@@ -207,16 +209,6 @@
 				0D686D312901954C00774265 /* ProgressBar.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0D686D2528FF661200774265 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				0D6670F928FF231000DA1814 /* ContentView.swift */,
-				0D6670FB28FF233300DA1814 /* GameScene.swift */,
-				0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */,
-			);
-			path = Game;
 			sourceTree = "<group>";
 		};
 		0D686D2C28FF84AA00774265 /* TextObserver */ = {
