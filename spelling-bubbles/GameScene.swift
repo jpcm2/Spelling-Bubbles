@@ -13,6 +13,8 @@ class GameScene: SKScene {
     
 //    var gargabeStation: GarbageStation?
     
+    var bubbleStation: BubbleStation?
+    
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var progressBar = ProgressBar(withMaxProgress: 3)
@@ -40,24 +42,27 @@ class GameScene: SKScene {
         self.physicsBody = border
 
 //        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
+        
+        self.bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
         textbox = TextBoxStation(withWord: "CAIXA")
         
         
 //        gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
+        self.bubbleStation?.addToGame(insideScene: self)
         
         progressBar.zPosition = 10
         progressBar.position = CGPoint(x: 150, y: 370)
         
         addChild(background ?? SKNode())
         addChild(progressBar)
-//        addChild(teste)
     }
     
     override func update(_ currentTime: TimeInterval) {
 //        gargabeStation?.update()
         progressBar.update()
+        self.bubbleStation?.update()
     }
 }
 
