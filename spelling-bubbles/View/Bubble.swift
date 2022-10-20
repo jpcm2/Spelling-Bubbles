@@ -17,7 +17,7 @@ struct BubbleConstants {
 class Bubble: SKNode, AnyNode {
     
     var image: SKSpriteNode = SKSpriteNode()
-    var letterLabel: SKLabelNode = SKLabelNode(fontNamed: BubbleConstants.BUBBLE_LETTER_FONT)
+    var letterLabel: SKLabelNode = SKLabelNode()
     var movement: VerticalWaveMovement?
     var letter: String = String()
     
