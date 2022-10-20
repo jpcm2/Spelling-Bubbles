@@ -67,10 +67,12 @@ class GarbageStation: GarbageSubscriber {
     func didUserShakeIphone(){
         garbages.forEach{ garbage in
             let newPosition = garbageManager.getNextAvaiablePosition()
+            let randomValue = Int.random(in: Constants.RANDOM_RANGE_MOVEMENT)
+            let randomMovement = randomValue % movements.count
+            let movement = movements[randomMovement]
+            garbage.change(movement)
             garbage.moveTo(newPosition)
-            
         }
-        
     }
 }
 

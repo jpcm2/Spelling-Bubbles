@@ -10,6 +10,6 @@ import Foundation
 extension GameScene: ShakeHandler {
     
     func didUserStartShake() {
-        print("shake funcionando")
+        gargabeStation?.didUserShakeIphone()
     }
 }

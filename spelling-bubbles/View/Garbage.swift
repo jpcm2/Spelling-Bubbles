@@ -43,8 +43,11 @@ class Garbage: SKNode, AnyNode {
     }
     
     func moveTo(_ newPosition: AvaiablePosition){
-//        SKAction.run
-//        self.position = newPosition.position
+        self.run( SKAction.move(to: newPosition.position, duration: 0.6) )
+    }
+    
+    func change(_ movement: Moveable){
+        self.movement = movement
     }
 }
 
