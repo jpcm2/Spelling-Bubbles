@@ -18,6 +18,7 @@ class GameScene: SKScene {
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var progressBar = ProgressBar(withMaxProgress: 3)
+    var boat = Boat()
     
     
     override init(size: CGSize) {
@@ -52,8 +53,9 @@ class GameScene: SKScene {
         textbox?.addToGame(insideScene: self)
         self.bubbleStation?.addToGame(insideScene: self)
         
-        progressBar.zPosition = 10
-        progressBar.position = CGPoint(x: 150, y: 370)
+     
+        
+        addChild(boat)
         
         addChild(background ?? SKNode())
         addChild(progressBar)
@@ -61,8 +63,10 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
 //        gargabeStation?.update()
+        boat.update()
         progressBar.update()
         self.bubbleStation?.update()
+    
     }
 }
 

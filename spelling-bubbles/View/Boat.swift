@@ -25,6 +25,7 @@ class Boat : SKNode, AnyNode {
         self.image = SKSpriteNode(imageNamed: "Barco+Lixeiras")
         self.addChild(self.image ?? SKSpriteNode())
         self.zRotation = 0
+        self.zPosition = 13
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,7 +45,8 @@ class Boat : SKNode, AnyNode {
     
     func setupPosition() {
         let midleOfScreen = Int(UIScreen.main.bounds.width / 2)
-        self.position = CGPoint(x: midleOfScreen.HAdapted - 25.HAdapted, y: 450.VAdapted)
+        let screenHeight = Int(UIScreen.main.bounds.height)
+        self.position = CGPoint(x: midleOfScreen.HAdapted - 25.HAdapted, y: screenHeight.VAdapted - 222.VAdapted)
         
     }
     
