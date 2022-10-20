@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "barra verde.png",
+      "filename" : "Barco+Lixeiras.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "barra verde@2x.png",
+      "filename" : "Barco+Lixeiras@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "barra verde@3x.png",
+      "filename" : "Barco+Lixeiras@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

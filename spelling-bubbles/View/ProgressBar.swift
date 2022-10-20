@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class ProgressBar: SKNode {
+class ProgressBar: SKNode, AnyNode {
     
     
     private var progress: CGFloat = 0
@@ -31,14 +31,23 @@ class ProgressBar: SKNode {
     }
     
     private var midProgressBar: CGFloat {
-        return Constants.PROGRESS_BAR_CONTAINER_SIZE.width / 2
+        return Constants.PROGRESS_BAR_CONTAINER_SIZE.width / 2 - 6
     }
     
     init(withMaxProgress progress: CGFloat) {
         super.init()
         self.maxProgress = progress
+        setupNode()
         build()
     }
+    
+    func setupPosition() {
+        let screenHeight = CGFloat(UIScreen.main.bounds.height)
+        
+        self.zPosition = 10
+        self.position = CGPoint(x: midProgressBar + 16.HAdapted, y: screenHeight - 70.VAdapted)
+    }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
