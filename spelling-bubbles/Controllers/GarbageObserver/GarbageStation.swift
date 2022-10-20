@@ -15,6 +15,10 @@ class GarbageStation: GarbageSubscriber {
     
     private var avaiablePositions: [AvaiablePosition] = []
     
+    private let objects: [String] = [
+        "box", "bottle", "bag"
+    ]
+    
     var index: Int = 0
     
     struct Constants {
@@ -40,8 +44,8 @@ class GarbageStation: GarbageSubscriber {
     
     private func createAvaiableSpawnPosition(){
         for newPosition in 1...Constants.SPACE_TO_OCCUPY {
-            let newPoint = CGPoint(x: Int(UIScreen.main.bounds.width) - newPosition*newPosition*newPosition,
-                                   y: Int(UIScreen.main.bounds.height) - 2*newPosition*newPosition*newPosition)
+            let newPoint = CGPoint(x: Int(UIScreen.main.bounds.width) - 8*newPosition*newPosition,
+                                   y: 700 - 64*newPosition)
             print(newPoint)
             let newAvaiablePosition = AvaiablePosition(position: newPoint,
                                                        isOccupied: false)
@@ -53,21 +57,21 @@ class GarbageStation: GarbageSubscriber {
         for _ in 0..<garbageQuantity {
             let randomValue = Int.random(in: Constants.RANDOM_RANGE_MOVEMENT)
             let randomMovementChoice = randomValue % movements.count
+            let objectChoice = randomMovementChoice % objects.count
             let movement = movements[randomMovementChoice]
+            
 
-            index -= 1
             avaiablePositions[index].isOccupied = true
             let currentGarbagePosition = avaiablePositions[index]
             
             let newGarbage = Garbage(atThisPostion: currentGarbagePosition,
-                                     image: SKSpriteNode(imageNamed: "object"),
+                                     image: SKSpriteNode(imageNamed: objects[objectChoice]),
                                      andMoveLike: movement)
             self.garbages.append(newGarbage)
         }
     }
     
     func addToGame(insideScene scene: SKScene){
-        print(garbages)
         garbages.forEach{ garbage in
             scene.addChild(garbage)
         }
