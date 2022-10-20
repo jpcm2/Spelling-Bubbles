@@ -44,8 +44,6 @@ class GameScene: SKScene {
         textbox = TextBoxStation(withWord: "CAIXA")
         
         
-
-        
 //        gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
         
@@ -59,6 +57,7 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
 //        gargabeStation?.update()
+        progressBar.update()
     }
 }
 

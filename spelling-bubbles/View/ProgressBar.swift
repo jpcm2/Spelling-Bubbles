@@ -26,8 +26,12 @@ class ProgressBar: SKNode {
         static let PROGRESS_BAR_CONTAINER = "progress-bar-container"
         static let PROGRESS_BAR_CONTAINER_SIZE = CGSize(width: 249.HAdapted,
                                                         height: 31.VAdapted)
-        static let PROGRESS_BAR_SIZE = CGSize(width: 244.HAdapted,
-                                              height: 27.VAdapted)
+        static let PROGRESS_BAR_SIZE = CGSize(width: 0.HAdapted,
+                                             height: 24.VAdapted)
+    }
+    
+    private var midProgressBar: CGFloat {
+        return Constants.PROGRESS_BAR_CONTAINER_SIZE.width / 2
     }
     
     init(withMaxProgress progress: CGFloat) {
@@ -46,6 +50,8 @@ class ProgressBar: SKNode {
         
         progressBar = SKSpriteNode(texture: progressTexture, size: progressTexture.size())
         progressBar?.size = Constants.PROGRESS_BAR_SIZE
+        progressBar?.position.x = -midProgressBar
+        progressBar?.anchorPoint.x = 0
         
         guard let progressBar = progressBar,
               let progressBarContainer = progressBarContainer else { return }
@@ -54,4 +60,13 @@ class ProgressBar: SKNode {
         addChild(progressBar)
     }
     
+    func update(){
+        guard let maxProgress = maxProgress else { return }
+        if progress > maxProgress { return }
+        
+        let width: CGFloat = (progress / maxProgress) * (2 * midProgressBar)
+        progressBar?.run(SKAction.resize(toWidth: width, duration: 0.2))
+        
+        progress += 1
+    }
 }
