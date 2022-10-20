@@ -35,6 +35,10 @@
 		0D686D2E28FF84C100774265 /* TextBoxStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2D28FF84C100774265 /* TextBoxStation.swift */; };
 		0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */; };
 		0D686D322901954C00774265 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D312901954C00774265 /* ProgressBar.swift */; };
+		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
+		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
+		27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6632901B76300789B2A /* BubbleSubscriber.swift */; };
+		27DDE6662901B78B00789B2A /* VerticalWaveMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6652901B78B00789B2A /* VerticalWaveMovement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +71,10 @@
 		0D686D2D28FF84C100774265 /* TextBoxStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxStation.swift; sourceTree = "<group>"; };
 		0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Rounded.swift"; sourceTree = "<group>"; };
 		0D686D312901954C00774265 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
+		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		27DDE6632901B76300789B2A /* BubbleSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSubscriber.swift; sourceTree = "<group>"; };
+		27DDE6652901B78B00789B2A /* VerticalWaveMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalWaveMovement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 				0D66710B28FF242700DA1814 /* Moveable.swift */,
 				0D66710D28FF244200DA1814 /* GarbageSubscriber.swift */,
 				0D686D2128FF65D200774265 /* ShakeHandler.swift */,
+				27DDE6632901B76300789B2A /* BubbleSubscriber.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -165,6 +174,7 @@
 		0D66710F28FF245600DA1814 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27DDE65E2901B70200789B2A /* BubbleObserver */,
 				0D686D2C28FF84AA00774265 /* TextObserver */,
 				0D66711728FF24B200DA1814 /* GarbageObserver */,
 				0D66711028FF246300DA1814 /* Movement */,
@@ -179,6 +189,7 @@
 				0D66711128FF247300DA1814 /* WaveMovement.swift */,
 				0D66711328FF248300DA1814 /* DiagonalMovement.swift */,
 				0D66711528FF249700DA1814 /* VerticalMovement.swift */,
+				27DDE6652901B78B00789B2A /* VerticalWaveMovement.swift */,
 			);
 			path = Movement;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 				0D686D2828FF7DBA00774265 /* TextBox.swift */,
 				0D66710028FF237600DA1814 /* Garbage.swift */,
 				0D686D312901954C00774265 /* ProgressBar.swift */,
+				27DDE6612901B74800789B2A /* Bubble.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +229,14 @@
 				0D686D2D28FF84C100774265 /* TextBoxStation.swift */,
 			);
 			path = TextObserver;
+			sourceTree = "<group>";
+		};
+		27DDE65E2901B70200789B2A /* BubbleObserver */ = {
+			isa = PBXGroup;
+			children = (
+				27DDE65F2901B71400789B2A /* BubbleStation.swift */,
+			);
+			path = BubbleObserver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */,
+				27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */,
 				0D66710C28FF242700DA1814 /* Moveable.swift in Sources */,
 				0D6670FC28FF233300DA1814 /* GameScene.swift in Sources */,
 				0D6670FF28FF236100DA1814 /* AvaiablePosition.swift in Sources */,
@@ -299,6 +320,7 @@
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
+				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
 				0D686D322901954C00774265 /* ProgressBar.swift in Sources */,
 				0D686D2028FF5E4300774265 /* GameViewController.swift in Sources */,
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
@@ -306,6 +328,7 @@
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
 				0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */,
 				0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */,
+				27DDE6662901B78B00789B2A /* VerticalWaveMovement.swift in Sources */,
 				0D66710A28FF240C00DA1814 /* AnyNode.swift in Sources */,
 				0D66710428FF239D00DA1814 /* MovementSide.swift in Sources */,
 				0D6670FA28FF231000DA1814 /* ContentView.swift in Sources */,
@@ -313,6 +336,7 @@
 				0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */,
 				0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */,
 				0D686D2928FF7DBA00774265 /* TextBox.swift in Sources */,
+				27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */,
 				0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */,
 				0D686D2E28FF84C100774265 /* TextBoxStation.swift in Sources */,
 			);
