@@ -22,7 +22,7 @@ class Boat : SKNode, AnyNode {
     override init() {
         super.init()
         setupNode()
-        self.image = SKSpriteNode(imageNamed: "Barco+Lixeiras")
+        self.image = SKSpriteNode(imageNamed: ImageConstants.BOAT)
         self.addChild(self.image ?? SKSpriteNode())
         self.zRotation = 0
         self.zPosition = 13
@@ -52,6 +52,6 @@ class Boat : SKNode, AnyNode {
     
     func setupPhysicsBody() {
         guard let image = self.image else {return}
-        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "Barco+Lixeiras"), size: CGSize(width: image.size.width, height: image.size.height))
+        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageConstants.BOAT), size: CGSize(width: image.size.width, height: image.size.height))
     }
 }

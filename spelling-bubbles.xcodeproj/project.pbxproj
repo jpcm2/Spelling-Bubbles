@@ -39,6 +39,7 @@
 		17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */; };
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
 		17BFB0422901BE76001FE918 /* BoatAngularMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */; };
+		17BFB04429023913001FE918 /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04329023913001FE918 /* PauseButton.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
 		27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6632901B76300789B2A /* BubbleSubscriber.swift */; };
@@ -79,6 +80,7 @@
 		17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatVerticalMoviment.swift; sourceTree = "<group>"; };
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
 		17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatAngularMovement.swift; sourceTree = "<group>"; };
+		17BFB04329023913001FE918 /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		27DDE6632901B76300789B2A /* BubbleSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSubscriber.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				0D686D312901954C00774265 /* ProgressBar.swift */,
 				27DDE6612901B74800789B2A /* Bubble.swift */,
 				17BFB03A2901BE2D001FE918 /* Boat.swift */,
+				17BFB04329023913001FE918 /* PauseButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
+				17BFB04429023913001FE918 /* PauseButton.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
 				17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */,
 				0D686D322901954C00774265 /* ProgressBar.swift in Sources */,

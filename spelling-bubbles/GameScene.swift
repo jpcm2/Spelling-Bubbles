@@ -19,6 +19,7 @@ class GameScene: SKScene {
     var textbox: TextBoxStation?
     var progressBar = ProgressBar(withMaxProgress: 3)
     var boat = Boat()
+    var pauseButton = PauseButton()
     
     
     override init(size: CGSize) {
@@ -59,6 +60,7 @@ class GameScene: SKScene {
         
         addChild(background ?? SKNode())
         addChild(progressBar)
+        addChild(pauseButton)
     }
     
     override func update(_ currentTime: TimeInterval) {
