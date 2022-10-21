@@ -24,6 +24,7 @@ class GameScene: SKScene {
     
     override init(size: CGSize) {
         super.init(size: size)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,7 +33,7 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
-        
+        pauseButton.delegate = self
         
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
@@ -68,9 +69,17 @@ class GameScene: SKScene {
         boat.update()
         progressBar.update()
         self.bubbleStation?.update()
-    
+        
     }
 }
 
+extension GameScene : PauseButtonDelegate {
+    func pauseButtonPressed() {
+        // let gamePause = True
+        // must call UIView PauseMenu 
+    }
+    
+    
+}
 
 
