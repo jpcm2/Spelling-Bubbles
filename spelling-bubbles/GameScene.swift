@@ -75,6 +75,7 @@ class GameScene: SKScene {
 
 extension GameScene : PauseButtonDelegate {
     func pauseButtonPressed() {
+        print("Usuário clicou no pauseButton")
         // let gamePause = True
         // must call UIView PauseMenu 
     }

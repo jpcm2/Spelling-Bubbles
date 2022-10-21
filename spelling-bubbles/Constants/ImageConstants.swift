@@ -14,5 +14,10 @@ struct ImageConstants {
     static let TEXT_BOX = "text-box"
     static let BOAT = "Barco+Lixeiras"
     static let PAUSE_BUTTON = "pause Button"
+    static let X_BUTTON = "XButton"
+    static let MUSIC_ICON = "Music Icon"
+    static let SOUND_ICON = "Sound Icon"
+    static let RESTART_BUTTON = "RecomecarButton"
+    static let MENU_BUTTON = "Menu Button"
     
 }

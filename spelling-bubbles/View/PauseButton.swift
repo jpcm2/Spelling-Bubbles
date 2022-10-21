@@ -13,7 +13,6 @@ class PauseButton: SKNode, AnyNode {
     
     override init() {
         super.init()
-        self.name = "pauseButton"
         self.image = SKSpriteNode(imageNamed: ImageConstants.PAUSE_BUTTON)
         self.isUserInteractionEnabled = true
         setupNode()
