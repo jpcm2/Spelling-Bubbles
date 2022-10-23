@@ -12,7 +12,10 @@ struct PauseMenuView : View {
     
     var body: some View {
         ZStack{
-            Color(.cyan) //backgrund
+            Color("PauseMenuBackground")
+                .frame(width: 332.HAdapted, height: 550.VAdapted, alignment: .center)
+                .cornerRadius(20)
+                .padding()
             VStack() {
                 HStack() {
                     Spacer()
@@ -22,15 +25,21 @@ struct PauseMenuView : View {
                     }) {
                         Image(ImageConstants.X_BUTTON)
                             .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                            .padding(.bottom, 20.0)
                     }
-                }.padding([.top, .bottom, .trailing], 31.0)
-                HStack{
+                }.padding([.top, .bottom, .trailing], 40.0)
+                          
+                
+                HStack(spacing: 18.0){
                     Image(systemName: "pause.fill")
+                        .resizable()
+                        .frame(width: 34,height: 35)
+                        .scaledToFit()
                     Text("Pause")
+                        .font(.system(size: 36, weight: .regular, design: .rounded))
                         
-                        .font(.body)
-                        .fontWeight(.regular)
                 }
+                .padding()
                 HStack{
                     VStack{
                         Button(action: {
