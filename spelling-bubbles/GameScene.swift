@@ -20,10 +20,20 @@ class GameScene: SKScene {
     var progressBar = ProgressBar(withMaxProgress: 3)
     var boat = Boat()
     var pauseButton = PauseButton()
+    var pauseDelegate: PauseButtonDelegate?
+    
+    var isGamePaused: Bool = false {
+        didSet {
+            if isGamePaused {
+                pauseDelegate?.pauseButtonPressed()
+            }
+        }
+    }
     
     
     override init(size: CGSize) {
         super.init(size: size)
+        pauseButton.delegate = self
         
     }
     
@@ -31,9 +41,7 @@ class GameScene: SKScene {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func didMove(to view: SKView) {
-        pauseButton.delegate = self
         
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
@@ -66,21 +74,18 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
 //        gargabeStation?.update()
-        boat.update()
-        progressBar.update()
-        self.bubbleStation?.update()
+        if !isGamePaused {
+            boat.update()
+            progressBar.update()
+            self.bubbleStation?.update()
+        }
         
     }
 }
 
+
 extension GameScene : PauseButtonDelegate {
     func pauseButtonPressed() {
-        print("Usuário clicou no pauseButton")
-        // must pause the game
-        // must present the PauseMenuView
+        self.isGamePaused = true
     }
-    
-    
 }
-
-

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import SpriteKit
 
 typealias Game = GameScene & ShakeHandler
@@ -18,6 +19,7 @@ class GameViewController: UIViewController {
         super.loadView()
         self.view = SKView()
         self.view.bounds = UIScreen.main.bounds
+        
     }
     
     override var canBecomeFirstResponder: Bool {
@@ -43,6 +45,7 @@ class GameViewController: UIViewController {
         let newScene = GameScene(size: view.bounds.size)
         view.presentScene(newScene)
         self.scene = newScene
+        self.scene?.pauseDelegate = self
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -50,5 +53,17 @@ class GameViewController: UIViewController {
             guard let skview = view as? SKView, let scene = skview.scene as? Game else { return }
             scene.didUserStartShake()
         }
+    }
+}
+
+extension GameViewController: PauseButtonDelegate {
+    func pauseButtonPressed() {
+        
+        let vc = UIHostingController(rootView: PauseMenuView() {
+            self.scene?.isGamePaused = false
+        })
+        vc.modalPresentationStyle = .overFullScreen
+        vc.view.backgroundColor = .clear
+        self.present(vc, animated: true)
     }
 }

@@ -42,6 +42,7 @@
 		17BFB04429023913001FE918 /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04329023913001FE918 /* PauseButton.swift */; };
 		17BFB0462902D4E2001FE918 /* PauseButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */; };
 		17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0472904C258001FE918 /* PauseMenu.swift */; };
+		17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0492904CBA4001FE918 /* SettingsMenu.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
 		27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6632901B76300789B2A /* BubbleSubscriber.swift */; };
@@ -85,6 +86,7 @@
 		17BFB04329023913001FE918 /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
 		17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButtonDelegate.swift; sourceTree = "<group>"; };
 		17BFB0472904C258001FE918 /* PauseMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenu.swift; sourceTree = "<group>"; };
+		17BFB0492904CBA4001FE918 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		27DDE6632901B76300789B2A /* BubbleSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSubscriber.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				17BFB03A2901BE2D001FE918 /* Boat.swift */,
 				17BFB04329023913001FE918 /* PauseButton.swift */,
 				17BFB0472904C258001FE918 /* PauseMenu.swift */,
+				17BFB0492904CBA4001FE918 /* SettingsMenu.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
+				17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */,
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
 				17BFB04429023913001FE918 /* PauseButton.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
