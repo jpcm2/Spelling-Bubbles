@@ -40,6 +40,15 @@
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
 		17BFB0422901BE76001FE918 /* BoatAngularMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */; };
 		2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */; };
+		17BFB04429023913001FE918 /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04329023913001FE918 /* PauseButton.swift */; };
+		17BFB0462902D4E2001FE918 /* PauseButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */; };
+		17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0472904C258001FE918 /* PauseMenu.swift */; };
+		17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0492904CBA4001FE918 /* SettingsMenu.swift */; };
+		17BFB04D2907112D001FE918 /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04C2907112D001FE918 /* XButtonView.swift */; };
+		17BFB04F2907114E001FE918 /* PauseLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04E2907114E001FE918 /* PauseLabelView.swift */; };
+		17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05029071194001FE918 /* SoundAndMusicView.swift */; };
+		17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB052290711D6001FE918 /* IconAndLabelView.swift */; };
+		17BFB05529071205001FE918 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05429071205001FE918 /* BottomButtons.swift */; };
 		27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27810D992901C93E00E167E1 /* SoundController.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
@@ -82,6 +91,15 @@
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
 		17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatAngularMovement.swift; sourceTree = "<group>"; };
 		2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+TouchesBegan.swift"; sourceTree = "<group>"; };
+		17BFB04329023913001FE918 /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
+		17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButtonDelegate.swift; sourceTree = "<group>"; };
+		17BFB0472904C258001FE918 /* PauseMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenu.swift; sourceTree = "<group>"; };
+		17BFB0492904CBA4001FE918 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
+		17BFB04C2907112D001FE918 /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
+		17BFB04E2907114E001FE918 /* PauseLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseLabelView.swift; sourceTree = "<group>"; };
+		17BFB05029071194001FE918 /* SoundAndMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAndMusicView.swift; sourceTree = "<group>"; };
+		17BFB052290711D6001FE918 /* IconAndLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAndLabelView.swift; sourceTree = "<group>"; };
+		17BFB05429071205001FE918 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
 		27810D992901C93E00E167E1 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
@@ -180,6 +198,7 @@
 				0D66710D28FF244200DA1814 /* GarbageSubscriber.swift */,
 				0D686D2128FF65D200774265 /* ShakeHandler.swift */,
 				27DDE6632901B76300789B2A /* BubbleSubscriber.swift */,
+				17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -229,12 +248,15 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17BFB04B2907110A001FE918 /* PauseView */,
 				0D66711E28FF2E9E00DA1814 /* MainGameBackground.swift */,
 				0D686D2828FF7DBA00774265 /* TextBox.swift */,
 				0D66710028FF237600DA1814 /* Garbage.swift */,
 				0D686D312901954C00774265 /* ProgressBar.swift */,
 				27DDE6612901B74800789B2A /* Bubble.swift */,
 				17BFB03A2901BE2D001FE918 /* Boat.swift */,
+				17BFB04329023913001FE918 /* PauseButton.swift */,
+				17BFB0492904CBA4001FE918 /* SettingsMenu.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +277,19 @@
 				17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */,
 			);
 			path = Boat;
+			sourceTree = "<group>";
+		};
+		17BFB04B2907110A001FE918 /* PauseView */ = {
+			isa = PBXGroup;
+			children = (
+				17BFB0472904C258001FE918 /* PauseMenu.swift */,
+				17BFB04C2907112D001FE918 /* XButtonView.swift */,
+				17BFB04E2907114E001FE918 /* PauseLabelView.swift */,
+				17BFB05029071194001FE918 /* SoundAndMusicView.swift */,
+				17BFB052290711D6001FE918 /* IconAndLabelView.swift */,
+				17BFB05429071205001FE918 /* BottomButtons.swift */,
+			);
+			path = PauseView;
 			sourceTree = "<group>";
 		};
 		27810D982901C8DF00E167E1 /* SoundController */ = {
@@ -348,17 +383,24 @@
 				0D66710C28FF242700DA1814 /* Moveable.swift in Sources */,
 				0D6670FC28FF233300DA1814 /* GameScene.swift in Sources */,
 				17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */,
+				17BFB0462902D4E2001FE918 /* PauseButtonDelegate.swift in Sources */,
 				0D6670FF28FF236100DA1814 /* AvaiablePosition.swift in Sources */,
+				17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */,
 				17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */,
 				0D686D2228FF65D200774265 /* ShakeHandler.swift in Sources */,
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
+				17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
+				17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */,
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
+				17BFB04429023913001FE918 /* PauseButton.swift in Sources */,
+				17BFB04F2907114E001FE918 /* PauseLabelView.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
 				17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */,
+				17BFB04D2907112D001FE918 /* XButtonView.swift in Sources */,
 				0D686D322901954C00774265 /* ProgressBar.swift in Sources */,
 				0D686D2028FF5E4300774265 /* GameViewController.swift in Sources */,
 				2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */,
@@ -371,8 +413,10 @@
 				0D66710A28FF240C00DA1814 /* AnyNode.swift in Sources */,
 				0D66710428FF239D00DA1814 /* MovementSide.swift in Sources */,
 				0D6670FA28FF231000DA1814 /* ContentView.swift in Sources */,
+				17BFB05529071205001FE918 /* BottomButtons.swift in Sources */,
 				0D6670E728FF1FB600DA1814 /* spelling_bubblesApp.swift in Sources */,
 				0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */,
+				17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */,
 				0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */,
 				0D686D2928FF7DBA00774265 /* TextBox.swift in Sources */,
 				27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */,

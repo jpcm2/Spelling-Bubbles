@@ -18,7 +18,7 @@ class BoatVerticalMovement : Moveable {
     }
     
     func moving(x: Double) -> Double {
-        let amplitudeModifier = 0.1
+        let amplitudeModifier = 0.08
         let sinRotation = side.rawValue*sin(counter * Double.pi / 180)
         counter += 1
         
