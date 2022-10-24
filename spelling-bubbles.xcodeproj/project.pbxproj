@@ -47,7 +47,7 @@
 		17BFB04F2907114E001FE918 /* PauseLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04E2907114E001FE918 /* PauseLabelView.swift */; };
 		17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05029071194001FE918 /* SoundAndMusicView.swift */; };
 		17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB052290711D6001FE918 /* IconAndLabelView.swift */; };
-		17BFB05529071205001FE918 /* bottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05429071205001FE918 /* bottomButtons.swift */; };
+		17BFB05529071205001FE918 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05429071205001FE918 /* BottomButtons.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
 		27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6632901B76300789B2A /* BubbleSubscriber.swift */; };
@@ -96,7 +96,7 @@
 		17BFB04E2907114E001FE918 /* PauseLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseLabelView.swift; sourceTree = "<group>"; };
 		17BFB05029071194001FE918 /* SoundAndMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAndMusicView.swift; sourceTree = "<group>"; };
 		17BFB052290711D6001FE918 /* IconAndLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAndLabelView.swift; sourceTree = "<group>"; };
-		17BFB05429071205001FE918 /* bottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomButtons.swift; sourceTree = "<group>"; };
+		17BFB05429071205001FE918 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		27DDE6632901B76300789B2A /* BubbleSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSubscriber.swift; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 				17BFB04E2907114E001FE918 /* PauseLabelView.swift */,
 				17BFB05029071194001FE918 /* SoundAndMusicView.swift */,
 				17BFB052290711D6001FE918 /* IconAndLabelView.swift */,
-				17BFB05429071205001FE918 /* bottomButtons.swift */,
+				17BFB05429071205001FE918 /* BottomButtons.swift */,
 			);
 			path = PauseView;
 			sourceTree = "<group>";
@@ -397,7 +397,7 @@
 				0D66710A28FF240C00DA1814 /* AnyNode.swift in Sources */,
 				0D66710428FF239D00DA1814 /* MovementSide.swift in Sources */,
 				0D6670FA28FF231000DA1814 /* ContentView.swift in Sources */,
-				17BFB05529071205001FE918 /* bottomButtons.swift in Sources */,
+				17BFB05529071205001FE918 /* BottomButtons.swift in Sources */,
 				0D6670E728FF1FB600DA1814 /* spelling_bubblesApp.swift in Sources */,
 				0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */,
 				17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */,
