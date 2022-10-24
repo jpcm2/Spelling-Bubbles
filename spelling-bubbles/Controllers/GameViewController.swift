@@ -60,8 +60,10 @@ extension GameViewController: PauseButtonDelegate {
     func pauseButtonPressed() {
         
         let vc = UIHostingController(rootView: PauseMenuView() {
+            // action for x button
             self.scene?.isGamePaused = false
         })
+        
         vc.modalPresentationStyle = .overFullScreen
         vc.view.backgroundColor = .clear
         self.present(vc, animated: true)

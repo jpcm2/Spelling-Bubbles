@@ -23,7 +23,7 @@ struct PauseMenuView : View {
                 HStack() {
                     Spacer()
                     Button(action: {
-                        print("button pressed")
+                        print("X button pressed")
                         action()
                         presentationMode.wrappedValue.dismiss()
                     }) {
