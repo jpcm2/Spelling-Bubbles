@@ -14,7 +14,7 @@ struct BubbleConstants {
     static let BUBBLE_LETTER_FONT_SIZE: CGFloat = 24.0
 }
 
-class Bubble: SKNode, AnyNode {
+class Bubble: SKNode, AnyNode{
     
     var image: SKSpriteNode = SKSpriteNode()
     var letterLabel: SKLabelNode = SKLabelNode()
@@ -31,8 +31,7 @@ class Bubble: SKNode, AnyNode {
         self.position = nodePosition.position
         self.addChild(self.image)
         self.addChild(self.letterLabel)
-        self.zPosition = 12
-        
+        self.zPosition = 250
     }
     
     func setupBubbleLabel(){
@@ -42,6 +41,7 @@ class Bubble: SKNode, AnyNode {
         self.letterLabel.fontColor = .black
         self.letterLabel.fontSize = BubbleConstants.BUBBLE_LETTER_FONT_SIZE
         self.letterLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY - self.image.frame.height/5)
+        self.letterLabel.name = "bubble"
     }
     
     func setupPosition() {}
