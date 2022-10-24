@@ -88,4 +88,12 @@ class BubbleStation: BubbleSubscriber{
             bubbles[bubbleIndex].movingBubble()
         }
     }
+    
+    func refreshBubbles(){
+        for bubble in bubbles {
+            bubble.isPaused = false
+            bubble.isHidden = false
+            print("todas as bolhas estão visíveis")
+        }
+    }
 }
