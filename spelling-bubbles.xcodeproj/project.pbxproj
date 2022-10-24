@@ -39,6 +39,7 @@
 		17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */; };
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
 		17BFB0422901BE76001FE918 /* BoatAngularMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */; };
+		2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */; };
 		27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27810D992901C93E00E167E1 /* SoundController.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
@@ -80,6 +81,7 @@
 		17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatVerticalMoviment.swift; sourceTree = "<group>"; };
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
 		17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatAngularMovement.swift; sourceTree = "<group>"; };
+		2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+TouchesBegan.swift"; sourceTree = "<group>"; };
 		27810D992901C93E00E167E1 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				0D6670F928FF231000DA1814 /* ContentView.swift */,
 				0D6670FB28FF233300DA1814 /* GameScene.swift */,
 				0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */,
+				2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */,
 				0D66711D28FF2E8E00DA1814 /* View */,
 				0D66711A28FF27AC00DA1814 /* Constants */,
 				0D66710F28FF245600DA1814 /* Controllers */,
@@ -358,6 +361,7 @@
 				17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */,
 				0D686D322901954C00774265 /* ProgressBar.swift in Sources */,
 				0D686D2028FF5E4300774265 /* GameViewController.swift in Sources */,
+				2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */,
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
 				0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */,
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
