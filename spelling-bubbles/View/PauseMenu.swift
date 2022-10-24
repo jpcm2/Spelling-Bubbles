@@ -8,14 +8,28 @@
 import Foundation
 import SwiftUI
 
+typealias HandleWithPauseButtonAction = (() -> Void)
+
+//struct XButton: View {
+//    
+//    var body: some View {
+//        
+//    }
+//}
+
 struct PauseMenuView : View {
-        
-    @Environment(\.presentationMode) var presentationMode
-    var action: (() -> Void)
     
+    @Environment(\.presentationMode) var presentationMode
+    var actionXButton: HandleWithPauseButtonAction
+    
+    struct Constants {
+        static let PAUSE_MENU_BACKGROUND = "PauseMenuBackground"
+    }
+    
+
     var body: some View {
         ZStack{
-            Color("PauseMenuBackground")
+            Color(Constants.PAUSE_MENU_BACKGROUND)
                 .frame(width: 332.HAdapted, height: 550.VAdapted, alignment: .center)
                 .cornerRadius(20)
                 .padding()
@@ -23,8 +37,7 @@ struct PauseMenuView : View {
                 HStack() {
                     Spacer()
                     Button(action: {
-                        print("X button pressed")
-                        action()
+                        actionXButton()
                         presentationMode.wrappedValue.dismiss()
                     }) {
                         Image(ImageConstants.X_BUTTON)

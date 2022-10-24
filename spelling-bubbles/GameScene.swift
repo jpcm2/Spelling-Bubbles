@@ -14,22 +14,25 @@ class GameScene: SKScene {
 //    var gargabeStation: GarbageStation?
     
     var bubbleStation: BubbleStation?
+    var controllerPauseDelegate: PauseButtonDelegate?
     
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var progressBar = ProgressBar(withMaxProgress: 3)
     var boat = Boat()
     var pauseButton = PauseButton()
-    var pauseDelegate: PauseButtonDelegate?
     
     var isGamePaused: Bool = false {
         didSet {
-            if isGamePaused {
-                pauseDelegate?.pauseButtonPressed()
-            }
+            self.didUserTapPauseButton()
         }
     }
     
+    private func didUserTapPauseButton(){
+        if isGamePaused {
+            controllerPauseDelegate?.pauseButtonPressed()
+        }
+    }
     
     override init(size: CGSize) {
         super.init(size: size)
@@ -74,11 +77,11 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
 //        gargabeStation?.update()
-        if !isGamePaused {
-            boat.update()
-            progressBar.update()
-            self.bubbleStation?.update()
-        }
+        if isGamePaused { return }
+
+        boat.update()
+        progressBar.update()
+        self.bubbleStation?.update()
         
     }
 }

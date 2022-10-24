@@ -9,7 +9,7 @@ import SpriteKit
 
 class PauseButton: SKNode, AnyNode {
     private var image : SKSpriteNode?
-    var delegate : PauseButtonDelegate?
+    weak var delegate : PauseButtonDelegate?
     
     override init() {
         super.init()
@@ -30,7 +30,7 @@ class PauseButton: SKNode, AnyNode {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.delegate?.pauseButtonPressed()
+        delegate?.pauseButtonPressed()
     }
 }
 

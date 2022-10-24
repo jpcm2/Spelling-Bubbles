@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         becomeFirstResponder()
@@ -45,7 +45,7 @@ class GameViewController: UIViewController {
         let newScene = GameScene(size: view.bounds.size)
         view.presentScene(newScene)
         self.scene = newScene
-        self.scene?.pauseDelegate = self
+        self.scene?.controllerPauseDelegate = self
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -59,10 +59,10 @@ class GameViewController: UIViewController {
 extension GameViewController: PauseButtonDelegate {
     func pauseButtonPressed() {
         
-        let vc = UIHostingController(rootView: PauseMenuView() {
+        let vc = UIHostingController(rootView: PauseMenuView(actionXButton: {
             // action for x button
             self.scene?.isGamePaused = false
-        })
+        }))
         
         vc.modalPresentationStyle = .overFullScreen
         vc.view.backgroundColor = .clear
