@@ -58,7 +58,7 @@ class GameScene: SKScene {
         
         self.bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "C  XA")
+        textbox = TextBoxStation(withWord: "SACO")
         
         
         gargabeStation?.addToGame(insideScene: self)
