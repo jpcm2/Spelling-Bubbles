@@ -11,10 +11,8 @@ import GameKit
 
 class GameScene: SKScene {
     
-//    var gargabeStation: GarbageStation?
-    
+    var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
-    
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var progressBar = ProgressBar(withMaxProgress: 3)
@@ -42,14 +40,14 @@ class GameScene: SKScene {
         border.restitution = 1
         self.physicsBody = border
 
-//        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
+        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
         
         self.bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "CAIXA")
+        textbox = TextBoxStation(withWord: "C  XA")
         
         
-//        gargabeStation?.addToGame(insideScene: self)
+        gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
         self.bubbleStation?.addToGame(insideScene: self)
         
@@ -62,7 +60,7 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-//        gargabeStation?.update()
+        gargabeStation?.update()
         boat.update()
         progressBar.update()
         self.bubbleStation?.update()
