@@ -11,8 +11,7 @@ import GameKit
 
 class GameScene: SKScene {
     
-//    var gargabeStation: GarbageStation?
-    
+    var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
     var controllerPauseDelegate: PauseButtonDelegate?
     
@@ -55,14 +54,14 @@ class GameScene: SKScene {
         border.restitution = 1
         self.physicsBody = border
 
-//        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
+        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
         
         self.bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "CAIXA")
+        textbox = TextBoxStation(withWord: "C  XA")
         
         
-//        gargabeStation?.addToGame(insideScene: self)
+        gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
         self.bubbleStation?.addToGame(insideScene: self)
         
@@ -79,6 +78,7 @@ class GameScene: SKScene {
 //        gargabeStation?.update()
         if isGamePaused { return }
 
+        gargabeStation?.update()
         boat.update()
         progressBar.update()
         self.bubbleStation?.update()

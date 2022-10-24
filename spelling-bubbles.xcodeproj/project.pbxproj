@@ -48,6 +48,7 @@
 		17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05029071194001FE918 /* SoundAndMusicView.swift */; };
 		17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB052290711D6001FE918 /* IconAndLabelView.swift */; };
 		17BFB05529071205001FE918 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05429071205001FE918 /* BottomButtons.swift */; };
+		27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27810D992901C93E00E167E1 /* SoundController.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
 		27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6632901B76300789B2A /* BubbleSubscriber.swift */; };
@@ -97,6 +98,7 @@
 		17BFB05029071194001FE918 /* SoundAndMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAndMusicView.swift; sourceTree = "<group>"; };
 		17BFB052290711D6001FE918 /* IconAndLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAndLabelView.swift; sourceTree = "<group>"; };
 		17BFB05429071205001FE918 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
+		27810D992901C93E00E167E1 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		27DDE6632901B76300789B2A /* BubbleSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSubscriber.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		0D66710F28FF245600DA1814 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27810D982901C8DF00E167E1 /* SoundController */,
 				27DDE65E2901B70200789B2A /* BubbleObserver */,
 				0D686D2C28FF84AA00774265 /* TextObserver */,
 				0D66711728FF24B200DA1814 /* GarbageObserver */,
@@ -284,6 +287,14 @@
 				17BFB05429071205001FE918 /* BottomButtons.swift */,
 			);
 			path = PauseView;
+			sourceTree = "<group>";
+		};
+		27810D982901C8DF00E167E1 /* SoundController */ = {
+			isa = PBXGroup;
+			children = (
+				27810D992901C93E00E167E1 /* SoundController.swift */,
+			);
+			path = SoundController;
 			sourceTree = "<group>";
 		};
 		27DDE65E2901B70200789B2A /* BubbleObserver */ = {
@@ -378,6 +389,7 @@
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
+				27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
 				17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */,
 				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
