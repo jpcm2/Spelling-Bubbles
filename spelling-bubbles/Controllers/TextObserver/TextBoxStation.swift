@@ -24,7 +24,7 @@ class TextBoxStation: TextBoxStationSubscriber {
 
     private var letters: [TextBox] = []
     private var word = "CAIXA"
-    private var currentWord: String = ""
+    var currentWord: String = ""
     
     init(withWord word: String){
         self.word = word
@@ -51,5 +51,10 @@ class TextBoxStation: TextBoxStationSubscriber {
         letters.forEach{ letter in
             scene.addChild(letter)
         }
+    }
+    
+    func resetLettersArray(){
+        letters.removeAll()
+        setupTextBoxAtMiddle()
     }
 }

@@ -15,7 +15,7 @@ extension GameScene {
             
             guard let touchedNode = self.atPoint(location) as? SKLabelNode else{return}
            
-            guard let selectedLetter = touchedNode.attributedText?.string else {return}
+            guard let selectedString = touchedNode.attributedText?.string else {return}
 
             guard let touchedNodeParent = touchedNode.parent else {return}
             
@@ -23,6 +23,16 @@ extension GameScene {
             
             touchedNodeParent.isHidden = true
             
+            guard let range = textbox?.currentWord.range(of: " ") else {return}
+            
+            guard let newString = textbox?.currentWord.replacingCharacters(in: range, with: selectedString) else {return}
+            
+            textbox?.currentWord = newString
+            
+            textbox?.resetLettersArray()
+            
+            print(textbox?.currentWord ?? " ")
+            textbox?.addToGame(insideScene: self)
         }
     }
 }
