@@ -50,4 +50,8 @@ class TextBoxStation: TextBoxStationSubscriber {
             scene.addChild(letter)
         }
     }
+    
+    func refreshLetters() {
+        letters = []
+    }
 }

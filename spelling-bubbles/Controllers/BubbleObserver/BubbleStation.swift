@@ -93,7 +93,8 @@ class BubbleStation: BubbleSubscriber{
         for bubble in bubbles {
             bubble.isPaused = false
             bubble.isHidden = false
-            print("todas as bolhas estão visíveis")
+            
         }
+        print("todas as bolhas estão visíveis")
     }
 }
