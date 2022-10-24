@@ -62,7 +62,7 @@ class BubbleStation: BubbleSubscriber{
             let randomMovementChoice = randomValue % possibleMovements.count
             
             let movement = possibleMovements[randomMovementChoice]
-
+            
             self.index -= 1
             
             possiblePositions[index].isOccupied = true
@@ -95,6 +95,5 @@ class BubbleStation: BubbleSubscriber{
             bubble.isHidden = false
             
         }
-        print("todas as bolhas estão visíveis")
     }
 }

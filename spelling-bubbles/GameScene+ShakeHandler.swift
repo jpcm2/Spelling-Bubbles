@@ -13,5 +13,6 @@ extension GameScene: ShakeHandler {
         print("shake funcionando")
         bubbleStation?.refreshBubbles()
         textbox?.refreshLetters()
+        textbox?.addToGame(insideScene: self)
     }
 }

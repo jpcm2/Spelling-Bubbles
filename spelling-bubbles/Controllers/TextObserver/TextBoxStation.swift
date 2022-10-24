@@ -53,12 +53,15 @@ class TextBoxStation: TextBoxStationSubscriber {
         }
     }
     
-    func refreshLetters() {
-        letters = []
-    }
-    
     func resetLettersArray(){
         letters.removeAll()
         setupTextBoxAtMiddle()
+    }
+    
+    func refreshLetters() {
+        self.currentWord = String(repeating: " ", count: self.word.count)
+        resetLettersArray()
+        
+        
     }
 }
