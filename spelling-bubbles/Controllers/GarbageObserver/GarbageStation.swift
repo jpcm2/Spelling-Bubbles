@@ -85,8 +85,6 @@ class GarbageStation: GarbageSubscriber {
             garbage.objectName == station.word.lowercased()
         })
         
-        print(garbageFiltered)
-        
         garbageFiltered.forEach{ garbage in
             garbage.physicsBody = nil
             garbage.run(SKAction.move(to: boat.position, duration: 0.65))
