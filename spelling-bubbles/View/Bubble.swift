@@ -34,6 +34,10 @@ class Bubble: SKNode, AnyNode{
         self.zPosition = 250
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setupBubbleLabel(){
         self.letterLabel.attributedText = NSAttributedString(string: letter,
                                                              attributes:[.font: UIFont.rounded(ofSize: BubbleConstants.BUBBLE_LETTER_FONT_SIZE, weight: .semibold),
@@ -47,7 +51,10 @@ class Bubble: SKNode, AnyNode{
     func setupPosition() {}
     
     func setupPhysicsBody() {
-        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: BubbleConstants.BUBBLE_IMAGE_NAME), size: CGSize(width: image.size.width, height: image.size.height))
+        let texture = SKTexture(imageNamed: BubbleConstants.BUBBLE_IMAGE_NAME)
+        let imageSize = image.size
+        self.physicsBody = SKPhysicsBody(texture: texture,
+                                         size: imageSize)
         self.physicsBody?.affectedByGravity = false
     }
     
@@ -55,9 +62,5 @@ class Bubble: SKNode, AnyNode{
         guard let movement = self.movement else{return}
         let newYposition = movement.moving(y: self.position.y)
         self.position = CGPoint(x: self.position.x, y: newYposition)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
