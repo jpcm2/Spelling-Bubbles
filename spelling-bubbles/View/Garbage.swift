@@ -13,13 +13,19 @@ class Garbage: SKNode, AnyNode {
     var movement: Moveable?
     var image: SKSpriteNode?
     var imageName: String?
+    var objectName: String?
     
     
-    init(atThisPostion avaiablePosition: AvaiablePosition, image: String, andMoveLike movement: Moveable){
+    init(atThisPostion avaiablePosition: AvaiablePosition,
+         image: String,
+         andMoveLike movement: Moveable,
+         withName name: String
+    ){
         super.init()
         self.image = SKSpriteNode(imageNamed: image)
         self.imageName = image
         self.movement = movement
+        self.objectName = name
         
         setupNode()
         

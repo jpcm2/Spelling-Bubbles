@@ -80,6 +80,11 @@ class GameScene: SKScene {
         boat.update()
         progressBar.update()
         bubbleStation?.update()
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5){
+            self.gargabeStation?.moveCompletedGarbage(with: "box", toBoat: self.boat)
+        }
     }
 }
 
