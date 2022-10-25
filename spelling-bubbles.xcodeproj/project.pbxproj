@@ -21,7 +21,6 @@
 		0D66710A28FF240C00DA1814 /* AnyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66710928FF240C00DA1814 /* AnyNode.swift */; };
 		0D66710C28FF242700DA1814 /* Moveable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66710B28FF242700DA1814 /* Moveable.swift */; };
 		0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66710D28FF244200DA1814 /* GarbageSubscriber.swift */; };
-		0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711128FF247300DA1814 /* WaveMovement.swift */; };
 		0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711328FF248300DA1814 /* DiagonalMovement.swift */; };
 		0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711528FF249700DA1814 /* VerticalMovement.swift */; };
 		0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711828FF24C000DA1814 /* GarbageStation.swift */; };
@@ -35,6 +34,7 @@
 		0D686D2E28FF84C100774265 /* TextBoxStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2D28FF84C100774265 /* TextBoxStation.swift */; };
 		0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */; };
 		0D686D322901954C00774265 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D312901954C00774265 /* ProgressBar.swift */; };
+		0D686D342902030400774265 /* GarbageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D332902030400774265 /* GarbageManager.swift */; };
 		17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03A2901BE2D001FE918 /* Boat.swift */; };
 		17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */; };
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
@@ -72,7 +72,6 @@
 		0D66710928FF240C00DA1814 /* AnyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNode.swift; sourceTree = "<group>"; };
 		0D66710B28FF242700DA1814 /* Moveable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moveable.swift; sourceTree = "<group>"; };
 		0D66710D28FF244200DA1814 /* GarbageSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageSubscriber.swift; sourceTree = "<group>"; };
-		0D66711128FF247300DA1814 /* WaveMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveMovement.swift; sourceTree = "<group>"; };
 		0D66711328FF248300DA1814 /* DiagonalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalMovement.swift; sourceTree = "<group>"; };
 		0D66711528FF249700DA1814 /* VerticalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalMovement.swift; sourceTree = "<group>"; };
 		0D66711828FF24C000DA1814 /* GarbageStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageStation.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		0D686D2D28FF84C100774265 /* TextBoxStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxStation.swift; sourceTree = "<group>"; };
 		0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Rounded.swift"; sourceTree = "<group>"; };
 		0D686D312901954C00774265 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		0D686D332902030400774265 /* GarbageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageManager.swift; sourceTree = "<group>"; };
 		17BFB03A2901BE2D001FE918 /* Boat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boat.swift; sourceTree = "<group>"; };
 		17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatVerticalMoviment.swift; sourceTree = "<group>"; };
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
@@ -220,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				17BFB03C2901BE48001FE918 /* Boat */,
-				0D66711128FF247300DA1814 /* WaveMovement.swift */,
 				0D66711328FF248300DA1814 /* DiagonalMovement.swift */,
 				0D66711528FF249700DA1814 /* VerticalMovement.swift */,
 				27DDE6652901B78B00789B2A /* VerticalWaveMovement.swift */,
@@ -232,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				0D66711828FF24C000DA1814 /* GarbageStation.swift */,
+				0D686D332902030400774265 /* GarbageManager.swift */,
 			);
 			path = GarbageObserver;
 			sourceTree = "<group>";
@@ -406,6 +406,7 @@
 				2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */,
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
 				0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */,
+				0D686D342902030400774265 /* GarbageManager.swift in Sources */,
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
 				0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */,
 				0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 extension GameScene: ShakeHandler {
     
     func didUserStartShake() {
-        print("shake funcionando")
+        gargabeStation?.didUserShakeIphone()
         bubbleStation?.refreshBubbles()
         textbox?.refreshLetters()
         textbox?.addToGame(insideScene: self)

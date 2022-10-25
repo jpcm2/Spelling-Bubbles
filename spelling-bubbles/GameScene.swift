@@ -14,7 +14,7 @@ class GameScene: SKScene {
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
     var controllerPauseDelegate: PauseButtonDelegate?
-    
+
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var progressBar = ProgressBar(withMaxProgress: 3)
@@ -44,7 +44,15 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
-        
+        bubbleStation = BubbleStation(numberOfBubbles: 11)
+        background = MainGameBackground(withSize: view.bounds.size)
+        textbox = TextBoxStation(withWord: "CAIXA")
+        progressBar = ProgressBar(withMaxProgress: 3)
+        boat = Boat()        
+        bubbleStation = BubbleStation(numberOfBubbles: 11)
+        background = MainGameBackground(withSize: view.bounds.size)
+        textbox = TextBoxStation(withWord: "SACO")
+    
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.05)
@@ -55,20 +63,15 @@ class GameScene: SKScene {
         self.physicsBody = border
 
         self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
-        
-        self.bubbleStation = BubbleStation(numberOfBubbles: 11)
-        background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "SACO")
+
         
         
         gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
-        self.bubbleStation?.addToGame(insideScene: self)
+        bubbleStation?.addToGame(insideScene: self)
         
      
-        
-        addChild(boat)
-        
+        addChild(boat ?? SKNode())
         addChild(background ?? SKNode())
         addChild(progressBar)
         addChild(pauseButton)
