@@ -25,8 +25,8 @@ class PauseButton: SKNode, AnyNode {
     }
     
     func setupPosition() {
-        let screenHeight = Int(UIScreen.main.bounds.height)
-        self.position = CGPoint(x: 325.HAdapted, y: screenHeight.VAdapted - 155.VAdapted)
+        let yPosition = CGFloat(UIScreen.main.bounds.height) * 0.92
+        self.position = CGPoint(x: 325.HAdapted, y: yPosition)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
