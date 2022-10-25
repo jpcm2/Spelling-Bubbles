@@ -54,7 +54,19 @@ class TextBoxStation: TextBoxStationSubscriber {
     }
     
     func resetLettersArray(){
+        letters.forEach{ letter in
+            letter.removeFromParent()
+            
+        }
+        
         letters.removeAll()
         setupTextBoxAtMiddle()
+    }
+    
+    func refreshLetters() {
+        self.currentWord = String(repeating: " ", count: self.word.count)
+        resetLettersArray()
+        
+        
     }
 }

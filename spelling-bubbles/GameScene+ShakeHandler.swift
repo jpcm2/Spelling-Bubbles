@@ -11,5 +11,8 @@ extension GameScene: ShakeHandler {
     
     func didUserStartShake() {
         gargabeStation?.didUserShakeIphone()
+        bubbleStation?.refreshBubbles()
+        textbox?.refreshLetters()
+        textbox?.addToGame(insideScene: self)
     }
 }
