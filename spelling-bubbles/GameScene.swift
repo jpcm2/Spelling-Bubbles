@@ -13,14 +13,30 @@ class GameScene: SKScene {
     
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
+    var controllerPauseDelegate: PauseButtonDelegate?
+
     var background: MainGameBackground?
     var textbox: TextBoxStation?
-    var progressBar: ProgressBar?
-    var boat: Boat?
+    var progressBar = ProgressBar(withMaxProgress: 3)
+    var boat = Boat()
+    var pauseButton = PauseButton()
     
+    var isGamePaused: Bool = false {
+        didSet {
+            self.didUserTapPauseButton()
+        }
+    }
+    
+    private func didUserTapPauseButton(){
+        if isGamePaused {
+            controllerPauseDelegate?.pauseButtonPressed()
+        }
+    }
     
     override init(size: CGSize) {
         super.init(size: size)
+        pauseButton.delegate = self
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,7 +48,10 @@ class GameScene: SKScene {
         background = MainGameBackground(withSize: view.bounds.size)
         textbox = TextBoxStation(withWord: "CAIXA")
         progressBar = ProgressBar(withMaxProgress: 3)
-        boat = Boat()
+        boat = Boat()        
+        bubbleStation = BubbleStation(numberOfBubbles: 11)
+        background = MainGameBackground(withSize: view.bounds.size)
+        textbox = TextBoxStation(withWord: "SACO")
     
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
@@ -44,7 +63,6 @@ class GameScene: SKScene {
         self.physicsBody = border
 
         self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
-        
 
         
         
@@ -55,16 +73,25 @@ class GameScene: SKScene {
      
         addChild(boat ?? SKNode())
         addChild(background ?? SKNode())
-        addChild(progressBar ?? SKNode())
+        addChild(progressBar)
+        addChild(pauseButton)
     }
     
     override func update(_ currentTime: TimeInterval) {
+//        gargabeStation?.update()
+        if isGamePaused { return }
+
         gargabeStation?.update()
-        boat?.update()
-        progressBar?.update()
+        boat.update()
+        progressBar.update()
         bubbleStation?.update()
+        
     }
 }
 
 
-
+extension GameScene : PauseButtonDelegate {
+    func pauseButtonPressed() {
+        self.isGamePaused = true
+    }
+}

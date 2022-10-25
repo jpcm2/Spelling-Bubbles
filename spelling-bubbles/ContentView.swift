@@ -22,15 +22,24 @@ struct GameView: UIViewControllerRepresentable {
 
 struct ContentView: View {
     
+    
+    @State var showingPauseMenu = true
+    
     var body: some View {
         GameView()
+        //PauseMenuView()
             .ignoresSafeArea()
     }
+    
+    
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
 

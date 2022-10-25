@@ -25,6 +25,7 @@ class Garbage: SKNode, AnyNode {
         
         self.position = avaiablePosition.position
         self.addChild(self.image ?? SKSpriteNode())
+        self.zPosition = 20
     }
 
     required init?(coder aDecoder: NSCoder) {
