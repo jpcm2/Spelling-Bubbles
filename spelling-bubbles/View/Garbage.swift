@@ -14,6 +14,11 @@ class Garbage: SKNode, AnyNode {
     var image: SKSpriteNode?
     var imageName: String?
     
+    struct Constants{
+        static let GAME_OVER_HEIGHT = 100.0
+        static let TRUE = 1
+        static let FALSE = 0
+    }
     
     init(atThisPostion avaiablePosition: AvaiablePosition, image: String, andMoveLike movement: Moveable){
         super.init()
@@ -57,11 +62,11 @@ class Garbage: SKNode, AnyNode {
     }
     
     func checkGarbagePosition() -> Int{
-        if(self.position.y <= 100.0){
+        if(self.position.y <= Constants.GAME_OVER_HEIGHT){
             self.isHidden = true
             self.physicsBody?.affectedByGravity = false
-            return 1
+            return Constants.TRUE
         }
-        return 0
+        return Constants.FALSE
     }
 }
