@@ -90,7 +90,9 @@ class GarbageStation: GarbageSubscriber {
             garbage.run(SKAction.move(to: boat.position, duration: 0.65))
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + Double(garbageFiltered.count)*0.65){
+        let time = Double(garbageFiltered.count)*0.65
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + time){
             garbageFiltered.forEach{ garbage in
                 garbage.removeFromParent()
             }
