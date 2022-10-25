@@ -24,8 +24,6 @@ class Boat : SKNode, AnyNode {
         setupNode()
         self.image = SKSpriteNode(imageNamed: ImageConstants.BOAT)
         self.addChild(self.image ?? SKSpriteNode())
-        self.zRotation = 0
-        self.zPosition = 13
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -45,13 +43,23 @@ class Boat : SKNode, AnyNode {
     
     func setupPosition() {
         let midleOfScreen = Int(UIScreen.main.bounds.width / 2)
-        let screenHeight = Int(UIScreen.main.bounds.height)
-        self.position = CGPoint(x: midleOfScreen.HAdapted - 25.HAdapted, y: screenHeight.VAdapted - 222.VAdapted)
-        
+        let screenHeight = CGFloat(UIScreen.main.bounds.height * 0.84)
+        self.position = CGPoint(x: midleOfScreen.HAdapted - 25.HAdapted, y: screenHeight)
     }
     
     func setupPhysicsBody() {
-        guard let image = self.image else {return}
-        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageConstants.BOAT), size: CGSize(width: image.size.width, height: image.size.height))
+        guard let image = self.image else { return }
+        let size = CGSize(width: image.size.width,
+                          height: image.size.height)
+        
+        let texture = SKTexture(imageNamed: ImageConstants.BOAT)
+        
+        self.physicsBody = SKPhysicsBody(texture: texture,
+                                         size: size)
+    }
+    
+    func setupAdditionalConfiguration() {
+        self.zRotation = 0
+        self.zPosition = 13
     }
 }
