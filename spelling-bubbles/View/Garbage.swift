@@ -55,5 +55,13 @@ class Garbage: SKNode, AnyNode {
     func change(_ movement: Moveable){
         self.movement = movement
     }
+    
+    func checkGarbagePosition() -> Int{
+        if(self.position.y <= 100.0){
+            self.isHidden = true
+            self.physicsBody?.affectedByGravity = false
+            return 1
+        }
+        return 0
+    }
 }
-

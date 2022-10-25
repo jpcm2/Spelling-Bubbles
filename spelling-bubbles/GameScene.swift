@@ -85,7 +85,9 @@ class GameScene: SKScene {
         boat.update()
         progressBar.update()
         bubbleStation?.update()
-        
+        if gargabeStation?.checkPosition() == 1{
+            self.scene?.view?.isPaused = true
+        }
     }
 }
 

@@ -47,8 +47,8 @@ class Bubble: SKNode, AnyNode{
     func setupPosition() {}
     
     func setupPhysicsBody() {
-        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: BubbleConstants.BUBBLE_IMAGE_NAME), size: CGSize(width: image.size.width, height: image.size.height))
-        self.physicsBody?.affectedByGravity = false
+//        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: BubbleConstants.BUBBLE_IMAGE_NAME), size: CGSize(width: image.size.width, height: image.size.height))
+//        self.physicsBody?.affectedByGravity = false
     }
     
     func movingBubble(){
