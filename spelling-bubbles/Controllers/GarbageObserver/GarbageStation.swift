@@ -78,12 +78,14 @@ class GarbageStation: GarbageSubscriber {
         }
     }
     
-    func moveCompletedGarbage(with name: String, toBoat boat: Boat?){
-        guard let boat = boat else { return }
+    func moveCompletedGarbage(toBoat boat: Boat?, withCorretWord station: TextBoxStation?){
+        guard let boat = boat, let station = station else { return }
         
         let garbageFiltered = garbages.filter({ garbage in
-            garbage.objectName == name
+            garbage.objectName == station.word.lowercased()
         })
+        
+        print(garbageFiltered)
         
         garbageFiltered.forEach{ garbage in
             garbage.physicsBody = nil

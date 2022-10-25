@@ -49,7 +49,7 @@ class GameScene: SKScene {
         gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
         bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "SACO")
+        textbox = TextBoxStation(withWord: "BOX")
         
         gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
@@ -82,7 +82,8 @@ class GameScene: SKScene {
         bubbleStation?.update()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5){
-            self.gargabeStation?.moveCompletedGarbage(with: "box", toBoat: self.boat)
+            self.gargabeStation?.moveCompletedGarbage(toBoat: self.boat,
+                                                      withCorretWord: self.textbox)
             self.progressBar.update()
         }
     }
