@@ -11,5 +11,8 @@ extension GameScene: ShakeHandler {
     
     func didUserStartShake() {
         print("shake funcionando")
+        bubbleStation?.refreshBubbles()
+        textbox?.refreshLetters()
+        textbox?.addToGame(insideScene: self)
     }
 }

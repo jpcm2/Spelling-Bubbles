@@ -81,7 +81,7 @@ class GameScene: SKScene {
         gargabeStation?.update()
         boat.update()
         progressBar.update()
-        self.bubbleStation?.update()
+        bubbleStation?.update()
         
     }
 }
