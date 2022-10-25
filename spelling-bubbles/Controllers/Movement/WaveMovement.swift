@@ -10,7 +10,7 @@ import UIKit
 
 class WaveMovement: Moveable {
     
-    var counter: Double = 90
+    var counter: Int = 180
     let side: MovementSide
     
     init(toSide side: MovementSide){
@@ -18,7 +18,7 @@ class WaveMovement: Moveable {
     }
         
     func moving(x: Double) -> Double {
-        return x + 10
+        return 0
     }
 }
 
