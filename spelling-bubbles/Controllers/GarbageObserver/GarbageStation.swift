@@ -26,9 +26,9 @@ class GarbageStation: GarbageSubscriber {
     
     private let movements: [Moveable] = [
         WaveMovement(toSide: .left),
-        WaveMovement(toSide: .right),
+//        WaveMovement(toSide: .right),
         VerticalMovement(),
-        DiagonalMovement()
+//        DiagonalMovement()
     ]
     
     init(withThisGarbageQuantity quantity: Int){
@@ -40,7 +40,8 @@ class GarbageStation: GarbageSubscriber {
         for _ in 0..<garbageQuantity {
             let randomValue = Int.random(in: Constants.RANDOM_RANGE_MOVEMENT)
             let randomMovementChoice = randomValue % movements.count
-            let objectChoice = randomMovementChoice % objects.count
+            let objectChoice = randomValue % objects.count
+   
             let movement = movements[randomMovementChoice]
             
             let newPosition = garbageManager.getNextAvaiablePosition()
