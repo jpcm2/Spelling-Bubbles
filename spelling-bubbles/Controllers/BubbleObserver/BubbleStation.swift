@@ -62,7 +62,7 @@ class BubbleStation: BubbleSubscriber {
             let randomMovementChoice = randomValue % possibleMovements.count
             
             let movement = possibleMovements[randomMovementChoice]
-
+            
             self.index -= 1
             
             possiblePositions[index].isOccupied = true
@@ -86,6 +86,14 @@ class BubbleStation: BubbleSubscriber {
         let bubbleLen = bubbles.count
         for bubbleIndex in 0..<bubbleLen{
             bubbles[bubbleIndex].movingBubble()
+        }
+    }
+    
+    func refreshBubbles(){
+        for bubble in bubbles {
+            bubble.isPaused = false
+            bubble.isHidden = false
+            
         }
     }
 }
