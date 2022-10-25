@@ -7,7 +7,6 @@
 import Foundation
 import SpriteKit
 
-protocol BubbleSubscriber {
-    func addToGame(insideScene scene: SKScene)
+protocol BubbleSubscriber: AddableGame {
     func update()
 }

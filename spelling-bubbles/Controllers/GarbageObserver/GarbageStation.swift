@@ -44,10 +44,13 @@ class GarbageStation: GarbageSubscriber {
             let movement = movements[randomMovementChoice]
             
             let newPosition = garbageManager.getNextAvaiablePosition()
+            
+            let name = objects[objectChoice]
                         
             let newGarbage = Garbage(atThisPostion: newPosition,
-                                     image: objects[objectChoice],
-                                     andMoveLike: movement)
+                                     image: "box",
+                                     andMoveLike: movement,
+                                     withName: "box")
             garbages.append(newGarbage)
         }
     }
@@ -74,5 +77,27 @@ class GarbageStation: GarbageSubscriber {
             garbage.moveTo(newPosition)
         }
     }
+    
+    func moveCompletedGarbage(toBoat boat: Boat?, withCorretWord station: TextBoxStation?){
+        guard let boat = boat, let station = station else { return }
+        
+        let garbageFiltered = garbages.filter({ garbage in
+            garbage.objectName == station.word.lowercased()
+        })
+        
+        garbageFiltered.forEach{ garbage in
+            garbage.physicsBody = nil
+            garbage.run(SKAction.move(to: boat.position, duration: 0.65))
+        }
+        
+        let time = Double(garbageFiltered.count)*0.65
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + time){
+            garbageFiltered.forEach{ garbage in
+                garbage.removeFromParent()
+            }
+        }
+    }
+
 }
 

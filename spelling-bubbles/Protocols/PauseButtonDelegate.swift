@@ -8,6 +8,5 @@
 import Foundation
 
 protocol PauseButtonDelegate: AnyObject {
-    func pauseButtonPressed()
-    
+    func pauseButtonPressed()    
 }
