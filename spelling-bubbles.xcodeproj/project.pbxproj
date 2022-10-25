@@ -21,7 +21,6 @@
 		0D66710A28FF240C00DA1814 /* AnyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66710928FF240C00DA1814 /* AnyNode.swift */; };
 		0D66710C28FF242700DA1814 /* Moveable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66710B28FF242700DA1814 /* Moveable.swift */; };
 		0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66710D28FF244200DA1814 /* GarbageSubscriber.swift */; };
-		0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711128FF247300DA1814 /* WaveMovement.swift */; };
 		0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711328FF248300DA1814 /* DiagonalMovement.swift */; };
 		0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711528FF249700DA1814 /* VerticalMovement.swift */; };
 		0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66711828FF24C000DA1814 /* GarbageStation.swift */; };
@@ -62,7 +61,6 @@
 		0D66710928FF240C00DA1814 /* AnyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNode.swift; sourceTree = "<group>"; };
 		0D66710B28FF242700DA1814 /* Moveable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moveable.swift; sourceTree = "<group>"; };
 		0D66710D28FF244200DA1814 /* GarbageSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageSubscriber.swift; sourceTree = "<group>"; };
-		0D66711128FF247300DA1814 /* WaveMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveMovement.swift; sourceTree = "<group>"; };
 		0D66711328FF248300DA1814 /* DiagonalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalMovement.swift; sourceTree = "<group>"; };
 		0D66711528FF249700DA1814 /* VerticalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalMovement.swift; sourceTree = "<group>"; };
 		0D66711828FF24C000DA1814 /* GarbageStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageStation.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				17BFB03C2901BE48001FE918 /* Boat */,
-				0D66711128FF247300DA1814 /* WaveMovement.swift */,
 				0D66711328FF248300DA1814 /* DiagonalMovement.swift */,
 				0D66711528FF249700DA1814 /* VerticalMovement.swift */,
 				27DDE6652901B78B00789B2A /* VerticalWaveMovement.swift */,
@@ -344,7 +341,6 @@
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
-				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
 				17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */,
 				0D686D322901954C00774265 /* ProgressBar.swift in Sources */,

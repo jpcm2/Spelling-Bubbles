@@ -25,8 +25,6 @@ class GarbageStation: GarbageSubscriber {
     }
     
     private let movements: [Moveable] = [
-//        WaveMovement(toSide: .left),
-//        WaveMovement(toSide: .right),
         VerticalMovement(),
         DiagonalMovement(toSide: .left),
         DiagonalMovement(toSide: .right)
