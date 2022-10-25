@@ -8,10 +8,6 @@
 import Foundation
 import SpriteKit
 
-protocol TextBoxStationSubscriber {
-    func addToGame(insideScene scene: SKScene)
-}
-
 class TextBoxStation: TextBoxStationSubscriber {
     
     private var textBoxSize: CGRect {

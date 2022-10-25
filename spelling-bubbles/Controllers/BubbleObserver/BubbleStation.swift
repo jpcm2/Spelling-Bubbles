@@ -8,7 +8,7 @@
 import SpriteKit
 import UIKit
 
-class BubbleStation: BubbleSubscriber{
+class BubbleStation: BubbleSubscriber {
     
     private var bubbles: [Bubble] = []
     private let numberOfBubbles: Int

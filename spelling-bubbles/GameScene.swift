@@ -36,7 +36,6 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
         pauseButton.delegate = self
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,51 +43,49 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        setupGravityAndConfiguration(inside: view)
+        createBorderAtGameScene()
         
+        gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
+        bubbleStation = BubbleStation(numberOfBubbles: 11)
+        background = MainGameBackground(withSize: view.bounds.size)
+        textbox = TextBoxStation(withWord: "SACO")
+        
+        gargabeStation?.addToGame(insideScene: self)
+        textbox?.addToGame(insideScene: self)
+        bubbleStation?.addToGame(insideScene: self)
+                
+        [boat, background, progressBar, pauseButton].forEach{ viewObject in
+            addChild( viewObject ?? SKNode())
+        }
+    }
+    
+    private func setupGravityAndConfiguration(inside view: SKView){
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.05)
-        
+    }
+    
+    private func createBorderAtGameScene(){
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
         border.friction = 0
         border.restitution = 1
         self.physicsBody = border
-
-        self.gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
-        
-        self.bubbleStation = BubbleStation(numberOfBubbles: 11)
-        background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "SACO")
-        
-        
-        gargabeStation?.addToGame(insideScene: self)
-        textbox?.addToGame(insideScene: self)
-        self.bubbleStation?.addToGame(insideScene: self)
-        
-     
-        
-        addChild(boat)
-        
-        addChild(background ?? SKNode())
-        addChild(progressBar)
-        addChild(pauseButton)
     }
     
     override func update(_ currentTime: TimeInterval) {
-//        gargabeStation?.update()
         if isGamePaused { return }
-
+        
         gargabeStation?.update()
         boat.update()
         progressBar.update()
-        self.bubbleStation?.update()
-        
+        bubbleStation?.update()
     }
 }
 
 
 extension GameScene : PauseButtonDelegate {
     func pauseButtonPressed() {
-        self.isGamePaused = true
+        isGamePaused = true
     }
 }
