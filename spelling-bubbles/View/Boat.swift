@@ -43,19 +43,18 @@ class Boat : SKNode, AnyNode {
     
     func setupPosition() {
         let midleOfScreen = Int(UIScreen.main.bounds.width / 2)
-        let screenHeight = CGFloat(UIScreen.main.bounds.height * 0.84)
-        self.position = CGPoint(x: midleOfScreen.HAdapted - 25.HAdapted, y: screenHeight)
+        let yPosition = CGFloat(UIScreen.main.bounds.height * 0.84)
+        self.position = CGPoint(x: midleOfScreen.HAdapted - 25.HAdapted, y: yPosition)
     }
     
     func setupPhysicsBody() {
         guard let image = self.image else { return }
-        let size = CGSize(width: image.size.width,
-                          height: image.size.height)
+        let imageSize = image.size
         
         let texture = SKTexture(imageNamed: ImageConstants.BOAT)
         
         self.physicsBody = SKPhysicsBody(texture: texture,
-                                         size: size)
+                                         size: imageSize)
     }
     
     func setupAdditionalConfiguration() {

@@ -45,7 +45,7 @@ class ProgressBar: SKNode, AnyNode {
         let screenHeight = CGFloat(UIScreen.main.bounds.height)
         
         self.zPosition = 10
-        self.position = CGPoint(x: midProgressBar + 16.HAdapted, y: screenHeight - 70.VAdapted)
+        self.position = CGPoint(x: midProgressBar + 16.HAdapted, y: screenHeight)
     }
 
     
