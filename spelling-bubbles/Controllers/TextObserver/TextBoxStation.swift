@@ -52,7 +52,6 @@ class TextBoxStation: TextBoxStationSubscriber {
     func resetLettersArray(){
         letters.forEach{ letter in
             letter.removeFromParent()
-            
         }
         
         letters.removeAll()
