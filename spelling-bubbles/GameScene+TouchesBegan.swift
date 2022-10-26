@@ -31,7 +31,6 @@ extension GameScene {
             
             textbox?.resetLettersArray()
             
-            print(textbox?.currentWord ?? " ")
             textbox?.addToGame(insideScene: self)
         }
     }

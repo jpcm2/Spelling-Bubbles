@@ -8,8 +8,7 @@
 import Foundation
 import SpriteKit
 
-protocol GarbageSubscriber {
-    func addToGame(insideScene scene: SKScene)
+protocol GarbageSubscriber: AddableGame {
     func update()
 }
 

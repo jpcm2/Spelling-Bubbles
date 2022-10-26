@@ -44,7 +44,8 @@ class TextBox: SKNode, AnyNode {
     
     func setupPosition() {
         guard let xPosition = xPosition else { return }
-        self.position = CGPoint(x: xPosition, y: 242.VAdapted)
+        let yPosition = UIScreen.main.bounds.height * 0.32
+        self.position = CGPoint(x: xPosition, y: yPosition)
     }
     
     func setupAdditionalConfiguration() {

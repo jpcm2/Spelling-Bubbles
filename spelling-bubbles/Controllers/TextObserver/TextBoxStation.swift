@@ -8,11 +8,11 @@
 import Foundation
 import SpriteKit
 
-protocol TextBoxStationSubscriber {
-    func addToGame(insideScene scene: SKScene)
-}
-
 class TextBoxStation: TextBoxStationSubscriber {
+    
+    private var letters: [TextBox] = []
+    var word = "CAIXA"
+    var currentWord: String = ""
     
     private var textBoxSize: CGRect {
         return SKSpriteNode(imageNamed: ImageConstants.TEXT_BOX).frame
@@ -21,10 +21,6 @@ class TextBoxStation: TextBoxStationSubscriber {
     private var textBoxWidth: Double {
         return Double(textBoxSize.width)
     }
-
-    private var letters: [TextBox] = []
-    private var word = "CAIXA"
-    var currentWord: String = ""
     
     init(withWord word: String){
         self.word = word
@@ -36,7 +32,7 @@ class TextBoxStation: TextBoxStationSubscriber {
         let textBoxQuantity = Double(currentWord.count)
         let allTextBoxSize = textBoxQuantity * textBoxWidth + 7.5 * (textBoxQuantity-1)
         let screenSize = Double(UIScreen.main.bounds.width)
-        print(allTextBoxSize)
+        
         let startXPoint = (screenSize - allTextBoxSize)/2 + textBoxWidth/2
         
         currentWord.enumerated().forEach{ (index, letter) in
@@ -56,7 +52,6 @@ class TextBoxStation: TextBoxStationSubscriber {
     func resetLettersArray(){
         letters.forEach{ letter in
             letter.removeFromParent()
-            
         }
         
         letters.removeAll()
@@ -66,7 +61,5 @@ class TextBoxStation: TextBoxStationSubscriber {
     func refreshLetters() {
         self.currentWord = String(repeating: " ", count: self.word.count)
         resetLettersArray()
-        
-        
     }
 }
