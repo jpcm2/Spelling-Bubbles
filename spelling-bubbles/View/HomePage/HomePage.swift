@@ -25,7 +25,7 @@ struct HomePageView : View {
                 .edgesIgnoringSafeArea(.all)
             
             PlantsViews()
-            
+
             VStack(alignment: .center){
                 TopButtonsStackView()
                     .ignoresSafeArea()
