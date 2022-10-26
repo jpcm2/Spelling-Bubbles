@@ -15,9 +15,12 @@ struct LogoAndStartButtonView : View {
         static let START_ICON = "Start Icon"
     }
     
+    @State var isAnimating = false
+    
     var body: some View {
         VStack(alignment: .center){
             Image(systemName: Constants.LOGO_ICON)
+            
             Button(action: {
                 print("starIcon pressed")
             }, label: {
@@ -27,6 +30,7 @@ struct LogoAndStartButtonView : View {
                     .frame(width: 137.HAdapted,height: 112.VAdapted)
             }
             )
+            
         }
     }
 }

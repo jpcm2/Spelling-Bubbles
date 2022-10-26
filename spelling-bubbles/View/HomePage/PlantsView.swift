@@ -51,7 +51,7 @@ struct PlantsViews : View {
                 .frame(width: 39.VAdapted, height: 60.VAdapted)
                 .position(x: 18.HAdapted, y: Constants.SCREEN_HEIGHT - 30.VAdapted)
                 .rotationEffect(Angle(degrees: self.isAnimating ? 1: 0))
-                .animation(Animation.linear(duration: 4).repeatForever(), value: isAnimating)
+                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
            
             
             Image(Constants.PLANT_IMAGE_4)
@@ -62,7 +62,7 @@ struct PlantsViews : View {
                 .rotationEffect(Angle(degrees: self.isAnimating ? 1: -1))
                 .animation(Animation.linear(duration: 20).repeatForever(), value: isAnimating)
      
-        }
+        }.ignoresSafeArea()
     }
     
 }
