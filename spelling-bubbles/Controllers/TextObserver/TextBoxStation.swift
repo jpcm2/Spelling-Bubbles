@@ -32,7 +32,7 @@ class TextBoxStation: TextBoxStationSubscriber {
         let textBoxQuantity = Double(currentWord.count)
         let allTextBoxSize = textBoxQuantity * textBoxWidth + 7.5 * (textBoxQuantity-1)
         let screenSize = Double(UIScreen.main.bounds.width)
-        print(allTextBoxSize)
+        
         let startXPoint = (screenSize - allTextBoxSize)/2 + textBoxWidth/2
         
         currentWord.enumerated().forEach{ (index, letter) in
@@ -52,7 +52,6 @@ class TextBoxStation: TextBoxStationSubscriber {
     func resetLettersArray(){
         letters.forEach{ letter in
             letter.removeFromParent()
-            
         }
         
         letters.removeAll()
