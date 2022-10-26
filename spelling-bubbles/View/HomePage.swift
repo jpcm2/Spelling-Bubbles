@@ -28,42 +28,41 @@ struct HomePageView : View {
 
             
             VStack(alignment: .center){
-                HStack(alignment: .center){
-                    Button(action: {
-                       print("map button pressed")
-                    }) {
-                        Image(Constants.MAP_ICON)
-                            .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-                    }
-                    Spacer()
-                    Button(action: {
-                        print("Settings button Pressed")
-                    }, label: {
-                        Image(Constants.SETTINGS_ICON)
-                            .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-                    })
-                }
-                .padding(.horizontal, CGFloat(14.HAdapted))
-                
-            
-                VStack(alignment: .center){
-                    Image(systemName: "star.fill")
-                    Button(action: {
-                        print("starIcon pressed")
-                    }, label: {
-                        Image(Constants.START_ICON)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 137.HAdapted,height: 112.VAdapted
-    )
-                    })
-                    
-                    
-                    
-                }
-                
+               TopButtonsStackView()
+                    .ignoresSafeArea()
+                    .padding(.horizontal, CGFloat(14.HAdapted))
+                    .padding(.top, CGFloat(35.VAdapted))
+                Spacer()
+
             }
-            .padding(.top, 11.0)
+            .padding(11.0)
+            
+            LogoAndStartButtonView()
+        }
+    }
+}
+
+struct LogoAndStartButtonView : View {
+    
+    struct Constants {
+        static let PAUSE_MENU_BACKGROUND = "HomePageBackground"
+        static let MAP_ICON = "map Icon"
+        static let SETTINGS_ICON = "settings-button"
+        static let START_ICON = "Start Icon"
+    }
+    
+    var body: some View {
+        VStack(alignment: .center){
+            Image(systemName: "star.fill")
+            Button(action: {
+                print("starIcon pressed")
+            }, label: {
+                Image(Constants.START_ICON)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 137.HAdapted,height: 112.VAdapted)
+            }
+            )
         }
     }
 }
@@ -111,5 +110,33 @@ struct PlantsViews : View {
             .scaledToFit()
             .frame(width: 156.VAdapted, height: 147.VAdapted)
             .position(x: Constants.SCREEN_WIDTH - 73.HAdapted, y: Constants.SCREEN_HEIGHT - 80.VAdapted)
+    }
+}
+
+struct TopButtonsStackView : View {
+    struct Constants {
+        static let PAUSE_MENU_BACKGROUND = "HomePageBackground"
+        static let MAP_ICON = "map Icon"
+        static let SETTINGS_ICON = "settings-button"
+        static let START_ICON = "Start Icon"
+    }
+    
+    
+    var body : some View {
+        HStack(alignment: .center){
+            Button(action: {
+               print("map button pressed")
+            }) {
+                Image(Constants.MAP_ICON)
+                    .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+            }
+            Spacer()
+            Button(action: {
+                print("Settings button Pressed")
+            }, label: {
+                Image(Constants.SETTINGS_ICON)
+                    .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+            })
+        }
     }
 }
