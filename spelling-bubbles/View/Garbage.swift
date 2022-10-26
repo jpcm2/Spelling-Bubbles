@@ -31,7 +31,6 @@ class Garbage: SKNode, AnyNode {
         
         self.position = avaiablePosition.position
         self.addChild(self.image ?? SKSpriteNode())
-        self.zPosition = 20
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -45,13 +44,14 @@ class Garbage: SKNode, AnyNode {
     }
     
     func setupPosition() {
-        self.zPosition = 13
+        self.zPosition = 20
     }
     
     func setupPhysicsBody() {
         guard let image = image else { return }
-        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: self.imageName ?? ""), size: CGSize(width: image.size.width,
-                                                                                                height: image.size.height))
+        let imageSize = image.size
+        let texture = SKTexture(imageNamed: self.imageName ?? "")
+        self.physicsBody = SKPhysicsBody(texture: texture, size: imageSize)
     }
     
     func moveTo(_ newPosition: AvaiablePosition){

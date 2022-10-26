@@ -42,9 +42,9 @@ class Boat : SKNode, AnyNode {
     }
     
     func setupPosition() {
-        let midleOfScreen = Int(UIScreen.main.bounds.width / 2)
-        let yPosition = CGFloat(UIScreen.main.bounds.height * 0.84)
-        self.position = CGPoint(x: midleOfScreen.HAdapted - 25.HAdapted, y: yPosition)
+        let midleOfScreen = CGFloat(UIScreen.main.bounds.width / 2)
+        let yPosition = CGFloat(UIScreen.main.bounds.height * 0.83)
+        self.position = CGPoint(x: midleOfScreen, y: yPosition)
     }
     
     func setupPhysicsBody() {

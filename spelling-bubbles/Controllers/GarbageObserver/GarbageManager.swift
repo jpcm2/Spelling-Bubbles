@@ -33,7 +33,7 @@ class GarbageManager {
             let xPosition: CGFloat = Constants.MAXIMUM_X - CGFloat(6*newPosition*newPosition)
             let newPoint = CGPoint(x: xPosition,
                                    y: yPosition)
-
+            
             let newAvaiablePosition = AvaiablePosition(position: newPoint,
                                                        isOccupied: false)
             avaiablePositions.append(newAvaiablePosition)
