@@ -61,6 +61,14 @@ class GarbageStation: GarbageSubscriber {
         }
     }
     
+    func checkPosition() -> Int{
+        var ret: Int = 0
+        garbages.forEach{garbage in
+            ret = ret | garbage.checkGarbagePosition()
+        }
+        return ret
+    }
+    
     func update() {
         garbages.forEach{ garbage in
             garbage.movingThroughAxisX()
