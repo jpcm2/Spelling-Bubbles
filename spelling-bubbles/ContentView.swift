@@ -26,9 +26,9 @@ struct ContentView: View {
     @State var showingPauseMenu = true
     
     var body: some View {
-        //GameView()
+        GameView()
         //PauseMenuView()
-        HomePageView()
+        //HomePageView()
             .ignoresSafeArea()
     }
     
