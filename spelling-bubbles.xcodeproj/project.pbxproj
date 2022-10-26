@@ -37,6 +37,9 @@
 		0DC262A3290799100091A7F2 /* AddableGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A2290799100091A7F2 /* AddableGame.swift */; };
 		0DC262A529079A4F0091A7F2 /* TextBoxStationSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */; };
 		0D686D342902030400774265 /* GarbageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D332902030400774265 /* GarbageManager.swift */; };
+		175CE6F42908D89600649C13 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F32908D89600649C13 /* PlantsView.swift */; };
+		175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F52908D8F100649C13 /* LogoAndStartView.swift */; };
+		175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F72908D92700649C13 /* TopbuttonsView.swift */; };
 		17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03A2901BE2D001FE918 /* Boat.swift */; };
 		17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */; };
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
@@ -50,6 +53,7 @@
 		17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05029071194001FE918 /* SoundAndMusicView.swift */; };
 		17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB052290711D6001FE918 /* IconAndLabelView.swift */; };
 		17BFB05529071205001FE918 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05429071205001FE918 /* BottomButtons.swift */; };
+		17C55245290860CF00929589 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C55244290860CF00929589 /* HomePage.swift */; };
 		2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */; };
 		27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27810D992901C93E00E167E1 /* SoundController.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
@@ -90,6 +94,9 @@
 		0DC262A2290799100091A7F2 /* AddableGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableGame.swift; sourceTree = "<group>"; };
 		0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxStationSubscriber.swift; sourceTree = "<group>"; };
 		0D686D332902030400774265 /* GarbageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageManager.swift; sourceTree = "<group>"; };
+		175CE6F32908D89600649C13 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
+		175CE6F52908D8F100649C13 /* LogoAndStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndStartView.swift; sourceTree = "<group>"; };
+		175CE6F72908D92700649C13 /* TopbuttonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopbuttonsView.swift; sourceTree = "<group>"; };
 		17BFB03A2901BE2D001FE918 /* Boat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boat.swift; sourceTree = "<group>"; };
 		17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatVerticalMoviment.swift; sourceTree = "<group>"; };
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 		17BFB05029071194001FE918 /* SoundAndMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAndMusicView.swift; sourceTree = "<group>"; };
 		17BFB052290711D6001FE918 /* IconAndLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAndLabelView.swift; sourceTree = "<group>"; };
 		17BFB05429071205001FE918 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
+		17C55244290860CF00929589 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+TouchesBegan.swift"; sourceTree = "<group>"; };
 		27810D992901C93E00E167E1 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
@@ -252,6 +260,7 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				175CE6F22908D87600649C13 /* HomePage */,
 				17BFB04B2907110A001FE918 /* PauseView */,
 				0D66711E28FF2E9E00DA1814 /* MainGameBackground.swift */,
 				0D686D2828FF7DBA00774265 /* TextBox.swift */,
@@ -271,6 +280,17 @@
 				0D686D2D28FF84C100774265 /* TextBoxStation.swift */,
 			);
 			path = TextObserver;
+			sourceTree = "<group>";
+		};
+		175CE6F22908D87600649C13 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				17C55244290860CF00929589 /* HomePage.swift */,
+				175CE6F32908D89600649C13 /* PlantsView.swift */,
+				175CE6F52908D8F100649C13 /* LogoAndStartView.swift */,
+				175CE6F72908D92700649C13 /* TopbuttonsView.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		0DC262A629079A9D0091A7F2 /* Subscribers */ = {
@@ -393,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */,
+				17C55245290860CF00929589 /* HomePage.swift in Sources */,
 				27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */,
 				0D66710C28FF242700DA1814 /* Moveable.swift in Sources */,
 				0D6670FC28FF233300DA1814 /* GameScene.swift in Sources */,
@@ -404,12 +425,14 @@
 				0D686D2228FF65D200774265 /* ShakeHandler.swift in Sources */,
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
+				175CE6F42908D89600649C13 /* PlantsView.swift in Sources */,
+				175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */,
 				17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
 				17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */,
-				0D66711228FF247300DA1814 /* WaveMovement.swift in Sources */,
+				175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */,
 				17BFB04429023913001FE918 /* PauseButton.swift in Sources */,
 				17BFB04F2907114E001FE918 /* PauseLabelView.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
