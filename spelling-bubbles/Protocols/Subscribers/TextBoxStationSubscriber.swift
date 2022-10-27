@@ -8,4 +8,6 @@
 import Foundation
 
 
-protocol TextBoxStationSubscriber: AddableGame  {}
+protocol TextBoxStationSubscriber: AddableGame  {
+    func checkCurrentWord() -> Bool
+}

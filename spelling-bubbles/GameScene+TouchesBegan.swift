@@ -32,6 +32,27 @@ extension GameScene {
             textbox?.resetLettersArray()
             
             textbox?.addToGame(insideScene: self)
+            
+            guard let wordSize = textbox?.word.count else {return}
+            var currentWordRealSize = 0
+            
+            newString.forEach{letter in
+                if letter != " "{
+                    currentWordRealSize += 1
+                    print("adadas")
+                }
+            }
+            
+            if wordSize == currentWordRealSize{
+                guard let ret = textbox?.checkCurrentWord() else{return}
+                if ret{
+                    // Tira o certo
+                }else{
+                    bubbleStation?.refreshBubbles()
+                    textbox?.refreshLetters()
+                    textbox?.addToGame(insideScene: self)
+                }
+            }
         }
     }
 }
