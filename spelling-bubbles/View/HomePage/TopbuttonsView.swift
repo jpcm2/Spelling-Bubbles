@@ -15,7 +15,6 @@ struct TopButtonsStackView : View {
         static let SETTINGS_ICON = "settings-button"
     }
     
-    
     var body : some View {
         HStack(alignment: .top){
             Button(action: {

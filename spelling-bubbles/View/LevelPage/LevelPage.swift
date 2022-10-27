@@ -21,20 +21,18 @@ struct LevelPage : View {
         static let BACKGROUND = "level-map"
     }
     
-    let paddings = EdgeInsets(top: 32,
+    let paddings = EdgeInsets(top: 47.VAdapted,
                               leading: 14.HAdapted,
                               bottom: 0,
                               trailing: 14.HAdapted)
     
     var positions: [LevelPosition] = {
-        let width = UIScreen.main.bounds.width
-        let height = UIScreen.main.bounds.height
         
         let firstLevel = LevelPosition(x: 250.HAdapted, y: 200.VAdapted)
         let secondLevel = LevelPosition(x: 320.HAdapted, y: 270.VAdapted)
-        let thirdLevel = LevelPosition(x: width * 0.64, y: height * 0.55)
-        let fourthLevel = LevelPosition(x: width * 0.5, y: height * 0.7)
-        let fifthLevel = LevelPosition(x: width * 0.15, y: height * 0.9)
+        let thirdLevel = LevelPosition(x: 290.HAdapted, y: 400.VAdapted)
+        let fourthLevel = LevelPosition(x: 230.HAdapted, y: 600.VAdapted)
+        let fifthLevel = LevelPosition(x: 60.HAdapted, y: 720.VAdapted)
         
         return [firstLevel, secondLevel, thirdLevel, fourthLevel, fifthLevel ]
     }()
@@ -43,8 +41,8 @@ struct LevelPage : View {
         ZStack{
             Image(Constants.BACKGROUND)
                 .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .edgesIgnoringSafeArea([.trailing, .leading, .bottom])
             
             VStack {
                 TopButtonsStackView()
@@ -58,7 +56,6 @@ struct LevelPage : View {
                     print("10")
                 }, title: "\(index+1)")
             }
-        
         }
     }
 }
