@@ -50,12 +50,12 @@ class GameScene: SKScene {
         gargabeStation = GarbageStation(withThisGarbageQuantity: 4)
         bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
-        textbox = TextBoxStation(withWord: "BOX")
+        textbox = TextBoxStation(withWord: gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA")
         
         gargabeStation?.addToGame(insideScene: self)
         textbox?.addToGame(insideScene: self)
         bubbleStation?.addToGame(insideScene: self)
-                
+        
         [boat, background, pauseButton].forEach{ viewObject in
             addChild( viewObject ?? SKNode())
         }
