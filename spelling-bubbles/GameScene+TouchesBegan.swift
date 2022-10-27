@@ -39,14 +39,19 @@ extension GameScene {
             newString.forEach{letter in
                 if letter != " "{
                     currentWordRealSize += 1
-                    print("adadas")
                 }
             }
             
             if wordSize == currentWordRealSize{
                 guard let ret = textbox?.checkCurrentWord() else{return}
                 if ret{
-                    // Tira o certo
+                    gargabeStation?.removeGarbage()
+                    gargabeStation?.setupIndicatedGarbage()
+                    textbox?.word = gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA"
+                    textbox?.refreshLetters()
+                    bubbleStation?.refreshBubbles()
+                    textbox?.addToGame(insideScene: self)
+                    
                 }else{
                     bubbleStation?.refreshBubbles()
                     textbox?.refreshLetters()

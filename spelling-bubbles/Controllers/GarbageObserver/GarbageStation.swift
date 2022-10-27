@@ -11,8 +11,9 @@ import SpriteKit
 class GarbageStation: GarbageSubscriber {
 
     private var garbages: [Garbage] = []
-    private let garbageQuantity: Int
+    private var garbageQuantity: Int
     var indicatedGarbage: Garbage?
+    private var indicatedGarbageIndex: Int?
     
     private let garbageManager = GarbageManager()
     
@@ -61,6 +62,7 @@ class GarbageStation: GarbageSubscriber {
         let randomIndex = Int.random(in: 0...self.garbageQuantity-1)
         garbages[randomIndex].toggleIndication()
         self.indicatedGarbage = garbages[randomIndex]
+        self.indicatedGarbageIndex = randomIndex
     }
     
     func addToGame(insideScene scene: SKScene){
@@ -82,6 +84,14 @@ class GarbageStation: GarbageSubscriber {
             garbage.movingThroughAxisX()
             garbage.checkIndication()
         }
+    }
+    
+    func removeGarbage(){
+        guard let indexToRemove = self.indicatedGarbageIndex else {return}
+        garbages[indexToRemove].isPaused = true
+        garbages[indexToRemove].isHidden = true
+        garbages.remove(at: indexToRemove)
+        self.garbageQuantity -= 1
     }
     
     func didUserShakeIphone(){

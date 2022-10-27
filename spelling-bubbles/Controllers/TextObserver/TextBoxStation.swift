@@ -77,7 +77,6 @@ class TextBoxStation: TextBoxStationSubscriber {
         letters.forEach{ letter in
             letter.removeFromParent()
         }
-        
         letters.removeAll()
         setupTextBoxAtMiddle()
     }
