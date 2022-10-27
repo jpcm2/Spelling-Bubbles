@@ -17,13 +17,16 @@ class TextBox: SKNode, AnyNode {
     var image: SKSpriteNode?
     let letterBox = SKLabelNode()
     var letter: String?
-    var xPosition: Double?
+    var rockPosition: CGPoint?
     
-    init(withLetter letter: String, andXPosition position: Double){
+    init(withLetter letter: String,
+         rockPosition position: CGPoint
+    ){
+        
         super.init()
         self.letter = letter
         self.image = SKSpriteNode(imageNamed: ImageConstants.TEXT_BOX)
-        self.xPosition = position
+        self.rockPosition = position
         setupLetterInsideBox()
         setupNode()
         addChild(image ?? SKSpriteNode())
@@ -39,13 +42,14 @@ class TextBox: SKNode, AnyNode {
                                                       attributes:[.font: UIFont.rounded(ofSize: 42, weight: .semibold),
                                                                    .foregroundColor: UIColor(named: ColorConstants.MID_BLACK) ?? .black])
         guard let image = image else { return }
-        letterBox.position = CGPoint(x: frame.midX, y: frame.midY - image.frame.height/Constants.HEIGHT_COMPENSATOR)
+        letterBox.position = CGPoint(x: frame.midX,
+                                     y: frame.midY - image.frame.height/Constants.HEIGHT_COMPENSATOR)
     }
     
     func setupPosition() {
-        guard let xPosition = xPosition else { return }
-        let yPosition = UIScreen.main.bounds.height * 0.32
-        self.position = CGPoint(x: xPosition, y: yPosition)
+        guard let rockPosition = rockPosition else { return }
+        let yPosition = UIScreen.main.bounds.height * 0.28 + rockPosition.y
+        self.position = CGPoint(x: rockPosition.x, y: yPosition)
     }
     
     func setupAdditionalConfiguration() {
