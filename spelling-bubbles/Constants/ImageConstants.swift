@@ -19,5 +19,6 @@ struct ImageConstants {
     static let SOUND_ICON = "Sound Icon"
     static let RESTART_BUTTON = "RecomecarButton"
     static let MENU_BUTTON = "Menu Button"
+    static let STICK = "vara"
     
 }

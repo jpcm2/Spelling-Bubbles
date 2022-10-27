@@ -9,7 +9,7 @@ import Foundation
 import SpriteKit
 
 struct BubbleConstants {
-    static let BUBBLE_IMAGE_NAME = "bubble-bg"
+    static let RANGE_NAME = 100...900
     static let BUBBLE_LETTER_FONT = "SF-Pro-Rounded-Heavy"
     static let BUBBLE_LETTER_FONT_SIZE: CGFloat = 24.0
 }
@@ -20,12 +20,16 @@ class Bubble: SKNode, AnyNode{
     var letterLabel: SKLabelNode = SKLabelNode()
     var movement: VerticalWaveMovement?
     var letter: String = String()
+    var imageName: String = "rock-0"
     
     init(movement: VerticalWaveMovement, letter: String, nodePosition: AvaiablePosition) {
         super.init()
-        self.image = SKSpriteNode(texture: SKTexture(imageNamed: BubbleConstants.BUBBLE_IMAGE_NAME))
+        let bubuleIndexImageName = Int.random(in: BubbleConstants.RANGE_NAME) % 3
+        self.imageName = "rock-\(bubuleIndexImageName)"
+        self.image = SKSpriteNode(texture: SKTexture(imageNamed: self.imageName))
         self.letter = letter
         self.movement = movement
+        
         setupBubbleLabel()
         setupNode()
 
@@ -53,7 +57,7 @@ class Bubble: SKNode, AnyNode{
     }
     
     func setupPhysicsBody() {
-        let texture = SKTexture(imageNamed: BubbleConstants.BUBBLE_IMAGE_NAME)
+        let texture = SKTexture(imageNamed: imageName)
         let imageSize = image.size
         self.physicsBody = SKPhysicsBody(texture: texture,
                                          size: imageSize)
