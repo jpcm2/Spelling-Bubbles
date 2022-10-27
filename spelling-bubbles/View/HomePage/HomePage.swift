@@ -10,6 +10,9 @@ import SwiftUI
 
 struct HomePageView : View {
     
+    @State var showingSettingsView = false
+    
+    
     struct Constants {
         static let PAUSE_MENU_BACKGROUND = "HomePageBackground"
         static let MAP_ICON = "map Icon"
@@ -25,21 +28,35 @@ struct HomePageView : View {
                 .edgesIgnoringSafeArea(.all)
             
             PlantsViews()
-
+            
             VStack(alignment: .center){
                 TopButtonsStackView()
-                    .ignoresSafeArea()
-                    .padding(.horizontal, CGFloat(14.HAdapted))
-                    .padding(.top, CGFloat(47.VAdapted))
+                {
+                    showingSettingsView = true
+                }
+                .padding(.horizontal, CGFloat(14.HAdapted))
+                .padding(.top, CGFloat(47.VAdapted))
                 Spacer()
                 
             }
             
             LogoAndStartButtonView()
                 .padding()
+            
+            if showingSettingsView {
+                SettingsMenuView() {
+                    showingSettingsView = false
+                }
+            }
+            
         }
+                
+        
     }
 }
+
+
+
 
 
 struct HomePageView_Previews : PreviewProvider {

@@ -22,16 +22,27 @@ struct GameView: UIViewControllerRepresentable {
 
 struct ContentView: View {
     
-    @State var showingPauseMenu = true
+    
+    
+    @State var showingHomePage = true
+    @State var showingPauseMenu = false
+    @State var showingMapScreen = false
+    @State var showingsettingsMenu = false
+    @State var showingGameScene = false
+    
     
     var body: some View {
-        GameView()
+        //GameView()
         //PauseMenuView()
-        //HomePageView()
+        HomePageView()
             .ignoresSafeArea()
     }
     
 }
+
+
+
+
 
 
 
