@@ -11,14 +11,17 @@ import SwiftUI
 struct HomePageView : View {
     
     @State var showingSettingsView = false
-    
-    
+    var actionForStartButtonPressed : HandleWithButtonAction
+
     struct Constants {
         static let PAUSE_MENU_BACKGROUND = "HomePageBackground"
         static let MAP_ICON = "map Icon"
         static let SETTINGS_ICON = "settings-button"
         static let START_ICON = "Start Icon"
     }
+    
+    
+//    var test: ((Bool) -> Void)
     
     var body: some View {
         ZStack{
@@ -40,7 +43,9 @@ struct HomePageView : View {
                 
             }
             
-            LogoAndStartButtonView()
+            LogoAndStartButtonView() {
+                actionForStartButtonPressed()
+            }
                 .padding()
             
             if showingSettingsView {
@@ -61,7 +66,7 @@ struct HomePageView : View {
 
 struct HomePageView_Previews : PreviewProvider {
     static var previews: some View {
-        HomePageView()
+        HomePageView() {}
     }
 }
 

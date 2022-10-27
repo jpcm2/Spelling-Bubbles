@@ -25,17 +25,23 @@ struct ContentView: View {
     
     
     @State var showingHomePage = true
-    @State var showingPauseMenu = false
-    @State var showingMapScreen = false
-    @State var showingsettingsMenu = false
-    @State var showingGameScene = false
+    @State var isGameRunning = false
     
     
     var body: some View {
         //GameView()
         //PauseMenuView()
-        HomePageView()
-            .ignoresSafeArea()
+        if !isGameRunning {
+            HomePageView() {
+                showingHomePage.toggle()
+                isGameRunning.toggle()
+            }
+                .ignoresSafeArea()
+        } else {
+            GameView()
+                .ignoresSafeArea(.all)
+        }
+
     }
     
 }
