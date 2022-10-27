@@ -48,6 +48,7 @@ class Boat : SKNode, AnyNode {
         
         self.physicsBody = SKPhysicsBody(texture: texture,
                                          size: imageSize)
+        self.physicsBody?.affectedByGravity = false
     }
     
     func setupAdditionalConfiguration() {
