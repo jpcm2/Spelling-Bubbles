@@ -14,30 +14,48 @@ typealias HandleWithButtonAction = (() -> Void)
 struct PauseMenuView : View {
     
     var actionXButton: HandleWithButtonAction
+    var actionMenuPressed : HandleWithButtonAction
     
     struct Constants {
-        static let PAUSE_MENU_BACKGROUND = "PauseMenuBackground"
+        static let CLOSE_BUTTON = "close-button"
+        static let MENU_BUTTON = "menu-button"
+        static let MUSIC_BUTTON = "music-button"
+        static let SOUND_BUTTON = "soundeffects-button"
+        static let BACKGROUND_IMAGE = "settignsBackgroundView"
+        static let RESTART_BUTTON = "restart-button"
+        
     }
     
     var body: some View {
         ZStack{
-            Color(Constants.PAUSE_MENU_BACKGROUND)
-                .frame(width: 332.HAdapted, height: 550.VAdapted, alignment: .center)
-                .cornerRadius(20)
-                .padding()
+            Image(Constants.BACKGROUND_IMAGE)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 332.HAdapted, height: 477.VAdapted)
             
-            VStack() {
+            XButtonView(){
+                actionXButton()
+            }
+            
+            VStack(alignment: .center) {
                 
-                XButtonView() {
-                    actionXButton()
-                }
                 PauseLabelView()
-                SoundAndMusicView()
-                BottomButtons()
+                    .padding(.top, 10.VAdapted)
+                
+                VStack(alignment: .center, spacing: 50){
+                    
+                    SoundAndMusicView()
+                        .padding(.horizontal, 1.0)
+                    
+                    BottomButtons(actionForRestart: {}, actionForMenu: {
+                        actionMenuPressed()
+                    })
+                }
+                .padding(.top, 0.0)
                 
             }
-            .padding()
         }
+        
     }
     
 }
@@ -45,6 +63,6 @@ struct PauseMenuView : View {
 
 struct PauseMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        PauseMenuView() {}
+        PauseMenuView(actionXButton: {}, actionMenuPressed: {})
     }
 }

@@ -13,6 +13,8 @@ typealias Game = GameScene & ShakeHandler
 
 class GameViewController: UIViewController {
     
+    //var actionMenuPressed : HandleWithButtonAction
+    
     var scene: GameScene?
     
     override func loadView() {
@@ -62,6 +64,7 @@ extension GameViewController: PauseButtonDelegate {
         let vc = UIHostingController(rootView: PauseMenuView(actionXButton: {
             // action for x button
             self.scene?.isGamePaused = false
+        }, actionMenuPressed: {
         }))
         
         vc.modalPresentationStyle = .overFullScreen

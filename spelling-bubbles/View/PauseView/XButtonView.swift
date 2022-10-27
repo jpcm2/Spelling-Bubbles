@@ -14,17 +14,16 @@ struct XButtonView: View {
     var actionXButton: HandleWithButtonAction
     
     var body: some View {
-        HStack() {
-            Spacer()
-            Button(action: {
-                actionXButton()
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                Image(ImageConstants.X_BUTTON)
-                    .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-                    .padding(.bottom, 20.0)
-            }
-        }.padding([.top, .bottom, .trailing], 40.0)
+        
+        Button(action: {
+            actionXButton()
+            
+        }, label: {
+            Image(PauseMenuView.Constants.CLOSE_BUTTON)
+                .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+        })
+        .frame(width: 59.HAdapted, height: 54.VAdapted)
+        .position(x: 310.HAdapted, y: 170.VAdapted)
         
     }
 }

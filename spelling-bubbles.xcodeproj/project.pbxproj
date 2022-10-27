@@ -52,7 +52,6 @@
 		17BFB04D2907112D001FE918 /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04C2907112D001FE918 /* XButtonView.swift */; };
 		17BFB04F2907114E001FE918 /* PauseLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04E2907114E001FE918 /* PauseLabelView.swift */; };
 		17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05029071194001FE918 /* SoundAndMusicView.swift */; };
-		17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB052290711D6001FE918 /* IconAndLabelView.swift */; };
 		17BFB05529071205001FE918 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05429071205001FE918 /* BottomButtons.swift */; };
 		17C55245290860CF00929589 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C55244290860CF00929589 /* HomePage.swift */; };
 		2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */; };
@@ -110,7 +109,6 @@
 		17BFB04C2907112D001FE918 /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
 		17BFB04E2907114E001FE918 /* PauseLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseLabelView.swift; sourceTree = "<group>"; };
 		17BFB05029071194001FE918 /* SoundAndMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAndMusicView.swift; sourceTree = "<group>"; };
-		17BFB052290711D6001FE918 /* IconAndLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAndLabelView.swift; sourceTree = "<group>"; };
 		17BFB05429071205001FE918 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
 		17C55244290860CF00929589 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+TouchesBegan.swift"; sourceTree = "<group>"; };
@@ -323,7 +321,6 @@
 				17BFB04C2907112D001FE918 /* XButtonView.swift */,
 				17BFB04E2907114E001FE918 /* PauseLabelView.swift */,
 				17BFB05029071194001FE918 /* SoundAndMusicView.swift */,
-				17BFB052290711D6001FE918 /* IconAndLabelView.swift */,
 				17BFB05429071205001FE918 /* BottomButtons.swift */,
 			);
 			path = PauseView;
@@ -430,7 +427,6 @@
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				175CE6F42908D89600649C13 /* PlantsView.swift in Sources */,
 				175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */,
-				17BFB053290711D6001FE918 /* IconAndLabelView.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,
 				27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,

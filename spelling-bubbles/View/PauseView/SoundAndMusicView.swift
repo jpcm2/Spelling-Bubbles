@@ -11,18 +11,36 @@ import SwiftUI
 
 struct SoundAndMusicView : View {
     
+    
+    
     var body: some View {
-        HStack{
-            IconAndLabelStackView(actionForButton: {print("Action for this button")},
-                                  imageString: ImageConstants.MUSIC_ICON,
-                                  textString: "Music")
+        HStack(alignment: .center){
+            VStack{
+                Button(action: {
+                    print("button pressed")
+                    
+                }) {
+                    Image(PauseMenuView.Constants.MUSIC_BUTTON)
+                        .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                }
+                
+                Text("Música")
+            }
+            .padding()
             
-            IconAndLabelStackView(actionForButton: {print("Action for this other button")},
-                                  imageString: ImageConstants.SOUND_ICON,
-                                  textString: "Sounds")
-            
+            VStack{
+                Button(action: {
+                    print("button pressed")
+                    
+                }) {
+                    Image(PauseMenuView.Constants.SOUND_BUTTON)
+                        .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                }
+                
+                Text("Som")
+            }
+            .padding()
         }
-        .padding()
     }
     
 }
