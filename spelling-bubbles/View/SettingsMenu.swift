@@ -19,6 +19,7 @@ struct SettingsMenuView : View {
         static let SOUND_BUTTON = "soundeffects-button"
         static let BACKGROUND_IMAGE = "settignsBackgroundView"
         static let SITE_BUUTTON = "site-button"
+        
     }
     
     var body: some View {
@@ -37,9 +38,9 @@ struct SettingsMenuView : View {
             }, label: {
                 Image(Constants.CLOSE_BUTTON)
                     .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-                    .frame(width: 59.HAdapted, height: 54.VAdapted)
-                    .position(x: 310.HAdapted, y: 140.VAdapted)}
-            )
+            })
+            .frame(width: 59.HAdapted, height: 54.VAdapted)
+            .position(x: 310.HAdapted, y: 170.VAdapted)
             
             
             
