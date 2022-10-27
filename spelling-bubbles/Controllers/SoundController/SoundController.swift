@@ -10,7 +10,6 @@ import AVFoundation
 
 class SoundController {
     
-    // Listar os nomes e os tipos (mp3) de cada asset.
     let mainMusicName: String?
     let mainMusicType: String?
     var mainMusicAudioPlayer: AVAudioPlayer = AVAudioPlayer()
@@ -31,7 +30,7 @@ class SoundController {
             mainMusicAudioPlayer.numberOfLoops = -1
             mainMusicAudioPlayer.volume = Float(Constants.mainMusicVolume)
             mainMusicAudioPlayer.play()
-        }catch{
+        } catch { 
             print("ERROR: Could not find and play the sound file")
         }
     }
