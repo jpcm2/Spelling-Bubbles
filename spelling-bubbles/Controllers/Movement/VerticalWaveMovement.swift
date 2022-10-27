@@ -18,6 +18,6 @@ class VerticalWaveMovement {
         
     func moving(y: Double) -> Double {
         counter += 1
-        return y + (side.rawValue*sin(counter * Double.pi / 180))/1.5
+        return y + (side.rawValue*sin(counter * Double.pi / 180))/15
     }
 }
