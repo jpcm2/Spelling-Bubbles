@@ -17,7 +17,7 @@ class GameScene: SKScene {
 
     var background: MainGameBackground?
     var textbox: TextBoxStation?
-    var progressBar = ProgressBar(withMaxProgress: 3)
+//    var progressBar = ProgressBar(withMaxProgress: 3)
     var boat = Boat()
     var pauseButton = PauseButton()
     
@@ -55,7 +55,7 @@ class GameScene: SKScene {
         textbox?.addToGame(insideScene: self)
         bubbleStation?.addToGame(insideScene: self)
                 
-        [boat, background, progressBar, pauseButton].forEach{ viewObject in
+        [boat, background, pauseButton].forEach{ viewObject in
             addChild( viewObject ?? SKNode())
         }
     }
@@ -89,7 +89,6 @@ class GameScene: SKScene {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5){
             self.gargabeStation?.moveCompletedGarbage(toBoat: self.boat,
                                                       withCorretWord: self.textbox)
-            self.progressBar.update()
         }
     }
 }

@@ -11,13 +11,14 @@ import Foundation
 struct ImageConstants {
     
     static let MAIN_GAME_BACKGROUND = "main-game"
-    static let TEXT_BOX = "text-box"
-    static let BOAT = "Barco+Lixeiras"
+    static let TEXT_BOX = "bg-rock"
+    static let BOAT = "boatman"
     static let PAUSE_BUTTON = "pause Button"
     static let X_BUTTON = "XButton"
     static let MUSIC_ICON = "Music Icon"
     static let SOUND_ICON = "Sound Icon"
     static let RESTART_BUTTON = "RecomecarButton"
     static let MENU_BUTTON = "Menu Button"
+    static let STICK = "vara"
     
 }

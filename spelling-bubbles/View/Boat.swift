@@ -42,8 +42,8 @@ class Boat : SKNode, AnyNode {
     }
     
     func setupPosition() {
-        let midleOfScreen = CGFloat(UIScreen.main.bounds.width / 2)
-        let yPosition = CGFloat(UIScreen.main.bounds.height * 0.83)
+        let midleOfScreen = CGFloat(UIScreen.main.bounds.width) * 0.48
+        let yPosition = CGFloat(UIScreen.main.bounds.height * 0.87)
         self.position = CGPoint(x: midleOfScreen, y: yPosition)
     }
     

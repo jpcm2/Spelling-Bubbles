@@ -35,12 +35,36 @@ class TextBoxStation: TextBoxStationSubscriber {
         
         let startXPoint = (screenSize - allTextBoxSize)/2 + textBoxWidth/2
         
+        let addToYPosition = createNewYPositions()
+        
         currentWord.enumerated().forEach{ (index, letter) in
             let newXPosition = startXPoint + Double(index) * (textBoxWidth + 7.5)
             let newLetter = TextBox(withLetter: String(letter),
-                                    andXPosition: newXPosition)
+                                    rockPosition: CGPoint(x: newXPosition, y: addToYPosition[index]))
             letters.append(newLetter)
         }
+    }
+    
+    private func createNewYPositions() -> [Double] {
+        var left = 0
+        var right = currentWord.count - 1
+        var yPositions: [Double] = []
+        var index: Double = 1
+        
+        for _ in 0..<currentWord.count {
+            yPositions.append(0.0)
+        }
+
+        while(left < right){
+            let position = -2*2*index
+            yPositions.insert( position , at: left)
+            yPositions.insert( position , at: right)
+            left += 1
+            right -= 1
+            index += 1
+        }
+        
+        return yPositions
     }
     
     func addToGame(insideScene scene: SKScene) {

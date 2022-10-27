@@ -16,10 +16,10 @@ class BubbleStation: BubbleSubscriber {
     private var possiblePositions: [AvaiablePosition] = []
     var index: Int = 0
     
-    struct Constants{
+    struct Constants {
         static let SPACE_TO_OCCUPY_ODD = 4
         static let SPACE_TO_OCCUPY_EVEN = 3
-        static let MAX_HEIGHT = 180.VAdapted
+        static let MAX_HEIGHT = 155.VAdapted
         static let MIN_HEIGHT = 60.VAdapted
         static let MIN_WIDTH_ODD = UIScreen.main.bounds.width * 0.15 //83.VAdapted
         static let MIN_WIDTH_EVEN = UIScreen.main.bounds.width * 0.1 //43.VAdapted
@@ -39,9 +39,6 @@ class BubbleStation: BubbleSubscriber {
     }
     
     func createAvaiableSpawnPosition(){
-        // Pegar as posições
-        // Pensar nas posições
-        // Altura minima = 80.00 e altura maxima = 230.00 (Iphone 11 --> Ficou meio ruim no iphone menor)
         for row in 1..<4{
             let maxColumn = row % 2 == 0 ? Constants.SPACE_TO_OCCUPY_EVEN:Constants.SPACE_TO_OCCUPY_ODD
             let rawHeight = Int(Constants.MAX_HEIGHT) - (row - 1)*Int(Constants.VERTICAL_DISTANCE_BETWEEN_BUBBLES)

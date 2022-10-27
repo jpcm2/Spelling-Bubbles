@@ -28,7 +28,7 @@ class PauseButton: SKNode, AnyNode {
         self.zPosition = 9
         
         let yPosition = CGFloat(UIScreen.main.bounds.height) * 0.92
-        let xPosition = CGFloat(UIScreen.main.bounds.width) * 0.93
+        let xPosition = CGFloat(UIScreen.main.bounds.width) * 0.91
         self.position = CGPoint(x: xPosition, y: yPosition)
     }
     
