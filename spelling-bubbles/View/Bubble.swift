@@ -14,7 +14,7 @@ struct BubbleConstants {
     static let BUBBLE_LETTER_FONT_SIZE: CGFloat = 24.0
 }
 
-class Bubble: SKNode, AnyNode{
+class Bubble: SKNode, AnyNode {
     
     var image: SKSpriteNode = SKSpriteNode()
     var letterLabel: SKLabelNode = SKLabelNode()
@@ -24,32 +24,30 @@ class Bubble: SKNode, AnyNode{
     
     init(movement: VerticalWaveMovement, letter: String, nodePosition: AvaiablePosition) {
         super.init()
-        let bubuleIndexImageName = Int.random(in: BubbleConstants.RANGE_NAME) % 3
-        self.imageName = "rock-\(bubuleIndexImageName)"
-        self.image = SKSpriteNode(texture: SKTexture(imageNamed: self.imageName))
+        createRockImageName()
+        
+        self.image = SKSpriteNode(texture: SKTexture(imageNamed: imageName))
         self.letter = letter
         self.movement = movement
         
         setupBubbleLabel()
         setupNode()
-
+        
         self.position = nodePosition.position
-        self.addChild(self.image)
-        self.addChild(self.letterLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupBubbleLabel(){
-        self.letterLabel.attributedText = NSAttributedString(string: letter,
-                                                             attributes:[.font: UIFont.rounded(ofSize: BubbleConstants.BUBBLE_LETTER_FONT_SIZE, weight: .semibold),
-                                                          .foregroundColor: UIColor(named: ColorConstants.MID_BLACK) ?? .black])
-        self.letterLabel.fontColor = .black
-        self.letterLabel.fontSize = BubbleConstants.BUBBLE_LETTER_FONT_SIZE
-        self.letterLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY - self.image.frame.height/5)
-        self.letterLabel.name = "bubble"
+    private func createRockImageName(){
+        let rockIndexImageName = Int.random(in: BubbleConstants.RANGE_NAME) % 3
+        self.imageName = "rock-\(rockIndexImageName)"
+    }
+    
+    func addChilds() {
+        addChild(image)
+        addChild(letterLabel)
     }
     
     func setupPosition() {
@@ -64,11 +62,25 @@ class Bubble: SKNode, AnyNode{
         self.physicsBody?.affectedByGravity = false
     }
     
+    func setupBubbleLabel(){
+        let font = UIFont.rounded(ofSize: BubbleConstants.BUBBLE_LETTER_FONT_SIZE,
+                                  weight: .semibold)
+        let color = UIColor(named: ColorConstants.MID_BLACK) ?? .black
+        
+        self.letterLabel.attributedText = NSAttributedString(string: letter,
+                                                             attributes: [.font: font,
+                                                                          .foregroundColor: color])
+        
+        self.letterLabel.fontColor = .black
+        self.letterLabel.fontSize = BubbleConstants.BUBBLE_LETTER_FONT_SIZE
+        self.letterLabel.position = CGPoint(x: self.frame.midX,
+                                            y: self.frame.midY - self.image.frame.height/5)
+        self.letterLabel.name = "bubble"
+    }
+    
     func movingBubble(){
-        guard let movement = self.movement else{return}
+        guard let movement = self.movement else { return }
         let newYposition = movement.moving(y: self.position.y)
         self.position = CGPoint(x: self.position.x, y: newYposition)
     }
-    
-
 }
