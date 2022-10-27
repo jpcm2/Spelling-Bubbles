@@ -12,6 +12,7 @@ class GarbageStation: GarbageSubscriber {
 
     private var garbages: [Garbage] = []
     private let garbageQuantity: Int
+    private var indicatedGarbage: Garbage?
     
     private let garbageManager = GarbageManager()
     
@@ -32,7 +33,8 @@ class GarbageStation: GarbageSubscriber {
     
     init(withThisGarbageQuantity quantity: Int){
         self.garbageQuantity = quantity
-        setupGarbages()
+        self.setupGarbages()
+        self.setupIndicatedGarbage()
     }
     
     private func setupGarbages(){
@@ -55,6 +57,12 @@ class GarbageStation: GarbageSubscriber {
         }
     }
     
+    func setupIndicatedGarbage(){
+        let randomIndex = Int.random(in: 0...self.garbageQuantity-1)
+        garbages[randomIndex].toggleIndication()
+        self.indicatedGarbage = garbages[randomIndex]
+    }
+    
     func addToGame(insideScene scene: SKScene){
         garbages.forEach{ garbage in
             scene.addChild(garbage)
@@ -72,6 +80,7 @@ class GarbageStation: GarbageSubscriber {
     func update() {
         garbages.forEach{ garbage in
             garbage.movingThroughAxisX()
+            garbage.checkIndication()
         }
     }
     

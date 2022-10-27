@@ -14,7 +14,8 @@ class Garbage: SKNode, AnyNode {
     var image: SKSpriteNode?
     var imageName: String?
     var objectName: String?
-    
+    var isIndicated: Bool?
+
     struct Constants {
         static let GAME_OVER_HEIGHT = 100.0
         static let TRUE = 1
@@ -31,9 +32,9 @@ class Garbage: SKNode, AnyNode {
         self.imageName = image
         self.movement = movement
         self.objectName = name
+        self.isIndicated = true
         
         setupNode()
-        
         self.position = avaiablePosition.position
     }
 
@@ -78,5 +79,19 @@ class Garbage: SKNode, AnyNode {
             return Constants.TRUE
         }
         return Constants.FALSE
+    }
+    
+    func toggleIndication(){
+        self.isIndicated?.toggle()
+    }
+    
+    func checkIndication() {
+        guard let indication = self.isIndicated else {return}
+        if indication{
+            self.removeAllChildren()
+            self.addChild(SKSpriteNode(imageNamed: ImageConstants.GARBAGE_INDICATOR_BG))
+            guard let image = self.image else {return}
+            self.addChild(image)
+        }
     }
 }
