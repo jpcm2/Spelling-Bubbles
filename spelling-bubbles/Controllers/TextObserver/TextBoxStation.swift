@@ -11,7 +11,7 @@ import SpriteKit
 class TextBoxStation: TextBoxStationSubscriber {
     
     private var letters: [TextBox] = []
-    var word = "CAIXA"
+    var word = ""
     var currentWord: String = ""
     
     private var textBoxSize: CGRect {
@@ -77,7 +77,6 @@ class TextBoxStation: TextBoxStationSubscriber {
         letters.forEach{ letter in
             letter.removeFromParent()
         }
-        
         letters.removeAll()
         setupTextBoxAtMiddle()
     }
@@ -85,5 +84,15 @@ class TextBoxStation: TextBoxStationSubscriber {
     func refreshLetters() {
         self.currentWord = String(repeating: " ", count: self.word.count)
         resetLettersArray()
+    }
+    
+    func checkCurrentWord() -> Bool{
+        if(self.currentWord == self.word){
+            print("DIGITOU CERRRRRTO")
+            return true
+        }else{
+            print("DIGITOU ERRADO PORRA")
+            return false
+        }
     }
 }
