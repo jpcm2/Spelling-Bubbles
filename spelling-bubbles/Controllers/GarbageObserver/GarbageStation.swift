@@ -11,12 +11,14 @@ import SpriteKit
 class GarbageStation: GarbageSubscriber {
 
     private var garbages: [Garbage] = []
-    private let garbageQuantity: Int
+    private var garbageQuantity: Int
+    var indicatedGarbage: Garbage?
+    private var indicatedGarbageIndex: Int?
     
     private let garbageManager = GarbageManager()
     
     private let objects: [String] = [
-        "box", "bottle", "bag"
+        "CAIXA", "GARRAFA", "SACOLA"
     ]
 
     struct Constants {
@@ -32,7 +34,8 @@ class GarbageStation: GarbageSubscriber {
     
     init(withThisGarbageQuantity quantity: Int){
         self.garbageQuantity = quantity
-        setupGarbages()
+        self.setupGarbages()
+        self.setupIndicatedGarbage()
     }
     
     private func setupGarbages(){
@@ -48,11 +51,18 @@ class GarbageStation: GarbageSubscriber {
             let name = objects[objectChoice]
                         
             let newGarbage = Garbage(atThisPostion: newPosition,
-                                     image: "box",
+                                     image: name,
                                      andMoveLike: movement,
-                                     withName: "box")
+                                     withName: name)
             garbages.append(newGarbage)
         }
+    }
+    
+    func setupIndicatedGarbage(){
+        let randomIndex = Int.random(in: 0...self.garbageQuantity-1)
+        garbages[randomIndex].toggleIndication()
+        self.indicatedGarbage = garbages[randomIndex]
+        self.indicatedGarbageIndex = randomIndex
     }
     
     func addToGame(insideScene scene: SKScene){
@@ -72,7 +82,16 @@ class GarbageStation: GarbageSubscriber {
     func update() {
         garbages.forEach{ garbage in
             garbage.movingThroughAxisX()
+            garbage.checkIndication()
         }
+    }
+    
+    func removeGarbage(){
+        guard let indexToRemove = self.indicatedGarbageIndex else {return}
+        garbages[indexToRemove].isPaused = true
+        garbages[indexToRemove].isHidden = true
+        garbages.remove(at: indexToRemove)
+        self.garbageQuantity -= 1
     }
     
     func didUserShakeIphone(){

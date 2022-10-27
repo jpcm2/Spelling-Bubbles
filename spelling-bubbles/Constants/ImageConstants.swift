@@ -10,6 +10,7 @@ import Foundation
 
 struct ImageConstants {
     
+    static let GARBAGE_INDICATOR_BG = "garbage-indicator-bg"
     static let MAIN_GAME_BACKGROUND = "main-game"
     static let TEXT_BOX = "bg-rock"
     static let BOAT = "boatman"

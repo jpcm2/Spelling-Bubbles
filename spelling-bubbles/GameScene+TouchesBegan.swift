@@ -32,6 +32,32 @@ extension GameScene {
             textbox?.resetLettersArray()
             
             textbox?.addToGame(insideScene: self)
+            
+            guard let wordSize = textbox?.word.count else {return}
+            var currentWordRealSize = 0
+            
+            newString.forEach{letter in
+                if letter != " "{
+                    currentWordRealSize += 1
+                }
+            }
+            
+            if wordSize == currentWordRealSize{
+                guard let ret = textbox?.checkCurrentWord() else{return}
+                if ret{
+                    gargabeStation?.removeGarbage()
+                    gargabeStation?.setupIndicatedGarbage()
+                    textbox?.word = gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA"
+                    textbox?.refreshLetters()
+                    bubbleStation?.refreshBubbles()
+                    textbox?.addToGame(insideScene: self)
+                    
+                }else{
+                    bubbleStation?.refreshBubbles()
+                    textbox?.refreshLetters()
+                    textbox?.addToGame(insideScene: self)
+                }
+            }
         }
     }
 }

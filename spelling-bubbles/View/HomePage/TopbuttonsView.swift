@@ -10,6 +10,8 @@ import SwiftUI
 
 struct TopButtonsStackView : View {
     
+    var actionForSettings : HandleWithButtonAction
+    
     struct Constants {
         static let MAP_ICON = "map Icon"
         static let SETTINGS_ICON = "settings-button"
@@ -18,14 +20,17 @@ struct TopButtonsStackView : View {
     var body : some View {
         HStack(alignment: .top){
             Button(action: {
-               print("map button pressed")
+
             }) {
                 Image(Constants.MAP_ICON)
                     .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
             }
+            
             Spacer()
+            
             Button(action: {
-                print("Settings button Pressed")
+                actionForSettings()
+                
             }, label: {
                 Image(Constants.SETTINGS_ICON)
                     .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))

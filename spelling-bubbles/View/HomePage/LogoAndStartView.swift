@@ -10,6 +10,8 @@ import SwiftUI
 
 struct LogoAndStartButtonView : View {
     
+    var actionForStartButton : HandleWithButtonAction
+    
     struct Constants {
         static let LOGO_ICON = "star.fill"
         static let START_ICON = "Start Icon"
@@ -23,6 +25,8 @@ struct LogoAndStartButtonView : View {
             
             Button(action: {
                 print("starIcon pressed")
+                actionForStartButton()
+                
             }, label: {
                 Image(Constants.START_ICON)
                     .resizable()

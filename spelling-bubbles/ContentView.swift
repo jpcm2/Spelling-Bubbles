@@ -22,17 +22,29 @@ struct GameView: UIViewControllerRepresentable {
 
 struct ContentView: View {
     
-    @State var showingPauseMenu = true
+    @State var showingHomePage = true
+    @State var isGameRunning = false
     
     var body: some View {
-//        GameView()
+        //GameView()
         //PauseMenuView()
-//        HomePageView()
-        LevelPage()
-            .ignoresSafeArea()
+        if !isGameRunning {
+            HomePageView() {
+                showingHomePage.toggle()
+                isGameRunning.toggle()
+            }
+                .ignoresSafeArea()
+        } else {
+            GameView()
+                .ignoresSafeArea(.all)
+        }
     }
     
 }
+
+
+
+
 
 
 
