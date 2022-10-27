@@ -11,19 +11,20 @@ import GameKit
 
 class GameScene: SKScene {
     
+    //    var progressBar = ProgressBar(withMaxProgress: 3)
+    
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
     var controllerPauseDelegate: PauseButtonDelegate?
-
     var background: MainGameBackground?
     var textbox: TextBoxStation?
-//    var progressBar = ProgressBar(withMaxProgress: 3)
+    
     var boat = Boat()
     var pauseButton = PauseButton()
-    
+
     var isGamePaused: Bool = false {
         didSet {
-            self.didUserTapPauseButton()
+            didUserTapPauseButton()
         }
     }
     
@@ -81,8 +82,7 @@ class GameScene: SKScene {
 
         bubbleStation?.update()
         
-        //LOGICA DA PAUSA
-        if gargabeStation?.checkPosition() == 1{
+        if gargabeStation?.checkPosition() == 1 {
             self.scene?.view?.isPaused = true
         }
         
@@ -94,8 +94,4 @@ class GameScene: SKScene {
 }
 
 
-extension GameScene : PauseButtonDelegate {
-    func pauseButtonPressed() {
-        isGamePaused = true
-    }
-}
+

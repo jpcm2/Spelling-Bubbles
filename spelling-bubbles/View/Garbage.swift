@@ -15,7 +15,7 @@ class Garbage: SKNode, AnyNode {
     var imageName: String?
     var objectName: String?
     
-    struct Constants{
+    struct Constants {
         static let GAME_OVER_HEIGHT = 100.0
         static let TRUE = 1
         static let FALSE = 0
@@ -35,17 +35,15 @@ class Garbage: SKNode, AnyNode {
         setupNode()
         
         self.position = avaiablePosition.position
-        self.addChild(self.image ?? SKSpriteNode())
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func movingThroughAxisX(){
-        guard let movement = movement else { return }
-        let newXPosition = movement.moving(x: self.position.x)
-        self.position = CGPoint(x: newXPosition, y: self.position.y)
+    func addChilds() {
+        guard let image = image else { return }
+        addChild(image)
     }
     
     func setupPosition() {
@@ -59,6 +57,12 @@ class Garbage: SKNode, AnyNode {
         self.physicsBody = SKPhysicsBody(texture: texture, size: imageSize)
     }
     
+    func movingThroughAxisX(){
+        guard let movement = movement else { return }
+        let newXPosition = movement.moving(x: self.position.x)
+        self.position = CGPoint(x: newXPosition, y: self.position.y)
+    }
+    
     func moveTo(_ newPosition: AvaiablePosition){
         self.run( SKAction.move(to: newPosition.position, duration: 0.65) )
     }
@@ -67,7 +71,7 @@ class Garbage: SKNode, AnyNode {
         self.movement = movement
     }
     
-    func checkGarbagePosition() -> Int{
+    func checkGarbagePosition() -> Int {
         if(self.position.y <= Constants.GAME_OVER_HEIGHT){
             self.isHidden = true
             self.physicsBody?.affectedByGravity = false

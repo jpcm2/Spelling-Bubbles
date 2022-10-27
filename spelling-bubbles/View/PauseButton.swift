@@ -17,13 +17,17 @@ class PauseButton: SKNode, AnyNode {
         self.image = SKSpriteNode(imageNamed: ImageConstants.PAUSE_BUTTON)
         
         setupNode()
-        self.addChild(self.image ?? SKSpriteNode())
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func addChilds() {
+        guard let image = image else { return }
+        addChild(image)
+    }
+
     func setupPosition() {
         self.zPosition = 9
         
@@ -31,13 +35,13 @@ class PauseButton: SKNode, AnyNode {
         let xPosition = CGFloat(UIScreen.main.bounds.width) * 0.91
         self.position = CGPoint(x: xPosition, y: yPosition)
     }
+        
+    func setupAdditionalConfiguration() {
+        self.isUserInteractionEnabled = true
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         delegate?.pauseButtonPressed()
-    }
-    
-    func setupAdditionalConfiguration() {
-        self.isUserInteractionEnabled = true
     }
 }
 

@@ -21,24 +21,17 @@ class Boat : SKNode, AnyNode {
     
     override init() {
         super.init()
-        setupNode()
         self.image = SKSpriteNode(imageNamed: ImageConstants.BOAT)
-        self.addChild(self.image ?? SKSpriteNode())
+        setupNode()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(){
-        let newXPosition = movementX.moving(x: self.position.x)
-        self.position.x = newXPosition
-        
-        let newYPosition = movementY.moving(x: self.position.y)
-        self.position.y = newYPosition
-        
-        let newAngularPosition = movementRotation.moving(x: self.zRotation)
-        self.zRotation = newAngularPosition
+    func addChilds() {
+        guard let image = image else { return }
+        addChild(image)
     }
     
     func setupPosition() {
@@ -60,5 +53,16 @@ class Boat : SKNode, AnyNode {
     func setupAdditionalConfiguration() {
         self.zRotation = 0
         self.zPosition = 13
+    }
+    
+    func update(){
+        let newXPosition = movementX.moving(x: self.position.x)
+        self.position.x = newXPosition
+        
+        let newYPosition = movementY.moving(x: self.position.y)
+        self.position.y = newYPosition
+        
+        let newAngularPosition = movementRotation.moving(x: self.zRotation)
+        self.zRotation = newAngularPosition
     }
 }
