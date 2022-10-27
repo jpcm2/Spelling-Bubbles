@@ -81,6 +81,11 @@ class GameScene: SKScene {
 
         bubbleStation?.update()
         
+        //LOGICA DA PAUSA
+        if gargabeStation?.checkPosition() == 1{
+            self.scene?.view?.isPaused = true
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5){
             self.gargabeStation?.moveCompletedGarbage(toBoat: self.boat,
                                                       withCorretWord: self.textbox)
