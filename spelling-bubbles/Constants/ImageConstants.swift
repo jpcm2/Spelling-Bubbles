@@ -11,7 +11,7 @@ import Foundation
 struct ImageConstants {
     
     static let MAIN_GAME_BACKGROUND = "main-game"
-    static let TEXT_BOX = "text-box"
+    static let TEXT_BOX = "bg-rock"
     static let BOAT = "boatman"
     static let PAUSE_BUTTON = "pause Button"
     static let X_BUTTON = "XButton"
