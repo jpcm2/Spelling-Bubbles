@@ -17,7 +17,7 @@ struct TopButtonsStackView : View {
     
     
     var body : some View {
-        HStack(alignment: .center){
+        HStack(alignment: .top){
             Button(action: {
                print("map button pressed")
             }) {
