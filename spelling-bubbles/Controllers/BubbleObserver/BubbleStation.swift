@@ -16,11 +16,11 @@ class BubbleStation: BubbleSubscriber {
     private var possiblePositions: [AvaiablePosition] = []
     var index: Int = 0
     
-    struct Constants{
+    struct Constants {
         static let SPACE_TO_OCCUPY_ODD = 4
         static let SPACE_TO_OCCUPY_EVEN = 3
-        static let MAX_HEIGHT = 150.VAdapted
-        static let MIN_HEIGHT = 50.VAdapted
+        static let MAX_HEIGHT = 155.VAdapted
+        static let MIN_HEIGHT = 60.VAdapted
         static let MIN_WIDTH_ODD = UIScreen.main.bounds.width * 0.15 //83.VAdapted
         static let MIN_WIDTH_EVEN = UIScreen.main.bounds.width * 0.1 //43.VAdapted
         static let VERTICAL_DISTANCE_BETWEEN_BUBBLES = 60.VAdapted
