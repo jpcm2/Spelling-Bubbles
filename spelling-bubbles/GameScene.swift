@@ -47,7 +47,7 @@ class GameScene: SKScene {
         setupGravityAndConfiguration(inside: view)
         createBorderAtGameScene()
         
-        gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
+        gargabeStation = GarbageStation(withThisGarbageQuantity: 4)
         bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
         textbox = TextBoxStation(withWord: "BOX")

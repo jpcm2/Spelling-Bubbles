@@ -32,7 +32,7 @@ class Garbage: SKNode, AnyNode {
         self.imageName = image
         self.movement = movement
         self.objectName = name
-        self.isIndicated = true
+        self.isIndicated = false
         
         setupNode()
         self.position = avaiablePosition.position
