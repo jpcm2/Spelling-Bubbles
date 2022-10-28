@@ -42,7 +42,7 @@ class TextBox: SKNode, AnyNode {
         
     func setupPosition() {
         guard let rockPosition = rockPosition else { return }
-        let yPosition = UIScreen.main.bounds.height * 0.28 + rockPosition.y
+        let yPosition = UIScreen.main.bounds.height * 0.27 + rockPosition.y
         self.position = CGPoint(x: rockPosition.x, y: yPosition)
     }
     
