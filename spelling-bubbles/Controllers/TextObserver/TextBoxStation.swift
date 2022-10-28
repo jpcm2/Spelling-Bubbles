@@ -56,13 +56,15 @@ class TextBoxStation: TextBoxStationSubscriber {
         }
 
         while(left < right){
-            let position = -2*index*index
+            let position = 2*index*index
             yPositions.insert( position , at: left)
             yPositions.insert( position , at: right)
             left += 1
             right -= 1
             index += 1
         }
+        
+        print(yPositions)
         
         return yPositions
     }

@@ -20,9 +20,6 @@ struct HomePageView : View {
         static let START_ICON = "Start Icon"
     }
     
-    
-//    var test: ((Bool) -> Void)
-    
     var body: some View {
         ZStack{
             Image(Constants.PAUSE_MENU_BACKGROUND)
@@ -33,10 +30,9 @@ struct HomePageView : View {
             PlantsViews()
             
             VStack(alignment: .center){
-                TopButtonsStackView()
-                {
-                    showingSettingsView = true
-                }
+                TopButtonsStackView(leftIcon: .map,
+                                    actionForSettings: { showingSettingsView = true },
+                                    actionForLeftButton: { print ("clicou no mapa") })
                 .padding(.horizontal, CGFloat(14.HAdapted))
                 .padding(.top, CGFloat(47.VAdapted))
                 Spacer()

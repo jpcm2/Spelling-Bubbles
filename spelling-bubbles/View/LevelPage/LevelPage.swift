@@ -17,6 +17,10 @@ struct LevelPosition: Hashable, Identifiable {
 
 struct LevelPage : View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    var actionAfterChosenLevel : HandleWithButtonAction
+    
     struct Constants {
         static let BACKGROUND = "level-map"
     }
@@ -45,7 +49,9 @@ struct LevelPage : View {
                 .edgesIgnoringSafeArea([.trailing, .leading, .bottom])
             
             VStack {
-                TopButtonsStackView()
+                TopButtonsStackView(leftIcon: .goBack,
+                                    actionForSettings: { print("oi") },
+                                    actionForLeftButton: { presentationMode.wrappedValue.dismiss() })
                     .padding(paddings)
                 Spacer()
             }
@@ -53,16 +59,18 @@ struct LevelPage : View {
             ForEach(0..<positions.count, id: \.self) { index in
                 LevelButton(position: positions[index],
                             didUserTap: {
-                    print("10")
+                    actionAfterChosenLevel()
                 }, title: "\(index+1)")
             }
         }
+        .ignoresSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 
 struct LevelPage_Previews : PreviewProvider {
     static var previews: some View {
-        LevelPage()
+        LevelPage(){}
     }
 }

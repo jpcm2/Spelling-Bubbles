@@ -24,29 +24,30 @@ struct ContentView: View {
     
     @State var showingHomePage = true
     @State var isGameRunning = false
+    @State var showingLevelPage = false
     
     var body: some View {
-        //GameView()
-        //PauseMenuView()
-        if !isGameRunning {
-            HomePageView() {
-                showingHomePage.toggle()
-                isGameRunning.toggle()
-            }
-                .ignoresSafeArea()
-        } else {
+        
+        if isGameRunning {
             GameView()
                 .ignoresSafeArea(.all)
         }
+
+        if showingHomePage {
+            HomePageView(){
+                showingHomePage = false
+                showingLevelPage = true
+            }.ignoresSafeArea(.all)
+        }
+
+        if showingLevelPage {
+            LevelPage(){
+                showingLevelPage = false
+                isGameRunning = true
+            }.ignoresSafeArea(.all)
+        }
     }
-    
 }
-
-
-
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
