@@ -35,16 +35,22 @@ struct ContentView: View {
 
         if showingHomePage {
             HomePageView(){
-                showingHomePage = false
                 showingLevelPage = true
+                showingHomePage = false
             }.ignoresSafeArea(.all)
         }
 
         if showingLevelPage {
-            LevelPage(){
+
+            LevelPage(actionAfterChosenLevel: {
                 showingLevelPage = false
                 isGameRunning = true
-            }.ignoresSafeArea(.all)
+            },
+                      actionAfterLeftButton: {
+                showingLevelPage = false
+                showingHomePage = true
+            })
+            .ignoresSafeArea(.all)
         }
     }
 }
