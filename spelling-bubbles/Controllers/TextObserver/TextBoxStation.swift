@@ -88,11 +88,9 @@ class TextBoxStation: TextBoxStationSubscriber {
     
     func checkCurrentWord() -> Bool {
         if(self.currentWord == self.word){
-            print("DIGITOU CERRRRRTO")
             return true
-        }else{
-            print("DIGITOU ERRADO PORRA")
-            return false
         }
+
+        return false
     }
 }
