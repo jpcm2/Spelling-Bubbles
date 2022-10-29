@@ -29,8 +29,6 @@ struct LevelPage : View {
         return level.status == .currrent
     }
     
-
-    
     var body: some View {
         ZStack{
             Image(Constants.BACKGROUND)
