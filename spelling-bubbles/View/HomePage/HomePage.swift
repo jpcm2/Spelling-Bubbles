@@ -10,8 +10,9 @@ import SwiftUI
 
 struct HomePageView : View {
     
+    @EnvironmentObject private var viewManager: ViewManager
+    
     @State var showingSettingsView = false
-    var actionForStartButtonPressed : HandleWithButtonAction
 
     struct Constants {
         static let PAUSE_MENU_BACKGROUND = "HomePageBackground"
@@ -40,7 +41,7 @@ struct HomePageView : View {
             }
             
             LogoAndStartButtonView() {
-                actionForStartButtonPressed()
+                viewManager.didUserTapStartButton()
             }
                 .padding()
             
@@ -62,7 +63,7 @@ struct HomePageView : View {
 
 struct HomePageView_Previews : PreviewProvider {
     static var previews: some View {
-        HomePageView() {}
+        HomePageView()
     }
 }
 

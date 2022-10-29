@@ -22,33 +22,25 @@ struct GameView: UIViewControllerRepresentable {
 
 struct ContentView: View {
     
-    @State var showingHomePage = true
-    @State var isGameRunning = false
-    @State var showingLevelPage = false
+    @EnvironmentObject private var viewManager: ViewManager
+    
+
     
     var body: some View {
         
-        if isGameRunning {
+        if viewManager.isGameRuning {
             GameView()
                 .ignoresSafeArea(.all)
         }
 
-        if showingHomePage {
-            HomePageView(){
-                showingLevelPage = true
-                showingHomePage = false
-            }.ignoresSafeArea(.all)
+        if viewManager.showingHomePage {
+            HomePageView()
+                .ignoresSafeArea(.all)
         }
 
-        if showingLevelPage {
+        if viewManager.showingLevelPage {
 
             LevelPage(actionAfterChosenLevel: {
-                showingLevelPage = false
-                isGameRunning = true
-            },
-                      actionAfterLeftButton: {
-                showingLevelPage = false
-                showingHomePage = true
             })
             .ignoresSafeArea(.all)
         }
