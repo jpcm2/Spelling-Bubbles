@@ -16,6 +16,8 @@ class LevelManager: ObservableObject {
     
     @Published var allLevels: [Level] = []
     
+    private var current = 0
+    
     init(){
         createAllLevels()
     }
@@ -33,7 +35,7 @@ class LevelManager: ObservableObject {
             return Level(position: position, status: .blocked)
         })
         
-        levels[0].status = .currrent
+        levels[current].status = .currrent
         allLevels = levels
     }
     

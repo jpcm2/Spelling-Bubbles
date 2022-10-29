@@ -24,7 +24,6 @@ struct LevelPage : View {
                               bottom: 0,
                               trailing: 14.HAdapted)
     
-    
     private func userCanPlatAt(_ level: Level) -> Bool {
         return level.status == .currrent
     }
