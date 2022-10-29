@@ -41,9 +41,7 @@ struct ContentView: View {
         }
 
         if viewManager.showingLevelPage {
-
-            LevelPage(actionAfterChosenLevel: {
-            })
+            LevelPage()
             .ignoresSafeArea(.all)
         }
     }

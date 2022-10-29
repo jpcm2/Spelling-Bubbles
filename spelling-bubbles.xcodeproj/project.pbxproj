@@ -164,6 +164,7 @@
 		0D6670E528FF1FB600DA1814 /* spelling-bubbles */ = {
 			isa = PBXGroup;
 			children = (
+				0DF9ECFA290D995700F02341 /* Manager */,
 				0D6670F928FF231000DA1814 /* ContentView.swift */,
 				0D6670FB28FF233300DA1814 /* GameScene.swift */,
 				0D1D7AB9290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift */,
@@ -181,7 +182,6 @@
 				0D6670EF28FF1FB600DA1814 /* Persistence.swift */,
 				0D6670F128FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld */,
 				0D6670EC28FF1FB600DA1814 /* Preview Content */,
-				0DF9ECF8290D88D600F02341 /* ViewManager.swift */,
 			);
 			path = "spelling-bubbles";
 			sourceTree = "<group>";
@@ -308,6 +308,14 @@
 				0D66710D28FF244200DA1814 /* GarbageSubscriber.swift */,
 			);
 			path = Subscribers;
+			sourceTree = "<group>";
+		};
+		0DF9ECFA290D995700F02341 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0DF9ECF8290D88D600F02341 /* ViewManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		175CE6F22908D87600649C13 /* HomePage */ = {

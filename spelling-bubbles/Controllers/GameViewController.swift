@@ -12,9 +12,7 @@ import SpriteKit
 typealias Game = GameScene & ShakeHandler
 
 class GameViewController: UIViewController {
-    
-    //var actionMenuPressed : HandleWithButtonAction
-    
+        
     var scene: GameScene?
     var viewManager: ViewManager?
     

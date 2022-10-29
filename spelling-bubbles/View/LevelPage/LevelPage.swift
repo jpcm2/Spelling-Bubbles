@@ -20,9 +20,7 @@ struct LevelPage : View {
     @EnvironmentObject private var viewManager: ViewManager
     
     @State var showingSettingsView = false
-    
-    var actionAfterChosenLevel : HandleWithButtonAction
-    
+        
     struct Constants {
         static let BACKGROUND = "level-map"
     }
@@ -79,6 +77,6 @@ struct LevelPage : View {
 
 struct LevelPage_Previews : PreviewProvider {
     static var previews: some View {
-        LevelPage(actionAfterChosenLevel: {})
+        LevelPage()
     }
 }
