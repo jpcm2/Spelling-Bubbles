@@ -11,7 +11,6 @@ import SwiftUI
 struct PauseLabelView : View {
     
     var body: some View {
-        
         HStack(spacing: 18.0){
             Image(systemName: "pause.fill")
                 .resizable()
@@ -21,7 +20,7 @@ struct PauseLabelView : View {
                 .font(.system(size: 36, weight: .regular, design: .rounded))
             
         }
-        .padding()
+
     }
 }
 
