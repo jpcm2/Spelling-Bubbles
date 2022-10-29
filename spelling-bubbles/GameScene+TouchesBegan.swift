@@ -6,6 +6,7 @@
 //
 
 import SpriteKit
+import AudioToolbox
 
 extension GameScene {
     
@@ -53,6 +54,7 @@ extension GameScene {
                     textbox?.addToGame(insideScene: self)
                     
                 }else{
+                    UIDevice.Vibrate()
                     bubbleStation?.refreshBubbles()
                     textbox?.refreshLetters()
                     textbox?.addToGame(insideScene: self)
