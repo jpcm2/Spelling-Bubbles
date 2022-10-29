@@ -33,6 +33,5 @@ class ViewManager: ObservableObject {
         isGameRuning = false
         showingLevelPage = true
     }
-    
-    
 }
+

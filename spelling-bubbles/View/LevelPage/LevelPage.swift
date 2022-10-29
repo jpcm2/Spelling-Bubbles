@@ -8,16 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct LevelPosition: Hashable, Identifiable {
-    var id: ObjectIdentifier?
-    
-    let x: Double
-    let y: Double
-}
-
 struct LevelPage : View {
     
     @EnvironmentObject private var viewManager: ViewManager
+    @EnvironmentObject private var levelManager: LevelManager
     
     @State var showingSettingsView = false
         
@@ -30,16 +24,12 @@ struct LevelPage : View {
                               bottom: 0,
                               trailing: 14.HAdapted)
     
-    var positions: [LevelPosition] = {
-        
-        let firstLevel = LevelPosition(x: 250.HAdapted, y: 200.VAdapted)
-        let secondLevel = LevelPosition(x: 320.HAdapted, y: 270.VAdapted)
-        let thirdLevel = LevelPosition(x: 290.HAdapted, y: 400.VAdapted)
-        let fourthLevel = LevelPosition(x: 230.HAdapted, y: 600.VAdapted)
-        let fifthLevel = LevelPosition(x: 60.HAdapted, y: 720.VAdapted)
-        
-        return [firstLevel, secondLevel, thirdLevel, fourthLevel, fifthLevel ]
-    }()
+    
+    private func userCanPlatAt(_ level: Level) -> Bool {
+        return level.status == .currrent
+    }
+    
+
     
     var body: some View {
         ZStack{
@@ -56,11 +46,12 @@ struct LevelPage : View {
                 Spacer()
             }
             
-            ForEach(0..<positions.count, id: \.self) { index in
-                LevelButton(position: positions[index],
+            ForEach(0..<levelManager.allLevels.count, id: \.self) { index in
+                let level = levelManager.allLevels[index]
+                LevelButton(position: level.position ,
                             didUserTap: {
-                    viewManager.didUserTapToStartGame()
-                }, title: "\(index+1)")
+                    if userCanPlatAt(level) { viewManager.didUserTapToStartGame() }
+                }, title: "\(index+1)", level: level.status)
             }
             
             if showingSettingsView {

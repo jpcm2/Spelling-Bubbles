@@ -16,6 +16,7 @@ struct spelling_bubblesApp: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(ViewManager())
+                .environmentObject(LevelManager())
         }
     }
 }

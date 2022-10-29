@@ -15,10 +15,9 @@ struct LevelButton : View {
     let position: LevelPosition
     let didUserTap: ButtonPressedAction
     let title: String
+    let level: LevelStatus
 
-    
     struct Constants {
-        static let COMPLETED_LEVEL = "level"
         static let TEXT_COLOR = "foreground-text-level"
     }
     
@@ -27,7 +26,7 @@ struct LevelButton : View {
             didUserTap()
         }, label: {
             ZStack {
-                Image(Constants.COMPLETED_LEVEL)
+                Image(level.rawValue)
                 
                 Text(self.title)
                     .fontWeight(.medium)
@@ -46,6 +45,6 @@ struct LevelButton_Previews : PreviewProvider {
         LevelButton(position: LevelPosition(x: 10, y: 10),
                     didUserTap: {
             print("10")
-        }, title: "1")
+        }, title: "1", level: .blocked)
     }
 }
