@@ -61,7 +61,7 @@ struct LevelPage : View {
             ForEach(0..<positions.count, id: \.self) { index in
                 LevelButton(position: positions[index],
                             didUserTap: {
-                    actionAfterChosenLevel()
+                    viewManager.didUserTapToStartGame()
                 }, title: "\(index+1)")
             }
             

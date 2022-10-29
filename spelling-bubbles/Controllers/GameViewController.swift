@@ -16,6 +16,16 @@ class GameViewController: UIViewController {
     //var actionMenuPressed : HandleWithButtonAction
     
     var scene: GameScene?
+    var viewManager: ViewManager?
+    
+    init(viewManager: ViewManager){
+        super.init(nibName: nil, bundle: nil)
+        self.viewManager = viewManager
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         super.loadView()
@@ -59,12 +69,15 @@ class GameViewController: UIViewController {
 }
 
 extension GameViewController: PauseButtonDelegate {
+    
     func pauseButtonPressed() {
         
         let vc = UIHostingController(rootView: PauseMenuView(actionXButton: {
-            // action for x button
             self.scene?.isGamePaused = false
+            self.dismiss(animated: true, completion: nil)
         }, actionMenuPressed: {
+            self.viewManager?.didUserTapGoToMenu()
+            self.dismiss(animated: true, completion: nil)
         }))
         
         vc.modalPresentationStyle = .overFullScreen

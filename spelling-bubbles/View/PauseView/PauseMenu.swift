@@ -10,7 +10,6 @@ import SwiftUI
 
 typealias HandleWithButtonAction = (() -> Void)
 
-
 struct PauseMenuView : View {
     
     var actionXButton: HandleWithButtonAction

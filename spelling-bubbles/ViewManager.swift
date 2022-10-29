@@ -24,5 +24,15 @@ class ViewManager: ObservableObject {
         showingHomePage = true
     }
     
+    func didUserTapToStartGame(){
+        showingLevelPage = false
+        isGameRuning = true
+    }
+    
+    func didUserTapGoToMenu(){
+        isGameRuning = false
+        showingLevelPage = true
+    }
+    
     
 }
