@@ -19,6 +19,8 @@ struct LevelPage : View {
     
     @EnvironmentObject private var viewManager: ViewManager
     
+    @State var showingSettingsView = false
+    
     var actionAfterChosenLevel : HandleWithButtonAction
     
     struct Constants {
@@ -50,7 +52,7 @@ struct LevelPage : View {
             
             VStack {
                 TopButtonsStackView(leftIcon: .goBack,
-                                    actionForSettings: { print("oi") },
+                                    actionForSettings: { showingSettingsView.toggle() },
                                     actionForLeftButton: { viewManager.didUserTapGoBackToHomePage() })
                     .padding(paddings)
                 Spacer()
@@ -61,6 +63,12 @@ struct LevelPage : View {
                             didUserTap: {
                     actionAfterChosenLevel()
                 }, title: "\(index+1)")
+            }
+            
+            if showingSettingsView {
+                SettingsMenuView() {
+                    showingSettingsView = false
+                }
             }
         }
         .ignoresSafeArea(.all)
