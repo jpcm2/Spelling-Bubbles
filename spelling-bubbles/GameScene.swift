@@ -12,7 +12,6 @@ import GameKit
 class GameScene: SKScene {
     
     //    var progressBar = ProgressBar(withMaxProgress: 3)
-    
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
     var controllerPauseDelegate: PauseButtonDelegate?
@@ -47,7 +46,7 @@ class GameScene: SKScene {
         setupGravityAndConfiguration(inside: view)
         createBorderAtGameScene()
         
-        gargabeStation = GarbageStation(withThisGarbageQuantity: 4)
+        gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
         bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
         textbox = TextBoxStation(withWord: gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA")
@@ -64,7 +63,7 @@ class GameScene: SKScene {
     private func setupGravityAndConfiguration(inside view: SKView){
         scene?.size = view.bounds.size
         scene?.scaleMode = .aspectFill
-        physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.05)
+        physicsWorld.gravity = CGVector(dx: 0.0, dy: -0.03)
     }
     
     private func createBorderAtGameScene(){
@@ -86,7 +85,7 @@ class GameScene: SKScene {
             self.scene?.view?.isPaused = true
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
             self.gargabeStation?.moveCompletedGarbage(toBoat: self.boat,
                                                       withCorretWord: self.textbox)
         }

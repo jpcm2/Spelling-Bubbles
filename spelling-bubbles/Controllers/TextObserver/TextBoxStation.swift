@@ -50,15 +50,15 @@ class TextBoxStation: TextBoxStationSubscriber {
         var right = currentWord.count - 1
         var yPositions: [Double] = []
         var index: Double = 1
-        
-        for _ in 0..<currentWord.count {
+                
+        for _ in 0..<word.count {
             yPositions.append(0.0)
         }
 
         while(left < right){
-            let position = -2*2*index
-            yPositions.insert( position , at: left)
-            yPositions.insert( position , at: right)
+            let position = 2*index*index
+            yPositions[left] = position
+            yPositions[right] = position
             left += 1
             right -= 1
             index += 1
@@ -86,13 +86,11 @@ class TextBoxStation: TextBoxStationSubscriber {
         resetLettersArray()
     }
     
-    func checkCurrentWord() -> Bool{
+    func checkCurrentWord() -> Bool {
         if(self.currentWord == self.word){
-            print("DIGITOU CERRRRRTO")
             return true
-        }else{
-            print("DIGITOU ERRADO PORRA")
-            return false
         }
+
+        return false
     }
 }
