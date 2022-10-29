@@ -7,15 +7,11 @@
 
 import Foundation
 
-struct Level {
-    let position: LevelPosition
-    var status: LevelStatus
-}
+
 
 class LevelManager: ObservableObject {
     
     @Published var allLevels: [Level] = []
-    
     private var current = 0
     
     init(){
@@ -38,5 +34,4 @@ class LevelManager: ObservableObject {
         levels[current].status = .currrent
         allLevels = levels
     }
-    
 }
