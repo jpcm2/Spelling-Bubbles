@@ -10,6 +10,7 @@
 		0D1D7ABA290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D7AB9290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift */; };
 		0D1D7ABD290ACBC100EE1179 /* LevelPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D7ABC290ACBC100EE1179 /* LevelPage.swift */; };
 		0D1D7ABF290ACC6D00EE1179 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D7ABE290ACC6D00EE1179 /* LevelButton.swift */; };
+		0D33EB06290F18C500474AFE /* UIDevice+Vibrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33EB05290F18C500474AFE /* UIDevice+Vibrate.swift */; };
 		0D6670E728FF1FB600DA1814 /* spelling_bubblesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6670E628FF1FB600DA1814 /* spelling_bubblesApp.swift */; };
 		0D6670EB28FF1FB600DA1814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6670EA28FF1FB600DA1814 /* Assets.xcassets */; };
 		0D6670EE28FF1FB600DA1814 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6670ED28FF1FB600DA1814 /* Preview Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		0D1D7AB9290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+PauseButtonDelegate.swift"; sourceTree = "<group>"; };
 		0D1D7ABC290ACBC100EE1179 /* LevelPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPage.swift; sourceTree = "<group>"; };
 		0D1D7ABE290ACC6D00EE1179 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
+		0D33EB05290F18C500474AFE /* UIDevice+Vibrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Vibrate.swift"; sourceTree = "<group>"; };
 		0D6670E328FF1FB600DA1814 /* spelling-bubbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spelling-bubbles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6670E628FF1FB600DA1814 /* spelling_bubblesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bubblesApp.swift; sourceTree = "<group>"; };
 		0D6670EA28FF1FB600DA1814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				0D66710628FF23DF00DA1814 /* Int+Adapted.swift */,
 				0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */,
+				0D33EB05290F18C500474AFE /* UIDevice+Vibrate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				175CE6F42908D89600649C13 /* PlantsView.swift in Sources */,
+				0D33EB06290F18C500474AFE /* UIDevice+Vibrate.swift in Sources */,
 				175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */,
 				0D1D7ABF290ACC6D00EE1179 /* LevelButton.swift in Sources */,
 				0D66711C28FF27BD00DA1814 /* ImageConstants.swift in Sources */,

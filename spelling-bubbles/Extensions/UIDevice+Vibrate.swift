@@ -5,10 +5,13 @@
 //  Created by jpcm2 on 29/10/22.
 //
 
+import Foundation
+
+
 import AudioToolbox
 import UIKit
 
-extension UIDevice{
+extension UIDevice {
     static func Vibrate(){
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
