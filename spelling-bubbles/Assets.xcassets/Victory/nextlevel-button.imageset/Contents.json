@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pause-button.png",
+      "filename" : "nextlevel-button.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pause-button@2x.png",
+      "filename" : "nextlevel-button@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pause-button@3x.png",
+      "filename" : "nextlevel-button@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

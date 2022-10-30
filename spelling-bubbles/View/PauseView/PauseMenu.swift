@@ -46,9 +46,11 @@ struct PauseMenuView : View {
                     SoundAndMusicView()
                         .padding(.horizontal, 1.0)
                     
-                    BottomButtons(actionForRestart: {}, actionForMenu: {
-                        actionMenuPressed()
-                    })
+                    BottomButtons(upperButtonIconSring: Constants.RESTART_BUTTON,
+                                  underButtonIconString: Constants.MENU_BUTTON,
+                                  upperActionButton: {},
+                                  underActionButton: { actionMenuPressed()}
+                    )
                 }
                 .padding(.top, 0.0)
                 

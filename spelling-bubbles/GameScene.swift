@@ -89,6 +89,7 @@ class GameScene: SKScene {
         
         if gargabeStation?.checkPosition() == 1 {
             self.scene?.view?.isPaused = true
+            
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3){

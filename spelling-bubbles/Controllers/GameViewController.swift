@@ -12,7 +12,7 @@ import SpriteKit
 typealias Game = GameScene & ShakeHandler
 
 class GameViewController: UIViewController {
-        
+    
     var scene: GameScene?
     var viewManager: ViewManager?
     var levelManager: LevelManager?
@@ -50,6 +50,9 @@ class GameViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupScene()
+        
+        // must be called when victory
+        // presentLevelCompleteView()
     }
     
     func setupScene(){
@@ -68,20 +71,41 @@ class GameViewController: UIViewController {
             scene.didUserStartShake()
         }
     }
+    
+    func presentLevelCompleteView() {
+        let vc = UIHostingController(rootView: LevelCompleteView(
+            actionForNextLevel: {
+                print("user taped nextLevel")
+                // must call next level, if available
+                // else, it should should restart gameScene ?
+            },
+            actionForMenu: {
+                self.viewManager?.didUserTapGoToMenu()
+                self.dismiss(animated: true, completion: nil)
+            })
+        )
+        
+        vc.modalPresentationStyle = .overFullScreen
+        vc.view.backgroundColor = .clear
+        self.present(vc, animated: true)
+    }
 }
 
 extension GameViewController: PauseButtonDelegate {
     
     func pauseButtonPressed() {
         
-        let vc = UIHostingController(rootView: PauseMenuView(actionXButton: {
-            self.scene?.isGamePaused = false
-            self.dismiss(animated: true, completion: nil)
-        }, actionMenuPressed: {
-            self.viewManager?.didUserTapGoToMenu()
-            self.levelManager?.levelCompleted()
-            self.dismiss(animated: true, completion: nil)
-        }))
+        let vc = UIHostingController(rootView: PauseMenuView(
+            actionXButton: {
+                self.scene?.isGamePaused = false
+                self.dismiss(animated: true, completion: nil)
+            },
+            actionMenuPressed: {
+                self.viewManager?.didUserTapGoToMenu()
+                self.levelManager?.levelCompleted()
+                self.dismiss(animated: true, completion: nil)
+            })
+        )
         
         vc.modalPresentationStyle = .overFullScreen
         vc.view.backgroundColor = .clear
