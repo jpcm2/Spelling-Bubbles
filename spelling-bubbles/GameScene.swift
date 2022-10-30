@@ -17,9 +17,9 @@ class GameScene: SKScene {
     var controllerPauseDelegate: PauseButtonDelegate?
     var background: MainGameBackground?
     var textbox: TextBoxStation?
-    
     var boat = Boat()
     var pauseButton = PauseButton()
+    var level: Int = 1
 
     var isGamePaused: Bool = false {
         didSet {
@@ -31,6 +31,12 @@ class GameScene: SKScene {
         if isGamePaused {
             controllerPauseDelegate?.pauseButtonPressed()
         }
+    }
+    
+    init(withLevel level: Int){
+        super.init(size: .zero)
+        pauseButton.delegate = self
+        self.level = level
     }
     
     override init(size: CGSize) {
@@ -46,7 +52,7 @@ class GameScene: SKScene {
         setupGravityAndConfiguration(inside: view)
         createBorderAtGameScene()
         
-        gargabeStation = GarbageStation(withThisGarbageQuantity: 2)
+        gargabeStation = GarbageStation(withThisGarbageQuantity: self.level)
         bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
         textbox = TextBoxStation(withWord: gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA")
