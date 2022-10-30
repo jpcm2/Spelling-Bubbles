@@ -61,6 +61,7 @@
 		17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05029071194001FE918 /* SoundAndMusicView.swift */; };
 		17BFB05529071205001FE918 /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB05429071205001FE918 /* BottomButtons.swift */; };
 		17C55245290860CF00929589 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C55244290860CF00929589 /* HomePage.swift */; };
+		17FF04EE290F07F3008684D8 /* LevelCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF04ED290F07F3008684D8 /* LevelCompleteView.swift */; };
 		2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */; };
 		27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27810D992901C93E00E167E1 /* SoundController.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
@@ -125,6 +126,7 @@
 		17BFB05029071194001FE918 /* SoundAndMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundAndMusicView.swift; sourceTree = "<group>"; };
 		17BFB05429071205001FE918 /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
 		17C55244290860CF00929589 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		17FF04ED290F07F3008684D8 /* LevelCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCompleteView.swift; sourceTree = "<group>"; };
 		2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+TouchesBegan.swift"; sourceTree = "<group>"; };
 		27810D992901C93E00E167E1 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
@@ -288,6 +290,8 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17FF04EC290F07E1008684D8 /* LevelComplete */,
+				17FF04EB290F06C2008684D8 /* SettingsView */,
 				0D1D7ABB290ACA7C00EE1179 /* LevelPage */,
 				175CE6F22908D87600649C13 /* HomePage */,
 				17BFB04B2907110A001FE918 /* PauseView */,
@@ -298,7 +302,6 @@
 				27DDE6612901B74800789B2A /* Bubble.swift */,
 				17BFB03A2901BE2D001FE918 /* Boat.swift */,
 				17BFB04329023913001FE918 /* PauseButton.swift */,
-				17BFB0492904CBA4001FE918 /* SettingsMenu.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,6 +364,22 @@
 				17BFB05429071205001FE918 /* BottomButtons.swift */,
 			);
 			path = PauseView;
+			sourceTree = "<group>";
+		};
+		17FF04EB290F06C2008684D8 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				17BFB0492904CBA4001FE918 /* SettingsMenu.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		17FF04EC290F07E1008684D8 /* LevelComplete */ = {
+			isa = PBXGroup;
+			children = (
+				17FF04ED290F07F3008684D8 /* LevelCompleteView.swift */,
+			);
+			path = LevelComplete;
 			sourceTree = "<group>";
 		};
 		27810D982901C8DF00E167E1 /* SoundController */ = {
@@ -488,6 +507,7 @@
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
 				0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */,
 				0D686D342902030400774265 /* GarbageManager.swift in Sources */,
+				17FF04EE290F07F3008684D8 /* LevelCompleteView.swift in Sources */,
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
 				0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */,
 				0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */,

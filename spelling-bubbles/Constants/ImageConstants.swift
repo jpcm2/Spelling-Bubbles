@@ -14,7 +14,6 @@ struct ImageConstants {
     static let MAIN_GAME_BACKGROUND = "main-game"
     static let TEXT_BOX = "bg-rock"
     static let BOAT = "boatman"
-    static let PAUSE_BUTTON = "pause Button"
     static let X_BUTTON = "XButton"
     static let MUSIC_ICON = "Music Icon"
     static let SOUND_ICON = "Sound Icon"

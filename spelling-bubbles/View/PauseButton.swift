@@ -12,9 +12,13 @@ class PauseButton: SKNode, AnyNode {
     private var image : SKSpriteNode?
     weak var delegate : PauseButtonDelegate?
     
+    struct Constants {
+        static let PAUSE_BUTTON = "pause Button"
+    }
+    
     override init() {
         super.init()
-        self.image = SKSpriteNode(imageNamed: ImageConstants.PAUSE_BUTTON)
+        self.image = SKSpriteNode(imageNamed: Constants.PAUSE_BUTTON)
         
         setupNode()
     }

@@ -10,26 +10,29 @@ import SwiftUI
 
 struct BottomButtons : View {
     
-    var actionForRestart : HandleWithButtonAction
-    var actionForMenu : HandleWithButtonAction
+    var upperButtonIconSring : String
+    var underButtonIconString : String
+    
+    var upperActionButton : HandleWithButtonAction
+    var underActionButton : HandleWithButtonAction
     
     var body: some View {
         VStack{
             Button(action: {
                 print("button pressed")
-                actionForRestart()
+                upperActionButton()
                 
             }) {
-                Image(PauseMenuView.Constants.RESTART_BUTTON)
+                Image(upperButtonIconSring)
                     .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
             }
             
             Button(action: {
                 print("button pressed")
-                actionForMenu()
+                underActionButton()
                 
             }) {
-                Image(PauseMenuView.Constants.MENU_BUTTON)
+                Image(underButtonIconString)
                     .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
             }
         }

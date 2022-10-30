@@ -54,7 +54,7 @@ extension GameScene {
                     textbox?.addToGame(insideScene: self)
                     
                 }else{
-                    UIDevice.Vibrate()
+                    //UIDevice.Vibrate()
                     bubbleStation?.refreshBubbles()
                     textbox?.refreshLetters()
                     textbox?.addToGame(insideScene: self)
