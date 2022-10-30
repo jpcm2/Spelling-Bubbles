@@ -274,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				0D66711828FF24C000DA1814 /* GarbageStation.swift */,
-				0D686D332902030400774265 /* GarbageManager.swift */,
 			);
 			path = GarbageObserver;
 			sourceTree = "<group>";
@@ -327,6 +326,7 @@
 		0DF9ECFA290D995700F02341 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0D686D332902030400774265 /* GarbageManager.swift */,
 				0DF9ECF8290D88D600F02341 /* ViewManager.swift */,
 				0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */,
 			);
