@@ -42,6 +42,7 @@ class LevelManager: ObservableObject {
     func levelCompleted(){
         allLevels[current].status = .completed
         current += 1
+        if current >= allLevels.count { return }
         allLevels[current].status = .currrent
     }
 }

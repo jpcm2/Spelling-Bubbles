@@ -31,18 +31,15 @@ struct ContentView: View {
     var body: some View {
         
         if viewManager.isGameRuning {
-            GameView()
-                .ignoresSafeArea(.all)
+            GameView().ignoresSafeArea(.all)
         }
 
         if viewManager.showingHomePage {
-            HomePageView()
-                .ignoresSafeArea(.all)
+            HomePageView().ignoresSafeArea(.all)
         }
-
+        
         if viewManager.showingLevelPage {
-            LevelPage()
-            .ignoresSafeArea(.all)
+            LevelPage().ignoresSafeArea(.all)
         }
     }
 }
