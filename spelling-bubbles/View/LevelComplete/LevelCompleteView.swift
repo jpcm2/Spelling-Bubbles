@@ -29,7 +29,8 @@ struct LevelCompleteView : View {
             Image(Constants.VICTORY_FRAME)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 332.HAdapted, height: 567.VAdapted)
+                .frame(width: 332.HAdapted,
+                       height: 567.VAdapted)
             
             VStack(alignment: .center, spacing: 15.VAdapted){
                 
@@ -40,11 +41,11 @@ struct LevelCompleteView : View {
                             .scaledToFit()
                             .frame(width: 280.HAdapted, height: 280.VAdapted)
                             .rotationEffect(Angle(degrees: animating ? 360 : 0))
-    
                             .animation(Animation.linear(duration: 20).repeatForever(autoreverses: false), value: animating)
                             .onAppear {
                                 animating = true
                                         }
+                        
                         Image(Constants.EMBLEM)
                             .resizable()
                             .scaledToFit()

@@ -71,6 +71,7 @@ class GameViewController: UIViewController {
     func presentLevelCompleteView() {
         let vc = UIHostingController(rootView: LevelCompleteView(
             actionForNextLevel: {
+                print("user taped nextLevel")
                 // must call next level, if available
                 // else, it should should restart gameScene ?
             },
