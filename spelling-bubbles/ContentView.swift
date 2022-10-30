@@ -12,11 +12,13 @@ import SpriteKit
 struct GameView: UIViewControllerRepresentable {
     
     @EnvironmentObject private var viewManager: ViewManager
+    @EnvironmentObject private var levelManager: LevelManager
     
     typealias UIViewControllerType = GameViewController
     
     func makeUIViewController(context: Context) -> GameViewController {
-        return GameViewController( viewManager: viewManager )
+        return GameViewController(viewManager: viewManager,
+                                  levelManager: levelManager)
     }
     
     func updateUIViewController(_ uiViewController: GameViewController, context: Context) {}
@@ -25,8 +27,6 @@ struct GameView: UIViewControllerRepresentable {
 struct ContentView: View {
     
     @EnvironmentObject private var viewManager: ViewManager
-    
-
     
     var body: some View {
         

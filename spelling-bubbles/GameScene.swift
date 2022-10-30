@@ -33,8 +33,8 @@ class GameScene: SKScene {
         }
     }
     
-    init(withLevel level: Int){
-        super.init(size: .zero)
+    init(withLevel level: Int, andSize size: CGSize ){
+        super.init(size: size)
         pauseButton.delegate = self
         self.level = level
     }
@@ -52,7 +52,7 @@ class GameScene: SKScene {
         setupGravityAndConfiguration(inside: view)
         createBorderAtGameScene()
         
-        gargabeStation = GarbageStation(withThisGarbageQuantity: self.level)
+        gargabeStation = GarbageStation(withThisGarbageQuantity: level)
         bubbleStation = BubbleStation(numberOfBubbles: 11)
         background = MainGameBackground(withSize: view.bounds.size)
         textbox = TextBoxStation(withWord: gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA")

@@ -34,4 +34,14 @@ class LevelManager: ObservableObject {
         levels[current].status = .currrent
         allLevels = levels
     }
+    
+    func userLevel() -> Int {
+        return current + 1
+    }
+    
+    func levelCompleted(){
+        allLevels[current].status = .completed
+        current += 1
+        allLevels[current].status = .currrent
+    }
 }

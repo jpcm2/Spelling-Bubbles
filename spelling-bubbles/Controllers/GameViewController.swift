@@ -15,10 +15,12 @@ class GameViewController: UIViewController {
         
     var scene: GameScene?
     var viewManager: ViewManager?
+    var levelManager: LevelManager?
     
-    init(viewManager: ViewManager){
+    init(viewManager: ViewManager, levelManager: LevelManager){
         super.init(nibName: nil, bundle: nil)
         self.viewManager = viewManager
+        self.levelManager = levelManager
     }
     
     required init?(coder: NSCoder) {
@@ -52,7 +54,9 @@ class GameViewController: UIViewController {
     
     func setupScene(){
         guard let view = self.view as? SKView, scene == nil else { return }
-        let newScene = GameScene(size: view.bounds.size)
+        guard let level = levelManager?.userLevel() else { return }
+        
+        let newScene = GameScene(withLevel: level, andSize: view.bounds.size)
         view.presentScene(newScene)
         self.scene = newScene
         self.scene?.controllerPauseDelegate = self
@@ -75,6 +79,7 @@ extension GameViewController: PauseButtonDelegate {
             self.dismiss(animated: true, completion: nil)
         }, actionMenuPressed: {
             self.viewManager?.didUserTapGoToMenu()
+            self.levelManager?.levelCompleted()
             self.dismiss(animated: true, completion: nil)
         }))
         
