@@ -39,8 +39,8 @@ struct PlantsViews : View {
                 .scaledToFit()
                 .frame(width: 51.VAdapted)
                 .position(x: Constants.SCREEN_WIDTH - 15.HAdapted, y: 151.VAdapted)
-                .rotationEffect(Angle(degrees: self.isAnimating ? 0.5: -0.5), anchor: .topTrailing)
-                .animation(Animation.linear(duration: 1).repeatForever(), value: isAnimating)
+                .rotationEffect(Angle(degrees: self.isAnimating ? 1: -1), anchor: .bottomLeading)
+                .animation(Animation.linear(duration: 4).repeatForever(), value: isAnimating)
             
             
             Image(Constants.PLANT_IMAGE_3)
@@ -57,7 +57,7 @@ struct PlantsViews : View {
                 .scaledToFit()
                 .frame(width: 187.VAdapted)
                 .position(x: Constants.SCREEN_WIDTH - 80.HAdapted, y: Constants.SCREEN_HEIGHT - 85.VAdapted)
-                .rotationEffect(Angle(degrees: self.isAnimating ? -1: 0.5), anchor: .bottomTrailing)
+                .rotationEffect(Angle(degrees: self.isAnimating ? -1: 1), anchor: .bottomTrailing)
                 .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
             
         }
