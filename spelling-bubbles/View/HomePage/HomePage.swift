@@ -19,6 +19,7 @@ struct HomePageView : View {
         static let PAUSE_MENU_BACKGROUND = "HomePageBackground"
         static let MAP_ICON = "map Icon"
         static let SETTINGS_ICON = "settings-button"
+        static let LOGO_ICON = "Logo 1"
         static let START_ICON = "Start Icon"
         static let WOOD = "floating-wood"
         static let WAVE_1 = "waves-1"
