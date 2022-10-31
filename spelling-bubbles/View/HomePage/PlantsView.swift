@@ -39,7 +39,7 @@ struct PlantsViews : View {
                 .scaledToFit()
                 .frame(width: 51.VAdapted)
                 .position(x: Constants.SCREEN_WIDTH - 15.HAdapted, y: 151.VAdapted)
-                .rotationEffect(Angle(degrees: self.isAnimating ? 1: -1), anchor: .bottomLeading)
+                .rotationEffect(Angle(degrees: self.isAnimating ? 1: -1), anchor: .center)
                 .animation(Animation.linear(duration: 4).repeatForever(), value: isAnimating)
             
             

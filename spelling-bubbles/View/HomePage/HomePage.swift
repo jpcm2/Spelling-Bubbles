@@ -21,6 +21,8 @@ struct HomePageView : View {
         static let SETTINGS_ICON = "settings-button"
         static let START_ICON = "Start Icon"
         static let WOOD = "floating-wood"
+        static let WAVE_1 = "waves-1"
+        static let WAVE_2 = "waves-2"
     }
     
     var body: some View {
@@ -30,18 +32,7 @@ struct HomePageView : View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
-            Image(Constants.WOOD)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 100.VAdapted)
-                .position(x: 100.HAdapted,
-                          y: 200.VAdapted)
-                .offset(x: animatingg ? 600.HAdapted : -30,
-                        y: animatingg ? 600.VAdapted : -30)
-                .animation(Animation.easeIn(duration: 20).repeatForever(autoreverses: false), value: animatingg)
-                .onAppear {
-                    animatingg = true
-                }
+            HomePageWoodAndWaves()
             
             PlantsViews()
             

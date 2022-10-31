@@ -49,6 +49,7 @@
 		175CE6F42908D89600649C13 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F32908D89600649C13 /* PlantsView.swift */; };
 		175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F52908D8F100649C13 /* LogoAndStartView.swift */; };
 		175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F72908D92700649C13 /* TopbuttonsView.swift */; };
+		17BC24D529100ECA0096AD59 /* WoodAndWaves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC24D429100ECA0096AD59 /* WoodAndWaves.swift */; };
 		17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03A2901BE2D001FE918 /* Boat.swift */; };
 		17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */; };
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
@@ -115,6 +116,7 @@
 		175CE6F32908D89600649C13 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
 		175CE6F52908D8F100649C13 /* LogoAndStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndStartView.swift; sourceTree = "<group>"; };
 		175CE6F72908D92700649C13 /* TopbuttonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopbuttonsView.swift; sourceTree = "<group>"; };
+		17BC24D429100ECA0096AD59 /* WoodAndWaves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodAndWaves.swift; sourceTree = "<group>"; };
 		17BFB03A2901BE2D001FE918 /* Boat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boat.swift; sourceTree = "<group>"; };
 		17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatVerticalMoviment.swift; sourceTree = "<group>"; };
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				175CE6F32908D89600649C13 /* PlantsView.swift */,
 				175CE6F52908D8F100649C13 /* LogoAndStartView.swift */,
 				175CE6F72908D92700649C13 /* TopbuttonsView.swift */,
+				17BC24D429100ECA0096AD59 /* WoodAndWaves.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				17BFB05529071205001FE918 /* BottomButtons.swift in Sources */,
 				0D6670E728FF1FB600DA1814 /* spelling_bubblesApp.swift in Sources */,
 				0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */,
+				17BC24D529100ECA0096AD59 /* WoodAndWaves.swift in Sources */,
 				17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */,
 				0DF9ECFC290D9A5800F02341 /* LevelPosition.swift in Sources */,
 				0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */,
