@@ -46,6 +46,7 @@
 		0DF9ECFE290DA5D500F02341 /* LevelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */; };
 		0DF9ED00290DA8AE00F02341 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */; };
 		0DF9ED02290DB4B200F02341 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ED01290DB4B200F02341 /* Level.swift */; };
+		1725EEBA291040EE0025BE6E /* LevelFailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEB9291040EE0025BE6E /* LevelFailed.swift */; };
 		175CE6F42908D89600649C13 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F32908D89600649C13 /* PlantsView.swift */; };
 		175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F52908D8F100649C13 /* LogoAndStartView.swift */; };
 		175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F72908D92700649C13 /* TopbuttonsView.swift */; };
@@ -113,6 +114,7 @@
 		0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStatus.swift; sourceTree = "<group>"; };
 		0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		0DF9ED01290DB4B200F02341 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		1725EEB9291040EE0025BE6E /* LevelFailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFailed.swift; sourceTree = "<group>"; };
 		175CE6F32908D89600649C13 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
 		175CE6F52908D8F100649C13 /* LogoAndStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndStartView.swift; sourceTree = "<group>"; };
 		175CE6F72908D92700649C13 /* TopbuttonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopbuttonsView.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1725EEBB291040F40025BE6E /* LevelFailed */,
 				17FF04EC290F07E1008684D8 /* LevelComplete */,
 				17FF04EB290F06C2008684D8 /* SettingsView */,
 				0D1D7ABB290ACA7C00EE1179 /* LevelPage */,
@@ -336,6 +339,14 @@
 				0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		1725EEBB291040F40025BE6E /* LevelFailed */ = {
+			isa = PBXGroup;
+			children = (
+				1725EEB9291040EE0025BE6E /* LevelFailed.swift */,
+			);
+			path = LevelFailed;
 			sourceTree = "<group>";
 		};
 		175CE6F22908D87600649C13 /* HomePage */ = {
@@ -487,6 +498,7 @@
 				17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */,
 				0D686D2228FF65D200774265 /* ShakeHandler.swift in Sources */,
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
+				1725EEBA291040EE0025BE6E /* LevelFailed.swift in Sources */,
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				175CE6F42908D89600649C13 /* PlantsView.swift in Sources */,
 				0D33EB06290F18C500474AFE /* UIDevice+Vibrate.swift in Sources */,
