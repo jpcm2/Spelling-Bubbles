@@ -59,6 +59,10 @@ class GarbageStation: GarbageSubscriber {
     }
     
     func setupIndicatedGarbage(){
+        if(self.garbageQuantity == 0){
+            print("FIM DE JOGO")
+            return
+        }
         let randomIndex = Int.random(in: 0...self.garbageQuantity-1)
         garbages[randomIndex].toggleIndication()
         self.indicatedGarbage = garbages[randomIndex]
