@@ -47,6 +47,7 @@
 		0DF9ED00290DA8AE00F02341 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */; };
 		0DF9ED02290DB4B200F02341 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ED01290DB4B200F02341 /* Level.swift */; };
 		1725EEBA291040EE0025BE6E /* LevelFailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEB9291040EE0025BE6E /* LevelFailed.swift */; };
+		1725EEBD291078260025BE6E /* GameLevelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEBC291078260025BE6E /* GameLevelDelegate.swift */; };
 		175CE6F42908D89600649C13 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F32908D89600649C13 /* PlantsView.swift */; };
 		175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F52908D8F100649C13 /* LogoAndStartView.swift */; };
 		175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F72908D92700649C13 /* TopbuttonsView.swift */; };
@@ -115,6 +116,7 @@
 		0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		0DF9ED01290DB4B200F02341 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		1725EEB9291040EE0025BE6E /* LevelFailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFailed.swift; sourceTree = "<group>"; };
+		1725EEBC291078260025BE6E /* GameLevelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelDelegate.swift; sourceTree = "<group>"; };
 		175CE6F32908D89600649C13 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
 		175CE6F52908D8F100649C13 /* LogoAndStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndStartView.swift; sourceTree = "<group>"; };
 		175CE6F72908D92700649C13 /* TopbuttonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopbuttonsView.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				0D66710B28FF242700DA1814 /* Moveable.swift */,
 				0D686D2128FF65D200774265 /* ShakeHandler.swift */,
 				17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */,
+				1725EEBC291078260025BE6E /* GameLevelDelegate.swift */,
 				0DC262A2290799100091A7F2 /* AddableGame.swift */,
 			);
 			path = Protocols;
@@ -545,6 +548,7 @@
 				27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */,
 				17BFB0422901BE76001FE918 /* BoatAngularMovement.swift in Sources */,
 				0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */,
+				1725EEBD291078260025BE6E /* GameLevelDelegate.swift in Sources */,
 				0DF9ED00290DA8AE00F02341 /* LevelManager.swift in Sources */,
 				0D686D2E28FF84C100774265 /* TextBoxStation.swift in Sources */,
 			);

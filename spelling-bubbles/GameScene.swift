@@ -15,6 +15,7 @@ class GameScene: SKScene {
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
     var controllerPauseDelegate: PauseButtonDelegate?
+    var controllerGameLevelDelegate: GameLevelDelegate?
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var boat = Boat()
@@ -93,7 +94,7 @@ class GameScene: SKScene {
         bubbleStation?.update()
         
         if gargabeStation?.checkPosition() == 1 {
-            self.scene?.view?.isPaused = true
+            controllerGameLevelDelegate?.didUserFailedLevel()
             
         }
         

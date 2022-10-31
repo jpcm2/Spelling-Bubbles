@@ -63,6 +63,7 @@ class GameViewController: UIViewController {
         view.presentScene(newScene)
         self.scene = newScene
         self.scene?.controllerPauseDelegate = self
+        self.scene?.controllerGameLevelDelegate = self
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -89,6 +90,30 @@ class GameViewController: UIViewController {
         vc.view.backgroundColor = .clear
         self.present(vc, animated: true)
     }
+}
+
+
+extension GameViewController : GameLevelDelegate {
+    func didUserCompletedLevel() {
+        presentLevelCompleteView()
+    }
+    
+    func didUserFailedLevel() {
+        let vc = UIHostingController(rootView: LevelFailedView(
+            actionForRestart: {},
+            actionForMenu: {
+                self.viewManager?.didUserTapGoToMenu()
+                self.dismiss(animated: true, completion: nil)
+            })
+        )
+        
+        self.scene?.isPaused = true
+        vc.modalPresentationStyle = .overFullScreen
+        vc.view.backgroundColor = .clear
+        self.present(vc, animated: true)
+    }
+    
+    
 }
 
 extension GameViewController: PauseButtonDelegate {
