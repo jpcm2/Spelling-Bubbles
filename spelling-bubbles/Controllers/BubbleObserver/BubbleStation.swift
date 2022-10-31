@@ -38,6 +38,7 @@ class BubbleStation: BubbleSubscriber {
     init(numberOfBubbles: Int, currentWord: String){
         self.numberOfBubbles = numberOfBubbles
         self.currentWord = currentWord
+        print(currentWord)
         createAvaiableSpawnPosition()
         self.index = possiblePositions.count
         setupBubbles()
