@@ -17,12 +17,22 @@ struct LevelCompleteView : View {
     
     struct Constants {
         static let SHINE = "brilho"
-        static let EMBLEM = "emblema-capivara"
+        static let EMBLEM_CAPI = "emblema-capivara"
+        static let EMBLEM_ARATU = "emblema-aratu"
+        static let EMBLEM_FLOWER = "emblema-flor"
+        static let EMBLEM_FOOT = "emblema-pegada"
         static let NEXT_LEVEL = "nextlevel-button"
         static let VICTORY_FRAME = "vitory-frame 1"
         static let MENU_BUTTON = "menu-button"
         
     }
+    
+    let emblems = [
+        Constants.EMBLEM_ARATU,
+        Constants.EMBLEM_CAPI,
+        Constants.EMBLEM_FOOT,
+        Constants.EMBLEM_FLOWER
+    ]
     
     var body: some View {
         ZStack{
@@ -44,9 +54,9 @@ struct LevelCompleteView : View {
                             .animation(Animation.linear(duration: 20).repeatForever(autoreverses: false), value: animating)
                             .onAppear {
                                 animating = true
-                                        }
+                            }
                         
-                        Image(Constants.EMBLEM)
+                        Image(emblems.randomElement()!)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200.HAdapted, height: 200.VAdapted)
