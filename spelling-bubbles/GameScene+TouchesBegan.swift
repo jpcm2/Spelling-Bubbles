@@ -48,9 +48,11 @@ extension GameScene {
                 if ret{
                     gargabeStation?.removeGarbage()
                     gargabeStation?.setupIndicatedGarbage()
-                    textbox?.word = gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA"
+                    guard let newWord = gargabeStation?.indicatedGarbage?.objectName else {return}
+                    textbox?.word = newWord
                     textbox?.refreshLetters()
-                    bubbleStation?.refreshBubbles()
+                    bubbleStation?.refreshBubblesToNewWord(withName: newWord)
+                    bubbleStation?.addToGame(insideScene: self)
                     textbox?.addToGame(insideScene: self)
                     
                 }else{

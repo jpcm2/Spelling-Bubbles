@@ -7,6 +7,7 @@
 
 import SpriteKit
 import UIKit
+import SwiftUI
 
 class BubbleStation: BubbleSubscriber {
     
@@ -14,6 +15,7 @@ class BubbleStation: BubbleSubscriber {
     private let numberOfBubbles: Int
     private let possibleMovements = [VerticalWaveMovement(toSide: .left), VerticalWaveMovement(toSide: .right)]
     private var possiblePositions: [AvaiablePosition] = []
+    var currentWord: String
     var index: Int = 0
     
     struct Constants {
@@ -29,17 +31,20 @@ class BubbleStation: BubbleSubscriber {
         static let RANDOM_RANGE_MOVEMENT = 100...900
         static let RANDOM_POSITION = 200...650
         static let RANDOM_LETTER_NUMBER = 65...90
+        static let ALPHABET = "ABCDEFGHIJKLMNOPRSTUVWXYZ"
+        static let NUMBER_OF_ROWS = 4
     }
     
-    init(numberOfBubbles: Int){
+    init(numberOfBubbles: Int, currentWord: String){
         self.numberOfBubbles = numberOfBubbles
+        self.currentWord = currentWord
         createAvaiableSpawnPosition()
         self.index = possiblePositions.count
         setupBubbles()
     }
     
     func createAvaiableSpawnPosition(){
-        for row in 1..<4{
+        for row in 1..<Constants.NUMBER_OF_ROWS{
             let maxColumn = row % 2 == 0 ? Constants.SPACE_TO_OCCUPY_EVEN:Constants.SPACE_TO_OCCUPY_ODD
             let rawHeight = Int(Constants.MAX_HEIGHT) - (row - 1)*Int(Constants.VERTICAL_DISTANCE_BETWEEN_BUBBLES)
             for columnIndex in 0..<maxColumn{
@@ -51,10 +56,8 @@ class BubbleStation: BubbleSubscriber {
     }
     
     private func setupBubbles(){
-        for _ in 0..<self.numberOfBubbles{
+        self.currentWord.forEach{letter in
             let randomValue = Int.random(in: Constants.RANDOM_RANGE_MOVEMENT)
-            
-            let randomLetter = "A"
             
             let randomMovementChoice = randomValue % possibleMovements.count
             
@@ -66,9 +69,38 @@ class BubbleStation: BubbleSubscriber {
             
             let currentBubblePosition = possiblePositions[index]
             
-            let newBubble = Bubble(movement: movement, letter: randomLetter, nodePosition: currentBubblePosition)
+            let newBubble = Bubble(movement: movement, letter: String(letter), nodePosition: currentBubblePosition)
             
             self.bubbles.append(newBubble)
+        }
+        
+        for _ in 0..<(self.numberOfBubbles - self.currentWord.count){
+            let randomValue = Int.random(in: Constants.RANDOM_RANGE_MOVEMENT)
+            
+            guard let randomLetter = Constants.ALPHABET.randomElement() else {return}
+            
+            let randomMovementChoice = randomValue % possibleMovements.count
+            
+            let movement = possibleMovements[randomMovementChoice]
+            
+            self.index -= 1
+            
+            possiblePositions[index].isOccupied = true
+            
+            let currentBubblePosition = possiblePositions[index]
+            
+            let newBubble = Bubble(movement: movement, letter: String(randomLetter), nodePosition: currentBubblePosition)
+            
+            self.bubbles.append(newBubble)
+        }
+        
+        for firstBubbleIndex in 0..<self.bubbles.count{
+            for secondBubbleIndex in firstBubbleIndex+1..<self.bubbles.count{
+                let random = Int.random(in: 0...1)
+                if random == 0 {
+                    swap(&self.bubbles[firstBubbleIndex].position, &self.bubbles[secondBubbleIndex].position)
+                }
+            }
         }
     }
     
@@ -90,7 +122,16 @@ class BubbleStation: BubbleSubscriber {
         for bubble in bubbles {
             bubble.isPaused = false
             bubble.isHidden = false
-            
         }
+    }
+    
+    func refreshBubblesToNewWord(withName garbageName: String){
+        for bubble in bubbles {
+            bubble.removeFromParent()
+        }
+        bubbles.removeAll()
+        self.index = possiblePositions.count
+        self.currentWord = garbageName
+        setupBubbles()
     }
 }

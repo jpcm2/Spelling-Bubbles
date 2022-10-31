@@ -98,6 +98,7 @@ extension GameViewController: PauseButtonDelegate {
         let vc = UIHostingController(rootView: PauseMenuView(
             actionXButton: {
                 self.scene?.isGamePaused = false
+                self.scene?.isPaused = false
                 self.dismiss(animated: true, completion: nil)
             },
             actionMenuPressed: {
@@ -107,6 +108,7 @@ extension GameViewController: PauseButtonDelegate {
             })
         )
         
+        self.scene?.isPaused = true
         vc.modalPresentationStyle = .overFullScreen
         vc.view.backgroundColor = .clear
         self.present(vc, animated: true)

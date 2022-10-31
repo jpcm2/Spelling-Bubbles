@@ -12,29 +12,30 @@ struct LogoAndStartButtonView : View {
     
     var actionForStartButton : HandleWithButtonAction
     
-    struct Constants {
-        static let LOGO_ICON = "star.fill"
-        static let START_ICON = "Start Icon"
-    }
-    
     @State var isAnimating = false
     
     var body: some View {
         VStack(alignment: .center){
-            Image(systemName: Constants.LOGO_ICON)
+            Image(HomePageView.Constants.LOGO_ICON)
+                .resizable()
+                .scaledToFit()
+                .padding()
+            
             
             Button(action: {
                 print("starIcon pressed")
                 actionForStartButton()
                 
             }, label: {
-                Image(Constants.START_ICON)
+                Image(HomePageView.Constants.START_ICON)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 137.HAdapted,height: 112.VAdapted)
             }
             )
+    
             
         }
+        .padding()
     }
 }
