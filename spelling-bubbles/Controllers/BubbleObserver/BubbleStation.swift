@@ -93,6 +93,15 @@ class BubbleStation: BubbleSubscriber {
             
             self.bubbles.append(newBubble)
         }
+        
+        for firstBubbleIndex in 0..<self.bubbles.count{
+            for secondBubbleIndex in firstBubbleIndex+1..<self.bubbles.count{
+                let random = Int.random(in: 0...1)
+                if random == 0 {
+                    swap(&self.bubbles[firstBubbleIndex].position, &self.bubbles[secondBubbleIndex].position)
+                }
+            }
+        }
     }
     
     func addToGame(insideScene scene: SKScene) {
