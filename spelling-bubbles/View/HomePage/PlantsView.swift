@@ -30,8 +30,8 @@ struct PlantsViews : View {
                 .scaledToFit()
                 .frame(width: 187.VAdapted)
                 .position(x: 80.HAdapted, y: 85.VAdapted)
-                .rotationEffect(Angle(degrees: self.isAnimating ? 1: -1), anchor: .topLeading)
-                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
+                .rotationEffect(Angle(degrees: self.isAnimating ? 2: -2), anchor: .topLeading)
+                .animation(Animation.linear(duration: 5).repeatForever(), value: isAnimating)
             
             
             Image(Constants.PLANT_IMAGE_2)
@@ -57,8 +57,8 @@ struct PlantsViews : View {
                 .scaledToFit()
                 .frame(width: 187.VAdapted)
                 .position(x: Constants.SCREEN_WIDTH - 80.HAdapted, y: Constants.SCREEN_HEIGHT - 85.VAdapted)
-                .rotationEffect(Angle(degrees: self.isAnimating ? -1: 1), anchor: .bottomTrailing)
-                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
+                .rotationEffect(Angle(degrees: self.isAnimating ? -2: 2), anchor: .bottomTrailing)
+                .animation(Animation.linear(duration: 4).repeatForever(), value: isAnimating)
             
         }
         .ignoresSafeArea()
