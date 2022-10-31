@@ -20,7 +20,11 @@ class GameScene: SKScene {
     var boat = Boat()
     var pauseButton = PauseButton()
     var level: Int = 1
-
+    
+    struct Constants {
+        static let numberOfBubbles = 11
+    }
+    
     var isGamePaused: Bool = false {
         didSet {
             didUserTapPauseButton()
@@ -53,7 +57,7 @@ class GameScene: SKScene {
         createBorderAtGameScene()
         
         gargabeStation = GarbageStation(withThisGarbageQuantity: level)
-        bubbleStation = BubbleStation(numberOfBubbles: 11)
+        bubbleStation = BubbleStation(numberOfBubbles: Constants.numberOfBubbles, currentWord: "CAIXA")
         background = MainGameBackground(withSize: view.bounds.size)
         textbox = TextBoxStation(withWord: gargabeStation?.indicatedGarbage?.objectName ?? "CAIXA")
         
