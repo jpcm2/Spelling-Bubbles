@@ -38,7 +38,6 @@ class BubbleStation: BubbleSubscriber {
     init(numberOfBubbles: Int, currentWord: String){
         self.numberOfBubbles = numberOfBubbles
         self.currentWord = currentWord
-        print(currentWord)
         createAvaiableSpawnPosition()
         self.index = possiblePositions.count
         setupBubbles()
@@ -123,7 +122,16 @@ class BubbleStation: BubbleSubscriber {
         for bubble in bubbles {
             bubble.isPaused = false
             bubble.isHidden = false
-            
         }
+    }
+    
+    func refreshBubblesToNewWord(withName garbageName: String){
+        for bubble in bubbles {
+            bubble.removeFromParent()
+        }
+        bubbles.removeAll()
+        self.index = possiblePositions.count
+        self.currentWord = garbageName
+        setupBubbles()
     }
 }
