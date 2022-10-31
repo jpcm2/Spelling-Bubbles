@@ -13,12 +13,16 @@ struct HomePageView : View {
     @EnvironmentObject private var viewManager: ViewManager
     
     @State var showingSettingsView = false
-
+    @State var animatingg = false
+    
     struct Constants {
         static let PAUSE_MENU_BACKGROUND = "HomePageBackground"
         static let MAP_ICON = "map Icon"
         static let SETTINGS_ICON = "settings-button"
         static let START_ICON = "Start Icon"
+        static let WOOD = "floating-wood"
+        static let WAVE_1 = "waves-1"
+        static let WAVE_2 = "waves-2"
     }
     
     var body: some View {
@@ -28,22 +32,29 @@ struct HomePageView : View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
+            HomePageWoodAndWaves()
+            
             PlantsViews()
             
             VStack(alignment: .center){
-                TopButtonsStackView(leftIcon: .map,
-                                    actionForSettings: { showingSettingsView = true },
-                                    actionForLeftButton: { print ("clicou no mapa") })
+                TopButtonsStackView(
+                    leftIcon: .map,
+                    actionForSettings: {
+                        showingSettingsView = true
+                    },
+                    actionForLeftButton: {
+                        print ("clicou no mapa")
+                    })
                 .padding(.horizontal, CGFloat(14.HAdapted))
                 .padding(.top, CGFloat(47.VAdapted))
-                Spacer()
                 
+                Spacer()
             }
             
             LogoAndStartButtonView() {
                 viewManager.didUserTapStartButton()
             }
-                .padding()
+            .padding()
             
             if showingSettingsView {
                 SettingsMenuView() {
@@ -52,7 +63,7 @@ struct HomePageView : View {
             }
             
         }
-                
+        
         
     }
 }
