@@ -15,7 +15,7 @@ class GameScene: SKScene {
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
     var controllerPauseDelegate: PauseButtonDelegate?
-    var controllerGameLevelDelegate: GameLevelDelegate?
+    var controllerGameSceneDelegate: GameSceneDelegate?
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var boat = Boat()
@@ -26,17 +26,8 @@ class GameScene: SKScene {
         static let numberOfBubbles = 11
     }
     
-    var isGamePaused: Bool = false {
-        didSet {
-            didUserTapPauseButton()
-        }
-    }
-    
-    private func didUserTapPauseButton(){
-        if isGamePaused {
-            controllerPauseDelegate?.pauseButtonPressed()
-        }
-    }
+    var isGamePaused: Bool = false
+       
     
     init(withLevel level: Int, andSize size: CGSize ){
         super.init(size: size)
@@ -94,7 +85,7 @@ class GameScene: SKScene {
         bubbleStation?.update()
         
         if gargabeStation?.checkPosition() == 1 {
-            controllerGameLevelDelegate?.didUserFailedLevel()
+            controllerGameSceneDelegate?.didUserFailedLevel()
             
         }
         

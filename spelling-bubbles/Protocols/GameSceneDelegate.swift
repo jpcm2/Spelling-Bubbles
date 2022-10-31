@@ -6,8 +6,10 @@
 //
 
 import Foundation
-protocol GameLevelDelegate: AnyObject {
+protocol GameSceneDelegate: AnyObject {
     func didUserCompletedLevel()
     
     func didUserFailedLevel()
+    
+    func didUserPressedPauseButton()
 }

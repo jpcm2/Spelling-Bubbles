@@ -62,8 +62,7 @@ class GameViewController: UIViewController {
         let newScene = GameScene(withLevel: level, andSize: view.bounds.size)
         view.presentScene(newScene)
         self.scene = newScene
-        self.scene?.controllerPauseDelegate = self
-        self.scene?.controllerGameLevelDelegate = self
+        self.scene?.controllerGameSceneDelegate = self
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -72,6 +71,25 @@ class GameViewController: UIViewController {
             scene.didUserStartShake()
         }
     }
+    
+    
+}
+
+
+extension GameViewController : GameSceneDelegate {
+    
+    func didUserCompletedLevel() {
+        presentLevelCompleteView()
+    }
+    
+    func didUserFailedLevel() {
+       presentLevelFailedView()
+    }
+    
+    func didUserPressedPauseButton() {
+     presentPauseMenuView()
+    }
+    
     
     func presentLevelCompleteView() {
         let vc = UIHostingController(rootView: LevelCompleteView(
@@ -90,17 +108,12 @@ class GameViewController: UIViewController {
         vc.view.backgroundColor = .clear
         self.present(vc, animated: true)
     }
-}
-
-
-extension GameViewController : GameLevelDelegate {
-    func didUserCompletedLevel() {
-        presentLevelCompleteView()
-    }
     
-    func didUserFailedLevel() {
+    func presentLevelFailedView(){
         let vc = UIHostingController(rootView: LevelFailedView(
-            actionForRestart: {},
+            actionForRestart: {
+                print("user pressed restart")
+            },
             actionForMenu: {
                 self.viewManager?.didUserTapGoToMenu()
                 self.dismiss(animated: true, completion: nil)
@@ -113,13 +126,7 @@ extension GameViewController : GameLevelDelegate {
         self.present(vc, animated: true)
     }
     
-    
-}
-
-extension GameViewController: PauseButtonDelegate {
-    
-    func pauseButtonPressed() {
-        
+    func presentPauseMenuView() {
         let vc = UIHostingController(rootView: PauseMenuView(
             actionXButton: {
                 self.scene?.isGamePaused = false
@@ -130,6 +137,9 @@ extension GameViewController: PauseButtonDelegate {
                 self.viewManager?.didUserTapGoToMenu()
                 self.levelManager?.levelCompleted()
                 self.dismiss(animated: true, completion: nil)
+            },
+            actionRestartPressed: {
+                print("User pressed restart")
             })
         )
         
@@ -138,4 +148,5 @@ extension GameViewController: PauseButtonDelegate {
         vc.view.backgroundColor = .clear
         self.present(vc, animated: true)
     }
+    
 }
