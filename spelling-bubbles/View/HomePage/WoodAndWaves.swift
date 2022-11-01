@@ -73,7 +73,6 @@ struct HomePageWoodAndWaves : View {
                 .offset(x: animatingg ? 550.HAdapted : -100.HAdapted,
                         y: animatingg ? 700.VAdapted : 200.VAdapted)
                 .animation(Animation.easeInOut(duration: 15).repeatForever(autoreverses: false), value: animatingg)
-            
         }.onAppear{
             animatingg = true
         }

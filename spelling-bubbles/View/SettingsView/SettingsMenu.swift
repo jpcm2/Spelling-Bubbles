@@ -23,7 +23,6 @@ struct SettingsMenuView : View {
     }
     
     var body: some View {
-        
         ZStack{
             Image(Constants.BACKGROUND_IMAGE)
                 .resizable()
@@ -41,18 +40,15 @@ struct SettingsMenuView : View {
             .position(x: 310.HAdapted, y: 170.VAdapted)
             
             VStack(alignment: .center) {
-
                 Text("Settings")
                     .font(.system(size: 36, weight: .regular, design: .rounded))
                     .padding()
-                
+            
                 VStack(alignment: .center){
-                    
                     HStack(alignment: .center){
                         VStack{
                             Button(action: {
                                 print("button pressed")
-                                
                             }) {
                                 Image(Constants.MUSIC_BUTTON)
                                     .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
