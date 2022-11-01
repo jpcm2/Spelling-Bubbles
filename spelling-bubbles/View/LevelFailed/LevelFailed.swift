@@ -24,7 +24,6 @@ struct LevelFailedView : View {
         static let EMBLEM_FOOT = "emblema-pegada"
         static let RESTART_BUTTON = "restart-button"
         static let MENU_BUTTON = "menu-button"
-        
     }
     
     let emblems = [
@@ -60,20 +59,16 @@ struct LevelFailedView : View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200.HAdapted, height: 200.VAdapted)
-                        
                     }
                     
                     Text("Fracasso")
                         .font(.system(size: 36.VAdapted, weight: .medium))
                 }
 
-                
-                
                 BottomButtons(upperButtonIconSring: Constants.RESTART_BUTTON,
                               underButtonIconString: Constants.MENU_BUTTON,
                               upperActionButton: actionForRestart,
                               underActionButton: actionForMenu)
-                
             }
             .padding(.bottom)
         }

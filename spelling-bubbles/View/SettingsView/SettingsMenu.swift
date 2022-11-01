@@ -30,8 +30,6 @@ struct SettingsMenuView : View {
                 .scaledToFit()
                 .frame(width: 332.HAdapted, height: 477.VAdapted)
                 
-            
-            
             Button(action: {
                 actionCloseButton()
                 
@@ -41,8 +39,6 @@ struct SettingsMenuView : View {
             })
             .frame(width: 59.HAdapted, height: 54.VAdapted)
             .position(x: 310.HAdapted, y: 170.VAdapted)
-            
-            
             
             VStack(alignment: .center) {
 
@@ -99,9 +95,7 @@ struct SettingsMenuView : View {
                         }
                     }
                 }
-                
                 .padding()
-                
             }
         }
     }
