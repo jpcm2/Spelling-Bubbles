@@ -14,7 +14,6 @@ class GameScene: SKScene {
     //    var progressBar = ProgressBar(withMaxProgress: 3)
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
-    var controllerPauseDelegate: PauseButtonDelegate?
     var controllerGameSceneDelegate: GameSceneDelegate?
     var background: MainGameBackground?
     var textbox: TextBoxStation?
@@ -31,13 +30,11 @@ class GameScene: SKScene {
     
     init(withLevel level: Int, andSize size: CGSize ){
         super.init(size: size)
-        pauseButton.delegate = self
         self.level = level
     }
     
     override init(size: CGSize) {
         super.init(size: size)
-        pauseButton.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,6 +58,9 @@ class GameScene: SKScene {
         [boat, background, pauseButton].forEach{ viewObject in
             addChild( viewObject ?? SKNode())
         }
+        
+        pauseButton.delegate = self
+        gargabeStation?.delegate = self
     }
     
     private func setupGravityAndConfiguration(inside view: SKView){

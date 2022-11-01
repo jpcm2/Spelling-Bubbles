@@ -51,8 +51,6 @@ class GameViewController: UIViewController {
         super.viewDidAppear(animated)
         setupScene()
         
-        // must be called when victory
-        // presentLevelCompleteView()
     }
     
     func setupScene(){
@@ -83,11 +81,11 @@ extension GameViewController : GameSceneDelegate {
     }
     
     func didUserFailedLevel() {
-       presentLevelFailedView()
+        presentLevelFailedView()
     }
     
     func didUserPressedPauseButton() {
-     presentPauseMenuView()
+        presentPauseMenuView()
     }
     
     
