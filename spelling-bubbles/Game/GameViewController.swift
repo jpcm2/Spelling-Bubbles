@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import SpriteKit
+import CoreMotion
 
 typealias Game = GameScene & ShakeHandler
 
@@ -16,6 +17,7 @@ class GameViewController: UIViewController {
     var scene: GameScene?
     var viewManager: ViewManager?
     var levelManager: LevelManager?
+    var motion = CMMotionManager()
     
     init(viewManager: ViewManager, levelManager: LevelManager){
         super.init(nibName: nil, bundle: nil)
@@ -45,12 +47,12 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         becomeFirstResponder()
+//        startMotionDetector()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupScene()
-        
     }
     
     func setupScene(){
@@ -68,5 +70,30 @@ class GameViewController: UIViewController {
             guard let skview = view as? SKView, let scene = skview.scene as? Game else { return }
             scene.didUserStartShake()
         }
+    }
+    
+    private func startMotionDetector(){
+//        motion.gyroUpdateInterval = 0.5
+//        guard let operation = OperationQueue.current else { return }
+//        motion.startGyroUpdates(to: operation){ (data, error) in
+//            guard let datinha = data else { return }
+//            let x = datinha.rotationRate.x
+//            let y = datinha.rotationRate.y
+//            let z = datinha.rotationRate.z
+//            if x < 0 {
+//                self.scene?.didUserStartShake()
+//            }
+//            print("x: \(Double(x).rounded(toPlaces: 3))")
+//            print("y: \(Double(y).rounded(toPlaces: 3))")
+//            print("z: \(Double(z).rounded(toPlaces: 3))")
+//        }
+    }
+}
+
+extension Double {
+    func rounded(toPlaces places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+        
     }
 }
