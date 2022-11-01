@@ -24,10 +24,9 @@ struct LevelCompleteView : View {
         static let NEXT_LEVEL = "nextlevel-button"
         static let VICTORY_FRAME = "vitory-frame 1"
         static let MENU_BUTTON = "menu-button"
-        
     }
     
-    let emblems = [
+    private let emblems = [
         Constants.EMBLEM_ARATU,
         Constants.EMBLEM_CAPI,
         Constants.EMBLEM_FOOT,
@@ -60,7 +59,6 @@ struct LevelCompleteView : View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200.HAdapted, height: 200.VAdapted)
-                        
                     }
                     
                     Text("MUITO BEM!")
@@ -68,12 +66,10 @@ struct LevelCompleteView : View {
                 }
                 .padding()
                 
-                
                 BottomButtons(upperButtonIconSring: Constants.NEXT_LEVEL,
                               underButtonIconString: Constants.MENU_BUTTON,
                               upperActionButton: actionForNextLevel,
                               underActionButton: actionForMenu)
-                
             }
             .padding(.top)
         }
