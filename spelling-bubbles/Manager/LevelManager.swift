@@ -60,10 +60,16 @@ class LevelManager: ObservableObject {
     }
     
     func levelCompleted(){
+        for x in allLevels{
+            print(x.status)
+        }
         allLevels[startLevel].status = .completed
         let nextLevel = startLevel + 1
         if nextLevel  >= allLevels.count { return }
         UserDefaults.standard.set(nextLevel, forKey: Constants.LEVEL)
         allLevels[nextLevel].status = .currrent
+        for x in allLevels{
+            print(x.status)
+        }
     }
 }

@@ -23,18 +23,20 @@ extension GameViewController : GameSceneDelegate {
     
     
     func presentLevelCompleteView() {
+        self.levelManager?.levelCompleted()
         let vc = UIHostingController(rootView: LevelCompleteView(
             actionForNextLevel: {
                 print("user taped nextLevel")
-                // must call next level, if available
-                // else, it should should restart gameScene ?
+                self.scene?.level += 1
+                self.scene?.restartScene()
+                self.scene?.isPaused = false
+                self.dismiss(animated: true)
             },
             actionForMenu: {
                 self.viewManager?.didUserTapGoToMenu()
                 self.dismiss(animated: true, completion: nil)
             })
         )
-        
         vc.modalPresentationStyle = .overFullScreen
         vc.view.backgroundColor = .clear
         self.present(vc, animated: true)
@@ -44,6 +46,9 @@ extension GameViewController : GameSceneDelegate {
         let vc = UIHostingController(rootView: LevelFailedView(
             actionForRestart: {
                 print("user pressed restart")
+                self.scene?.restartScene()
+                self.scene?.isPaused = false
+                self.dismiss(animated: true)
             },
             actionForMenu: {
                 self.viewManager?.didUserTapGoToMenu()
@@ -66,11 +71,13 @@ extension GameViewController : GameSceneDelegate {
             },
             actionMenuPressed: {
                 self.viewManager?.didUserTapGoToMenu()
-                self.levelManager?.levelCompleted()
                 self.dismiss(animated: true, completion: nil)
             },
             actionRestartPressed: {
                 print("User pressed restart")
+                self.scene?.restartScene()
+                self.scene?.isPaused = false
+                self.dismiss(animated: true)
             })
         )
         
