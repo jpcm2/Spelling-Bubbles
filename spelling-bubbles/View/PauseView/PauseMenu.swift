@@ -14,6 +14,7 @@ struct PauseMenuView : View {
     
     var actionXButton: HandleWithButtonAction
     var actionMenuPressed : HandleWithButtonAction
+    var actionRestartPressed : HandleWithButtonAction
     
     struct Constants {
         static let CLOSE_BUTTON = "close-button"
@@ -48,7 +49,7 @@ struct PauseMenuView : View {
                     
                     BottomButtons(upperButtonIconSring: Constants.RESTART_BUTTON,
                                   underButtonIconString: Constants.MENU_BUTTON,
-                                  upperActionButton: {},
+                                  upperActionButton: { actionRestartPressed()},
                                   underActionButton: { actionMenuPressed()}
                     )
                 }
@@ -64,6 +65,6 @@ struct PauseMenuView : View {
 
 struct PauseMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        PauseMenuView(actionXButton: {}, actionMenuPressed: {})
+        PauseMenuView(actionXButton: {}, actionMenuPressed: {}, actionRestartPressed: {})
     }
 }
