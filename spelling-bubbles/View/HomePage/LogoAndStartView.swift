@@ -20,8 +20,7 @@ struct LogoAndStartButtonView : View {
                 .resizable()
                 .scaledToFit()
                 .padding()
-            
-            
+        
             Button(action: {
                 print("starIcon pressed")
                 actionForStartButton()
@@ -31,10 +30,7 @@ struct LogoAndStartButtonView : View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 137.HAdapted,height: 112.VAdapted)
-            }
-            )
-    
-            
+            })
         }
         .padding()
     }

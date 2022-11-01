@@ -12,9 +12,7 @@ class GarbageManager {
     private var avaiablePositions: [AvaiablePosition] = []
     private var left = 0
     private var right = 5
-    
-    private var isLeft = true
-    
+        
     struct Constants {
         static let SPACE_TO_OCCUPY = 6
         static let MAXIMUM_Y = UIScreen.main.bounds.height * 0.78

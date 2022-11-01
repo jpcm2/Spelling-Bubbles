@@ -23,15 +23,12 @@ struct SettingsMenuView : View {
     }
     
     var body: some View {
-        
         ZStack{
             Image(Constants.BACKGROUND_IMAGE)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 332.HAdapted, height: 477.VAdapted)
                 
-            
-            
             Button(action: {
                 actionCloseButton()
                 
@@ -42,21 +39,16 @@ struct SettingsMenuView : View {
             .frame(width: 59.HAdapted, height: 54.VAdapted)
             .position(x: 310.HAdapted, y: 170.VAdapted)
             
-            
-            
             VStack(alignment: .center) {
-
                 Text("Settings")
                     .font(.system(size: 36, weight: .regular, design: .rounded))
                     .padding()
-                
+            
                 VStack(alignment: .center){
-                    
                     HStack(alignment: .center){
                         VStack{
                             Button(action: {
                                 print("button pressed")
-                                
                             }) {
                                 Image(Constants.MUSIC_BUTTON)
                                     .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
@@ -99,9 +91,7 @@ struct SettingsMenuView : View {
                         }
                     }
                 }
-                
                 .padding()
-                
             }
         }
     }

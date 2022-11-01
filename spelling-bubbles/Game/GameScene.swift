@@ -86,7 +86,6 @@ class GameScene: SKScene {
         
         if gargabeStation?.checkPosition() == 1 {
             controllerGameSceneDelegate?.didUserFailedLevel()
-            
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3){
