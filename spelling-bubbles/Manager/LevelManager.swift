@@ -35,7 +35,6 @@ class LevelManager: ObservableObject {
     
     func setupUserDefaultToLevel(){
         if isLevelAlreadySet { return }
-        print("entrou aq")
         UserDefaults.standard.set(Constants.START_LEVEL, forKey: Constants.LEVEL)
     }
     
