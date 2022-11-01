@@ -46,6 +46,11 @@
 		0DF9ECFE290DA5D500F02341 /* LevelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */; };
 		0DF9ED00290DA8AE00F02341 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */; };
 		0DF9ED02290DB4B200F02341 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ED01290DB4B200F02341 /* Level.swift */; };
+		1725EEBA291040EE0025BE6E /* LevelFailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEB9291040EE0025BE6E /* LevelFailed.swift */; };
+		1725EEBD291078260025BE6E /* GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEBC291078260025BE6E /* GameSceneDelegate.swift */; };
+		1725EEBF29107DBB0025BE6E /* PauseButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEBE29107DBB0025BE6E /* PauseButtonDelegate.swift */; };
+		1725EEC1291083E30025BE6E /* GarbageStationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEC0291083E30025BE6E /* GarbageStationDelegate.swift */; };
+		1725EEC3291084E00025BE6E /* GameScene+GarbageStationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725EEC2291084E00025BE6E /* GameScene+GarbageStationDelegate.swift */; };
 		175CE6F42908D89600649C13 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F32908D89600649C13 /* PlantsView.swift */; };
 		175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F52908D8F100649C13 /* LogoAndStartView.swift */; };
 		175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F72908D92700649C13 /* TopbuttonsView.swift */; };
@@ -55,7 +60,6 @@
 		17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */; };
 		17BFB0422901BE76001FE918 /* BoatAngularMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */; };
 		17BFB04429023913001FE918 /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04329023913001FE918 /* PauseButton.swift */; };
-		17BFB0462902D4E2001FE918 /* PauseButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */; };
 		17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0472904C258001FE918 /* PauseMenu.swift */; };
 		17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB0492904CBA4001FE918 /* SettingsMenu.swift */; };
 		17BFB04D2907112D001FE918 /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB04C2907112D001FE918 /* XButtonView.swift */; };
@@ -113,6 +117,11 @@
 		0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStatus.swift; sourceTree = "<group>"; };
 		0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		0DF9ED01290DB4B200F02341 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		1725EEB9291040EE0025BE6E /* LevelFailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFailed.swift; sourceTree = "<group>"; };
+		1725EEBC291078260025BE6E /* GameSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneDelegate.swift; sourceTree = "<group>"; };
+		1725EEBE29107DBB0025BE6E /* PauseButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButtonDelegate.swift; sourceTree = "<group>"; };
+		1725EEC0291083E30025BE6E /* GarbageStationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageStationDelegate.swift; sourceTree = "<group>"; };
+		1725EEC2291084E00025BE6E /* GameScene+GarbageStationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+GarbageStationDelegate.swift"; sourceTree = "<group>"; };
 		175CE6F32908D89600649C13 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
 		175CE6F52908D8F100649C13 /* LogoAndStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndStartView.swift; sourceTree = "<group>"; };
 		175CE6F72908D92700649C13 /* TopbuttonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopbuttonsView.swift; sourceTree = "<group>"; };
@@ -122,7 +131,6 @@
 		17BFB03F2901BE69001FE918 /* BoatHorizontalMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatHorizontalMovement.swift; sourceTree = "<group>"; };
 		17BFB0412901BE76001FE918 /* BoatAngularMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatAngularMovement.swift; sourceTree = "<group>"; };
 		17BFB04329023913001FE918 /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
-		17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButtonDelegate.swift; sourceTree = "<group>"; };
 		17BFB0472904C258001FE918 /* PauseMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenu.swift; sourceTree = "<group>"; };
 		17BFB0492904CBA4001FE918 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 		17BFB04C2907112D001FE918 /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 				0DF9ECFA290D995700F02341 /* Manager */,
 				0D6670F928FF231000DA1814 /* ContentView.swift */,
 				0D6670FB28FF233300DA1814 /* GameScene.swift */,
+				1725EEC2291084E00025BE6E /* GameScene+GarbageStationDelegate.swift */,
 				0D1D7AB9290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift */,
 				0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */,
 				2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */,
@@ -244,8 +253,10 @@
 				0D66710928FF240C00DA1814 /* AnyNode.swift */,
 				0D66710B28FF242700DA1814 /* Moveable.swift */,
 				0D686D2128FF65D200774265 /* ShakeHandler.swift */,
-				17BFB0452902D4E2001FE918 /* PauseButtonDelegate.swift */,
+				1725EEBC291078260025BE6E /* GameSceneDelegate.swift */,
+				1725EEBE29107DBB0025BE6E /* PauseButtonDelegate.swift */,
 				0DC262A2290799100091A7F2 /* AddableGame.swift */,
+				1725EEC0291083E30025BE6E /* GarbageStationDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -294,6 +305,7 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1725EEBB291040F40025BE6E /* LevelFailed */,
 				17FF04EC290F07E1008684D8 /* LevelComplete */,
 				17FF04EB290F06C2008684D8 /* SettingsView */,
 				0D1D7ABB290ACA7C00EE1179 /* LevelPage */,
@@ -336,6 +348,14 @@
 				0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		1725EEBB291040F40025BE6E /* LevelFailed */ = {
+			isa = PBXGroup;
+			children = (
+				1725EEB9291040EE0025BE6E /* LevelFailed.swift */,
+			);
+			path = LevelFailed;
 			sourceTree = "<group>";
 		};
 		175CE6F22908D87600649C13 /* HomePage */ = {
@@ -480,13 +500,13 @@
 				0D66710C28FF242700DA1814 /* Moveable.swift in Sources */,
 				0D6670FC28FF233300DA1814 /* GameScene.swift in Sources */,
 				17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */,
-				17BFB0462902D4E2001FE918 /* PauseButtonDelegate.swift in Sources */,
 				0D6670FF28FF236100DA1814 /* AvaiablePosition.swift in Sources */,
 				0D1D7ABD290ACBC100EE1179 /* LevelPage.swift in Sources */,
 				17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */,
 				17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */,
 				0D686D2228FF65D200774265 /* ShakeHandler.swift in Sources */,
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
+				1725EEBA291040EE0025BE6E /* LevelFailed.swift in Sources */,
 				0D6670F028FF1FB600DA1814 /* Persistence.swift in Sources */,
 				175CE6F42908D89600649C13 /* PlantsView.swift in Sources */,
 				0D33EB06290F18C500474AFE /* UIDevice+Vibrate.swift in Sources */,
@@ -503,6 +523,7 @@
 				0D1D7ABA290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift in Sources */,
 				17BFB04F2907114E001FE918 /* PauseLabelView.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
+				1725EEC1291083E30025BE6E /* GarbageStationDelegate.swift in Sources */,
 				17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */,
 				17BFB04D2907112D001FE918 /* XButtonView.swift in Sources */,
 				0DF9ED02290DB4B200F02341 /* Level.swift in Sources */,
@@ -515,6 +536,7 @@
 				0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */,
 				0D686D342902030400774265 /* GarbageManager.swift in Sources */,
 				17FF04EE290F07F3008684D8 /* LevelCompleteView.swift in Sources */,
+				1725EEBF29107DBB0025BE6E /* PauseButtonDelegate.swift in Sources */,
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
 				0D66711428FF248300DA1814 /* DiagonalMovement.swift in Sources */,
 				0D66711928FF24C000DA1814 /* GarbageStation.swift in Sources */,
@@ -528,11 +550,13 @@
 				17BC24D529100ECA0096AD59 /* WoodAndWaves.swift in Sources */,
 				17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */,
 				0DF9ECFC290D9A5800F02341 /* LevelPosition.swift in Sources */,
+				1725EEC3291084E00025BE6E /* GameScene+GarbageStationDelegate.swift in Sources */,
 				0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */,
 				0D686D2928FF7DBA00774265 /* TextBox.swift in Sources */,
 				27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */,
 				17BFB0422901BE76001FE918 /* BoatAngularMovement.swift in Sources */,
 				0D66711628FF249700DA1814 /* VerticalMovement.swift in Sources */,
+				1725EEBD291078260025BE6E /* GameSceneDelegate.swift in Sources */,
 				0DF9ED00290DA8AE00F02341 /* LevelManager.swift in Sources */,
 				0D686D2E28FF84C100774265 /* TextBoxStation.swift in Sources */,
 			);

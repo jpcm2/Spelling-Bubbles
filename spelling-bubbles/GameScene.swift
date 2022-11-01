@@ -14,7 +14,7 @@ class GameScene: SKScene {
     //    var progressBar = ProgressBar(withMaxProgress: 3)
     var gargabeStation: GarbageStation?
     var bubbleStation: BubbleStation?
-    var controllerPauseDelegate: PauseButtonDelegate?
+    var controllerGameSceneDelegate: GameSceneDelegate?
     var background: MainGameBackground?
     var textbox: TextBoxStation?
     var boat = Boat()
@@ -25,27 +25,16 @@ class GameScene: SKScene {
         static let numberOfBubbles = 11
     }
     
-    var isGamePaused: Bool = false {
-        didSet {
-            didUserTapPauseButton()
-        }
-    }
-    
-    private func didUserTapPauseButton(){
-        if isGamePaused {
-            controllerPauseDelegate?.pauseButtonPressed()
-        }
-    }
+    var isGamePaused: Bool = false
+       
     
     init(withLevel level: Int, andSize size: CGSize ){
         super.init(size: size)
-        pauseButton.delegate = self
         self.level = level
     }
     
     override init(size: CGSize) {
         super.init(size: size)
-        pauseButton.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -69,6 +58,9 @@ class GameScene: SKScene {
         [boat, background, pauseButton].forEach{ viewObject in
             addChild( viewObject ?? SKNode())
         }
+        
+        pauseButton.delegate = self
+        gargabeStation?.delegate = self
     }
     
     private func setupGravityAndConfiguration(inside view: SKView){
@@ -93,7 +85,7 @@ class GameScene: SKScene {
         bubbleStation?.update()
         
         if gargabeStation?.checkPosition() == 1 {
-            self.scene?.view?.isPaused = true
+            controllerGameSceneDelegate?.didUserFailedLevel()
             
         }
         

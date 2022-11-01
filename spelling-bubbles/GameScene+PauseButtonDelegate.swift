@@ -11,5 +11,6 @@ extension GameScene : PauseButtonDelegate {
     
     func pauseButtonPressed() {
         isGamePaused = true
+        controllerGameSceneDelegate?.didUserPressedPauseButton()
     }
 }
