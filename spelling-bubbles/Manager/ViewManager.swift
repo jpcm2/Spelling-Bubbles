@@ -34,5 +34,11 @@ class ViewManager: ObservableObject {
         isGameRuning = false
         showingLevelPage = true
     }
+    
+    func didUserTapToRestartGame(){
+        isGameRuning.toggle()
+        sleep(1)
+        isGameRuning.toggle()
+    }
 }
 

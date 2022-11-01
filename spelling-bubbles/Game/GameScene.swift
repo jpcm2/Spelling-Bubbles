@@ -30,7 +30,7 @@ class GameScene: SKScene {
     
     init(withLevel level: Int, andSize size: CGSize ){
         super.init(size: size)
-        self.level = level
+        self.level = 1
     }
     
     override init(size: CGSize) {
@@ -74,6 +74,29 @@ class GameScene: SKScene {
         border.friction = 0
         border.restitution = 1
         self.physicsBody = border
+    }
+    
+    func restartScene(){
+        self.removeAllChildren()
+        setupGravityAndConfiguration(inside: self.view ?? SKView())
+        createBorderAtGameScene()
+        
+        gargabeStation = GarbageStation(withThisGarbageQuantity: level)
+        background = MainGameBackground(withSize: self.view?.bounds.size ?? SKView().bounds.size)
+        guard let currentWordOnTextBox = gargabeStation?.indicatedGarbage?.objectName else {return}
+        textbox = TextBoxStation(withWord: currentWordOnTextBox)
+        bubbleStation = BubbleStation(numberOfBubbles: Constants.numberOfBubbles, currentWord: currentWordOnTextBox)
+        
+        gargabeStation?.addToGame(insideScene: self)
+        textbox?.addToGame(insideScene: self)
+        bubbleStation?.addToGame(insideScene: self)
+        
+        [boat, background, pauseButton].forEach{ viewObject in
+            addChild( viewObject ?? SKNode())
+        }
+        
+        pauseButton.delegate = self
+        gargabeStation?.delegate = self
     }
     
     override func update(_ currentTime: TimeInterval) {
