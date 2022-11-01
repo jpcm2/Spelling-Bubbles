@@ -26,7 +26,7 @@ struct LevelFailedView : View {
         static let MENU_BUTTON = "menu-button"
     }
     
-    let emblems = [
+    private let emblems = [
         Constants.EMBLEM_ARATU,
         Constants.EMBLEM_CAPI,
         Constants.EMBLEM_FOOT,
