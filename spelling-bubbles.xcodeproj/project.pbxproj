@@ -39,6 +39,7 @@
 		0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */; };
 		0D686D322901954C00774265 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D312901954C00774265 /* ProgressBar.swift */; };
 		0D686D342902030400774265 /* GarbageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D332902030400774265 /* GarbageManager.swift */; };
+		0D81EABE2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81EABD2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift */; };
 		0DC262A3290799100091A7F2 /* AddableGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A2290799100091A7F2 /* AddableGame.swift */; };
 		0DC262A529079A4F0091A7F2 /* TextBoxStationSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */; };
 		0DF9ECF9290D88D600F02341 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECF8290D88D600F02341 /* ViewManager.swift */; };
@@ -110,6 +111,7 @@
 		0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Rounded.swift"; sourceTree = "<group>"; };
 		0D686D312901954C00774265 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		0D686D332902030400774265 /* GarbageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageManager.swift; sourceTree = "<group>"; };
+		0D81EABD2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView+UIViewControllerRepresentable.swift"; sourceTree = "<group>"; };
 		0DC262A2290799100091A7F2 /* AddableGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableGame.swift; sourceTree = "<group>"; };
 		0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxStationSubscriber.swift; sourceTree = "<group>"; };
 		0DF9ECF8290D88D600F02341 /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
@@ -186,13 +188,8 @@
 		0D6670E528FF1FB600DA1814 /* spelling-bubbles */ = {
 			isa = PBXGroup;
 			children = (
+				0D81EABC2910AB2000E1F1D7 /* Game */,
 				0DF9ECFA290D995700F02341 /* Manager */,
-				0D6670F928FF231000DA1814 /* ContentView.swift */,
-				0D6670FB28FF233300DA1814 /* GameScene.swift */,
-				1725EEC2291084E00025BE6E /* GameScene+GarbageStationDelegate.swift */,
-				0D1D7AB9290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift */,
-				0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */,
-				2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */,
 				0D66711D28FF2E8E00DA1814 /* View */,
 				0D66711A28FF27AC00DA1814 /* Constants */,
 				0D66710F28FF245600DA1814 /* Controllers */,
@@ -269,7 +266,6 @@
 				0D686D2C28FF84AA00774265 /* TextObserver */,
 				0D66711728FF24B200DA1814 /* GarbageObserver */,
 				0D66711028FF246300DA1814 /* Movement */,
-				0D686D1F28FF5E4300774265 /* GameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -328,6 +324,21 @@
 				0D686D2D28FF84C100774265 /* TextBoxStation.swift */,
 			);
 			path = TextObserver;
+			sourceTree = "<group>";
+		};
+		0D81EABC2910AB2000E1F1D7 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0D686D1F28FF5E4300774265 /* GameViewController.swift */,
+				0D6670F928FF231000DA1814 /* ContentView.swift */,
+				0D6670FB28FF233300DA1814 /* GameScene.swift */,
+				1725EEC2291084E00025BE6E /* GameScene+GarbageStationDelegate.swift */,
+				0D1D7AB9290A485F00EE1179 /* GameScene+PauseButtonDelegate.swift */,
+				0D686D2328FF660100774265 /* GameScene+ShakeHandler.swift */,
+				2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */,
+				0D81EABD2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		0DC262A629079A9D0091A7F2 /* Subscribers */ = {
@@ -548,6 +559,7 @@
 				0D6670E728FF1FB600DA1814 /* spelling_bubblesApp.swift in Sources */,
 				0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */,
 				17BC24D529100ECA0096AD59 /* WoodAndWaves.swift in Sources */,
+				0D81EABE2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift in Sources */,
 				17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */,
 				0DF9ECFC290D9A5800F02341 /* LevelPosition.swift in Sources */,
 				1725EEC3291084E00025BE6E /* GameScene+GarbageStationDelegate.swift in Sources */,
