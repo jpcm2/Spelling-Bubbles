@@ -23,6 +23,7 @@ extension GameViewController : GameSceneDelegate {
     
     
     func presentLevelCompleteView() {
+        self.levelManager?.levelCompleted()
         let vc = UIHostingController(rootView: LevelCompleteView(
             actionForNextLevel: {
                 print("user taped nextLevel")
@@ -66,7 +67,6 @@ extension GameViewController : GameSceneDelegate {
             },
             actionMenuPressed: {
                 self.viewManager?.didUserTapGoToMenu()
-                self.levelManager?.levelCompleted()
                 self.dismiss(animated: true, completion: nil)
             },
             actionRestartPressed: {
