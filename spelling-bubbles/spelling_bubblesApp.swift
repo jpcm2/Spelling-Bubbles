@@ -9,14 +9,16 @@ import SwiftUI
 
 @main
 struct spelling_bubblesApp: App {
+    
     let persistenceController = PersistenceController.shared
+    let levelManager = LevelManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(ViewManager())
-                .environmentObject(LevelManager())
+                .environmentObject(levelManager)
         }
     }
 }

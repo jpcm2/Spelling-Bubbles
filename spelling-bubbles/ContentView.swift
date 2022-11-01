@@ -27,6 +27,8 @@ struct GameView: UIViewControllerRepresentable {
 struct ContentView: View {
     
     @EnvironmentObject private var viewManager: ViewManager
+    let homePage = HomePageView()
+    let levelPage = LevelPage()
     
     var body: some View {
         
@@ -35,11 +37,11 @@ struct ContentView: View {
         }
 
         if viewManager.showingHomePage {
-            HomePageView().ignoresSafeArea(.all)
+            homePage.ignoresSafeArea(.all)
         }
         
         if viewManager.showingLevelPage {
-            LevelPage().ignoresSafeArea(.all)
+            levelPage.ignoresSafeArea(.all)
         }
     }
 }

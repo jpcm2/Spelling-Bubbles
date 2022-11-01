@@ -12,10 +12,31 @@ import Foundation
 class LevelManager: ObservableObject {
     
     @Published var allLevels: [Level] = []
-    private var current = 0
+    
+    private var startLevel: Int {
+        let value = UserDefaults.standard.value(forKey: Constants.LEVEL)
+        guard let value = value, let valueConverted = value as? Int else { return 0 }
+        return valueConverted
+    }
+    
+    private var isLevelAlreadySet: Bool {
+        return UserDefaults.standard.value(forKey: Constants.LEVEL) != nil
+    }
+    
+    struct Constants {
+        static let LEVEL = "level"
+        static let START_LEVEL = 0
+    }
     
     init(){
+        setupUserDefaultToLevel()
         createAllLevels()
+    }
+    
+    func setupUserDefaultToLevel(){
+        if isLevelAlreadySet { return }
+        print("entrou aq")
+        UserDefaults.standard.set(Constants.START_LEVEL, forKey: Constants.LEVEL)
     }
     
     private func createAllLevels(){
@@ -27,22 +48,23 @@ class LevelManager: ObservableObject {
         
         let positions = [firstLevel, secondLevel, thirdLevel, fourthLevel, fifthLevel]
         
-        var levels = positions.map({ position in
-            return Level(position: position, status: .blocked)
+        var levels = positions.enumerated().map({ (index, position) in
+            return Level(position: position, status: index <= startLevel ? .completed : .blocked)
         })
         
-        levels[current].status = .currrent
+        levels[startLevel].status = .currrent
         allLevels = levels
     }
     
     func userLevel() -> Int {
-        return current + 1
+        return startLevel + 1
     }
     
     func levelCompleted(){
-        allLevels[current].status = .completed
-        current += 1
-        if current >= allLevels.count { return }
-        allLevels[current].status = .currrent
+        allLevels[startLevel].status = .completed
+        let nextLevel = startLevel + 1
+        if nextLevel  >= allLevels.count { return }
+        UserDefaults.standard.set(nextLevel, forKey: Constants.LEVEL)
+        allLevels[nextLevel].status = .currrent
     }
 }

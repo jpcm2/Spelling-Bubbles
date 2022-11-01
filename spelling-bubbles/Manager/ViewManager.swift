@@ -17,6 +17,7 @@ class ViewManager: ObservableObject {
     func didUserTapStartButton(){
         showingHomePage = false
         showingLevelPage = true
+        
     }
     
     func didUserTapGoBackToHomePage(){
