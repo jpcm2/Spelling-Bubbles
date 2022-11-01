@@ -30,7 +30,7 @@ class GameScene: SKScene {
     
     init(withLevel level: Int, andSize size: CGSize ){
         super.init(size: size)
-        self.level = 1
+        self.level = level
     }
     
     override init(size: CGSize) {

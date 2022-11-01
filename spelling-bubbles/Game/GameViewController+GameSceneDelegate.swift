@@ -27,6 +27,10 @@ extension GameViewController : GameSceneDelegate {
         let vc = UIHostingController(rootView: LevelCompleteView(
             actionForNextLevel: {
                 print("user taped nextLevel")
+                self.scene?.level += 1
+                self.scene?.restartScene()
+                self.scene?.isPaused = false
+                self.dismiss(animated: true)
             },
             actionForMenu: {
                 self.viewManager?.didUserTapGoToMenu()
