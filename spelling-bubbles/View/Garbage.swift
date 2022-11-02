@@ -28,7 +28,9 @@ class Garbage: SKNode, AnyNode {
          withName name: String
     ){
         super.init()
-        self.image = SKSpriteNode(imageNamed: image)
+        let newImage = UIImage(named: image)?.scalePreservingAspectRatio(targetSize: CGSize(width: 64, height: 64))
+        
+        self.image = SKSpriteNode(texture: SKTexture(image: newImage ?? UIImage()))
         self.imageName = image
         self.movement = movement
         self.objectName = name
