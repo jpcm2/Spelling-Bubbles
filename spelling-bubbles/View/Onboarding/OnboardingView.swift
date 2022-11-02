@@ -21,18 +21,23 @@ class OnboardingView: UIView {
       super.init(frame: frame)
         
       playLayer.player = player
+        playLayer.videoGravity = .resizeAspectFill
     
       player.play()
-      player.volume = 0.4
+      player.volume = 0.35
       layer.addSublayer(playLayer)
+
     }
 
     required init?(coder: NSCoder) {
        fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func layoutSubviews() {
       super.layoutSubviews()
-        playLayer.frame = bounds
+        playLayer.frame = CGRect(x: 0,
+                                 y: 0,
+                                 width: UIScreen.main.bounds.width,
+                                 height: UIScreen.main.bounds.height)
     }
 }

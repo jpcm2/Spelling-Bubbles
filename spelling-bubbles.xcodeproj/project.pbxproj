@@ -48,6 +48,7 @@
 		0DD545512912FF0E0078814C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD545502912FF0E0078814C /* OnboardingView.swift */; };
 		0DD545532912FF470078814C /* onboarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0DD545522912FF470078814C /* onboarding.mp4 */; };
 		0DD545552912FF660078814C /* OnboardingView+UIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD545542912FF660078814C /* OnboardingView+UIViewRepresentable.swift */; };
+		0DD54557291301020078814C /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD54556291301020078814C /* Onboarding.swift */; };
 		0DF9ECF9290D88D600F02341 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECF8290D88D600F02341 /* ViewManager.swift */; };
 		0DF9ECFC290D9A5800F02341 /* LevelPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFB290D9A5800F02341 /* LevelPosition.swift */; };
 		0DF9ECFE290DA5D500F02341 /* LevelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */; };
@@ -127,6 +128,7 @@
 		0DD545502912FF0E0078814C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0DD545522912FF470078814C /* onboarding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding.mp4; sourceTree = "<group>"; };
 		0DD545542912FF660078814C /* OnboardingView+UIViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView+UIViewRepresentable.swift"; sourceTree = "<group>"; };
+		0DD54556291301020078814C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		0DF9ECF8290D88D600F02341 /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
 		0DF9ECFB290D9A5800F02341 /* LevelPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPosition.swift; sourceTree = "<group>"; };
 		0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStatus.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 			children = (
 				0DD545502912FF0E0078814C /* OnboardingView.swift */,
 				0DD545542912FF660078814C /* OnboardingView+UIViewRepresentable.swift */,
+				0DD54556291301020078814C /* Onboarding.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
 				0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */,
 				0D686D342902030400774265 /* GarbageManager.swift in Sources */,
+				0DD54557291301020078814C /* Onboarding.swift in Sources */,
 				17FF04EE290F07F3008684D8 /* LevelCompleteView.swift in Sources */,
 				1725EEBF29107DBB0025BE6E /* PauseButtonDelegate.swift in Sources */,
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
