@@ -12,6 +12,7 @@ struct ImageConstants {
     
     static let GARBAGE_INDICATOR_BG = "garbage-indicator-bg"
     static let MAIN_GAME_BACKGROUND = "main-game"
+    static let DARK_MAIN_GAME_BACKGROUND = "dark-background"
     static let TEXT_BOX = "bg-rock"
     static let BOAT = "boatman"
     static let X_BUTTON = "XButton"

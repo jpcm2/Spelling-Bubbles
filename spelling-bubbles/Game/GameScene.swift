@@ -46,7 +46,7 @@ class GameScene: SKScene {
         createBorderAtGameScene()
         
         gargabeStation = GarbageStation(withThisGarbageQuantity: level)
-        background = MainGameBackground(withSize: view.bounds.size)
+        background = MainGameBackground(withSize: view.bounds.size, andLevel: level)
         guard let currentWordOnTextBox = gargabeStation?.indicatedGarbage?.objectName else {return}
         textbox = TextBoxStation(withWord: currentWordOnTextBox)
         bubbleStation = BubbleStation(numberOfBubbles: Constants.numberOfBubbles, currentWord: currentWordOnTextBox)
@@ -82,7 +82,7 @@ class GameScene: SKScene {
         createBorderAtGameScene()
         
         gargabeStation = GarbageStation(withThisGarbageQuantity: level)
-        background = MainGameBackground(withSize: self.view?.bounds.size ?? SKView().bounds.size)
+        background = MainGameBackground(withSize: self.view?.bounds.size ?? SKView().bounds.size, andLevel: level)
         guard let currentWordOnTextBox = gargabeStation?.indicatedGarbage?.objectName else {return}
         textbox = TextBoxStation(withWord: currentWordOnTextBox)
         bubbleStation = BubbleStation(numberOfBubbles: Constants.numberOfBubbles, currentWord: currentWordOnTextBox)
