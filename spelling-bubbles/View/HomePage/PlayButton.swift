@@ -10,6 +10,17 @@ import SwiftUI
 
 struct PlayButton : View {
     
+    @State var showTurtle = false
+    @State private var isAnimating = false
+    @State private var movingAllTurtle = false
+    
+    @State var spriteTurtle = TurtleSprite.first
+    @State private var triggerToChangeShell = 0
+    @State private var triggerMovingShell = 0
+    
+    @State private var offsetx: CGFloat = 0
+    @State private var offsety: CGFloat = 0
+    
     private struct Constants {
         static let LEFT_ARM_TURTLE = "L1-turtle"
         static let LEFT_ARM_TURTLE_2 = "L2-turtle"
@@ -39,67 +50,84 @@ struct PlayButton : View {
         return UIScreen.main.bounds.width/2
     }
     
-    @State var showTurtle = false
-    @State var spriteTurtle = TurtleSprite.first
-    @State private var fadeOut = false
-
     var body : some View {
     
         ZStack{
             Image( showTurtle ? spriteTurtle.rawValue : HomePageView.Constants.START_ICON)
                 .resizable()
                 .frame(width: 160, height: 110)
-                .animation(Animation.easeIn(duration: 0.25), value: fadeOut)
-                .animation(Animation.linear(duration: <#T##Double#>))
-                .onTapGesture{
-                    self.fadeOut.toggle()
-                    self.showTurtle = true
-    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25 ) {
-                        withAnimation {
-                            self.spriteTurtle = self.spriteTurtle.next()
-                            self.fadeOut.toggle()
-                        }
+                .onChange(of: triggerToChangeShell, perform: { _ in
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        self.spriteTurtle = self.spriteTurtle.next()
+                        triggerToChangeShell += 1
                     }
+                })
+                .onTapGesture{
+                    self.showTurtle = true
+                    triggerToChangeShell += 1
+                    self.isAnimating = true
+                    self.movingAllTurtle = true
+                    triggerMovingShell += 1
                 }
             
             Image(Constants.LEFT_ARM_TURTLE)
                 .resizable()
                 .frame(width: 45, height: 60)
-                .position(x: midScreenWidth + 35, y: 323)
+                .position(x: 140 + 35, y: 50)
                 .zIndex(-1)
-                .opacity(showTurtle ? 1 : 0.0)
+                .rotationEffect(Angle(degrees: self.isAnimating ? 3: -3), anchor: .center)
+                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
             
             Image(Constants.LEFT_ARM_TURTLE_2)
                 .resizable()
                 .frame(width: 35, height: 40)
-                .position(x: midScreenWidth - 35, y: 323)
+                .position(x: 140 - 35, y: 55)
                 .zIndex(-1)
-                .opacity(showTurtle ? 1 : 0.0)
+                .rotationEffect(Angle(degrees: self.isAnimating ? 3: -3), anchor: .center)
+                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
             
             Image(Constants.RIGHT_ARM_TURTLE)
                 .resizable()
                 .frame(width: 45, height: 60)
-                .position(x: midScreenWidth + 35, y: 435)
-                .opacity(showTurtle ? 1 : 0.0)
+                .position(x: 140 + 35, y: 175)
                 .zIndex(-1)
+                .rotationEffect(Angle(degrees: self.isAnimating ? -3: 3), anchor: .center)
+                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
             
             Image(Constants.RIGHT_ARM_TURTLE_2)
                 .resizable()
                 .frame(width: 40, height: 35)
-                .position(x: midScreenWidth - 35, y: 440)
-                .opacity(showTurtle ? 1 : 0.0)
+                .position(x: 140 - 35, y: 175)
                 .zIndex(-1)
+                .rotationEffect(Angle(degrees: self.isAnimating ? -3: 3), anchor: .center)
+                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
+                .transition(.identity)
+ 
             
             Image(Constants.HEAD)
                 .resizable()
                 .frame(width: 100, height: 60)
-                .position(x: midScreenWidth + 100, y: 380)
-                .opacity(showTurtle ? 1 : 0.0)
+                .position(x: 140 + 100, y: 125)
                 .zIndex(-1)
-                
+                .rotationEffect(Angle(degrees: self.isAnimating ? -1: 1), anchor: .leading)
+                .animation(Animation.linear(duration: 2).repeatForever(), value: isAnimating)
         }
-        
+        .frame(width: 280, height: 230)
+        .rotationEffect(Angle(degrees: movingAllTurtle ? 10: 0), anchor: .leading)
+        .animation(Animation.linear(duration: 2), value: movingAllTurtle)
+        .onChange(of: triggerMovingShell, perform: { _ in
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                withAnimation {
+                    offsetx += 3
+                    offsety += 5
+                    self.triggerMovingShell += 1
+                }
+
+            }
+        })
+        .offset(x: offsetx, y: offsety)
     }
 }
 
