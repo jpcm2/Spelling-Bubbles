@@ -44,6 +44,7 @@ struct HomePageView : View {
                         showingSettingsView = true
                     },
                     actionForLeftButton: {
+                        viewManager.didUserTapStartButton()
                         print ("clicou no mapa")
                     })
                 .padding(.horizontal, CGFloat(14.HAdapted))
