@@ -13,6 +13,7 @@ struct SettingsMenuView : View {
     var actionCloseButton : HandleWithButtonAction
     
     struct Constants {
+        static let TEXT_COLOR = "TextColor"
         static let CLOSE_BUTTON = "close-button"
         static let MORE_GAMES = "moregames-button"
         static let MUSIC_BUTTON = "music-button"
@@ -40,8 +41,9 @@ struct SettingsMenuView : View {
             .position(x: 310.HAdapted, y: 170.VAdapted)
             
             VStack(alignment: .center) {
-                Text("Settings")
-                    .font(.system(size: 36, weight: .regular, design: .rounded))
+                Text("Ajustes")
+                    .font(.system(size: 42, weight: .medium, design: .rounded))
+                    .foregroundColor(Color(Constants.TEXT_COLOR))
                     .padding()
             
                 VStack(alignment: .center){
@@ -55,6 +57,8 @@ struct SettingsMenuView : View {
                             }
                             
                             Text("Music")
+                                .fontWeight(.medium)
+                                .foregroundColor(Color(Constants.TEXT_COLOR))
                         }
                         .padding()
                         
@@ -68,6 +72,8 @@ struct SettingsMenuView : View {
                             }
                             
                             Text("Sounds")
+                                .fontWeight(.medium)
+                                .foregroundColor(Color(Constants.TEXT_COLOR))
                         }
                         .padding()
                     }

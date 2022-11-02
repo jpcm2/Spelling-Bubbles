@@ -25,6 +25,8 @@ struct SoundAndMusicView : View {
                 }
                 
                 Text("Música")
+                    .fontWeight(.medium)
+                    .foregroundColor(Color(PauseMenuView.Constants.TEXT_COLOR))
             }
             .padding()
             
@@ -38,6 +40,8 @@ struct SoundAndMusicView : View {
                 }
                 
                 Text("Som")
+                    .fontWeight(.medium)
+                    .foregroundColor(Color(PauseMenuView.Constants.TEXT_COLOR))
             }
             .padding()
         }

@@ -17,6 +17,7 @@ struct PauseMenuView : View {
     var actionRestartPressed : HandleWithButtonAction
     
     struct Constants {
+        static let TEXT_COLOR = "TextColor"
         static let CLOSE_BUTTON = "close-button"
         static let MENU_BUTTON = "menu-button"
         static let MUSIC_BUTTON = "music-button"
@@ -40,9 +41,9 @@ struct PauseMenuView : View {
             VStack(alignment: .center) {
                 
                 PauseLabelView()
-                    .padding(.top, 10.VAdapted)
+                    .padding(.top, 50.VAdapted)
                 
-                VStack(alignment: .center, spacing: 50){
+                VStack(alignment: .center, spacing: 20.VAdapted){
                     
                     SoundAndMusicView()
                         .padding(.horizontal, 1.0)
@@ -53,7 +54,7 @@ struct PauseMenuView : View {
                                   underActionButton: { actionMenuPressed()}
                     )
                 }
-                .padding(.top, 0.0)
+                .padding(.top, 40.0)
                 
             }
         }

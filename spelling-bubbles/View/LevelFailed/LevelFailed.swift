@@ -16,6 +16,7 @@ struct LevelFailedView : View {
     var actionForMenu : HandleWithButtonAction
     
     struct Constants {
+        static let TEXT_COLOR = "TextColor"
         static let FAIL_FRAME = "failed-frame 1"
         static let EMBLEM_FAILED = "crabInABottle"
         static let RESTART_BUTTON = "restart-button"
@@ -41,7 +42,8 @@ struct LevelFailedView : View {
                     .padding()
                 
                 Text("EITA POXA!")
-                    .font(.system(size: 36.VAdapted, weight: .medium))
+                    .font(.system(size: 42.VAdapted, weight: .medium))
+                    .foregroundColor(Color(Constants.TEXT_COLOR))
                     .padding()
                 
                 BottomButtons(upperButtonIconSring: Constants.RESTART_BUTTON,

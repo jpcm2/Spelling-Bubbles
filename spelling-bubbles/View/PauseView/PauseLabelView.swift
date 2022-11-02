@@ -15,9 +15,12 @@ struct PauseLabelView : View {
             Image(systemName: "pause.fill")
                 .resizable()
                 .frame(width: 34,height: 35)
+                .foregroundColor(Color(PauseMenuView.Constants.TEXT_COLOR))
                 .scaledToFit()
             Text("Pause")
-                .font(.system(size: 36, weight: .regular, design: .rounded))
+                .font(.system(size: 36, weight: .medium, design: .rounded))
+                .foregroundColor(Color(PauseMenuView.Constants.TEXT_COLOR))
+      
             
         }
 
