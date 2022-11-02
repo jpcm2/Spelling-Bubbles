@@ -85,7 +85,7 @@
 		0D1D7ABC290ACBC100EE1179 /* LevelPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPage.swift; sourceTree = "<group>"; };
 		0D1D7ABE290ACC6D00EE1179 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
 		0D33EB05290F18C500474AFE /* UIDevice+Vibrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Vibrate.swift"; sourceTree = "<group>"; };
-		0D6670E328FF1FB600DA1814 /* spelling-bubbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spelling-bubbles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D6670E328FF1FB600DA1814 /* Ecoletrando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecoletrando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6670E628FF1FB600DA1814 /* spelling_bubblesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bubblesApp.swift; sourceTree = "<group>"; };
 		0D6670EA28FF1FB600DA1814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D6670ED28FF1FB600DA1814 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		0D6670E428FF1FB600DA1814 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D6670E328FF1FB600DA1814 /* spelling-bubbles.app */,
+				0D6670E328FF1FB600DA1814 /* Ecoletrando.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -461,7 +461,7 @@
 			);
 			name = "spelling-bubbles";
 			productName = "spelling-bubbles";
-			productReference = 0D6670E328FF1FB600DA1814 /* spelling-bubbles.app */;
+			productReference = 0D6670E328FF1FB600DA1814 /* Ecoletrando.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -725,7 +725,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.apfd.spelling-bubbles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Ecoletrando;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -754,7 +754,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.apfd.spelling-bubbles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Ecoletrando;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
