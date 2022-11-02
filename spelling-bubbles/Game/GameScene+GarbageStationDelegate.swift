@@ -8,10 +8,9 @@
 import Foundation
 
 extension GameScene : GarbageStationDelegate {
+    
     func endRoundLevel() {
         controllerGameSceneDelegate?.didUserCompletedLevel()
-        print("entrou aqui")
-        
     }
     
 }

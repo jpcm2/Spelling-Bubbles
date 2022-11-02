@@ -21,7 +21,6 @@ extension GameViewController : GameSceneDelegate {
         presentPauseMenuView()
     }
     
-    
     func presentLevelCompleteView() {
         self.levelManager?.levelCompleted()
         let vc = UIHostingController(rootView: LevelCompleteView(
