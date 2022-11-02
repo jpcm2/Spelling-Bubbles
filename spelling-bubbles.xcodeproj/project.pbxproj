@@ -41,7 +41,7 @@
 		0D686D342902030400774265 /* GarbageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D686D332902030400774265 /* GarbageManager.swift */; };
 		0D81EABE2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81EABD2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift */; };
 		0D81EAC02910B0EB00E1F1D7 /* GameViewController+GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81EABF2910B0EB00E1F1D7 /* GameViewController+GameSceneDelegate.swift */; };
-		0D81EAC22911A11300E1F1D7 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81EAC12911A11300E1F1D7 /* PlayButton.swift */; };
+		0D81EAC22911A11300E1F1D7 /* Turtle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81EAC12911A11300E1F1D7 /* Turtle.swift */; };
 		0DC262A3290799100091A7F2 /* AddableGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A2290799100091A7F2 /* AddableGame.swift */; };
 		0DC262A529079A4F0091A7F2 /* TextBoxStationSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */; };
 		0DF9ECF9290D88D600F02341 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECF8290D88D600F02341 /* ViewManager.swift */; };
@@ -115,7 +115,7 @@
 		0D686D332902030400774265 /* GarbageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageManager.swift; sourceTree = "<group>"; };
 		0D81EABD2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView+UIViewControllerRepresentable.swift"; sourceTree = "<group>"; };
 		0D81EABF2910B0EB00E1F1D7 /* GameViewController+GameSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+GameSceneDelegate.swift"; sourceTree = "<group>"; };
-		0D81EAC12911A11300E1F1D7 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		0D81EAC12911A11300E1F1D7 /* Turtle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turtle.swift; sourceTree = "<group>"; };
 		0DC262A2290799100091A7F2 /* AddableGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableGame.swift; sourceTree = "<group>"; };
 		0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxStationSubscriber.swift; sourceTree = "<group>"; };
 		0DF9ECF8290D88D600F02341 /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 				175CE6F52908D8F100649C13 /* LogoAndStartView.swift */,
 				175CE6F72908D92700649C13 /* TopbuttonsView.swift */,
 				17BC24D429100ECA0096AD59 /* WoodAndWaves.swift */,
-				0D81EAC12911A11300E1F1D7 /* PlayButton.swift */,
+				0D81EAC12911A11300E1F1D7 /* Turtle.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -568,7 +568,7 @@
 				0D81EABE2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift in Sources */,
 				17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */,
 				0DF9ECFC290D9A5800F02341 /* LevelPosition.swift in Sources */,
-				0D81EAC22911A11300E1F1D7 /* PlayButton.swift in Sources */,
+				0D81EAC22911A11300E1F1D7 /* Turtle.swift in Sources */,
 				1725EEC3291084E00025BE6E /* GameScene+GarbageStationDelegate.swift in Sources */,
 				0D66711F28FF2E9E00DA1814 /* MainGameBackground.swift in Sources */,
 				0D686D2928FF7DBA00774265 /* TextBox.swift in Sources */,

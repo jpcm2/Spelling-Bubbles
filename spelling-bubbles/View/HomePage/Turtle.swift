@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct PlayButton : View {
+struct Turtle : View {
     
     @State var showTurtle = false
     @State private var isAnimating = false
@@ -134,8 +134,8 @@ struct PlayButton : View {
     }
 }
 
-struct PlayButton_ContentPreview : PreviewProvider {
+struct Turtle_ContentPreview : PreviewProvider {
     static var previews : some View {
-        PlayButton()
+        Turtle()
     }
 }

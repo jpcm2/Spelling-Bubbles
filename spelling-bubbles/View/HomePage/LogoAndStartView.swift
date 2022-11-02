@@ -15,7 +15,7 @@ struct LogoAndStartButtonView : View {
     @State var isAnimating = false
     @State var showTurtle = false
     
-    private let turtle = PlayButton()
+    private let turtle = Turtle()
     
     var body: some View {
         VStack(alignment: .center){
