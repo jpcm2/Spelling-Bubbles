@@ -16,6 +16,7 @@ struct LevelCompleteView : View {
     var actionForMenu : HandleWithButtonAction
     
     struct Constants {
+        static let TEXT_COLOR = "TextColor"
         static let SHINE = "brilho"
         static let EMBLEM_CAPI = "emblema-capivara"
         static let EMBLEM_ARATU = "emblema-aratu"

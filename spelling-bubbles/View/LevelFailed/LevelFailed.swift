@@ -16,22 +16,13 @@ struct LevelFailedView : View {
     var actionForMenu : HandleWithButtonAction
     
     struct Constants {
+        static let TEXT_COLOR = "TextColor"
         static let FAIL_FRAME = "failed-frame 1"
-        static let SHINE = "brilho"
-        static let EMBLEM_CAPI = "emblema-capivara"
-        static let EMBLEM_ARATU = "emblema-aratu"
-        static let EMBLEM_FLOWER = "emblema-flor"
-        static let EMBLEM_FOOT = "emblema-pegada"
+        static let EMBLEM_FAILED = "crabInABottle"
         static let RESTART_BUTTON = "restart-button"
         static let MENU_BUTTON = "menu-button"
     }
     
-    private let emblems = [
-        Constants.EMBLEM_ARATU,
-        Constants.EMBLEM_CAPI,
-        Constants.EMBLEM_FOOT,
-        Constants.EMBLEM_FLOWER
-    ]
     
     var body: some View {
         ZStack{
@@ -41,39 +32,34 @@ struct LevelFailedView : View {
                 .frame(width: 332.HAdapted,
                        height: 497.VAdapted)
             
-            VStack(alignment: .center, spacing: 15.VAdapted){
+            VStack(alignment: .center){
                 
-                VStack(spacing: -35.VAdapted){
-                    ZStack{
-                        Image(Constants.SHINE)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 280.HAdapted, height: 280.VAdapted)
-                            .rotationEffect(Angle(degrees: animating ? 360 : 0))
-                            .animation(Animation.linear(duration: 20).repeatForever(autoreverses: false), value: animating)
-                            .onAppear {
-                                animating = true
-                            }
-                        
-                        Image(emblems.randomElement()!)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200.HAdapted, height: 200.VAdapted)
-                    }
-                    
-                    Text("Fracasso")
-                        .font(.system(size: 36.VAdapted, weight: .medium))
-                }
-
+                Image(Constants.EMBLEM_FAILED)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 330.HAdapted)
+                    .offset(x: -19.HAdapted)
+                    .padding()
+                
+                Text("EITA POXA!")
+                    .font(.system(size: 42.VAdapted, weight: .medium))
+                    .foregroundColor(Color(Constants.TEXT_COLOR))
+                    .padding()
+                
                 BottomButtons(upperButtonIconSring: Constants.RESTART_BUTTON,
                               underButtonIconString: Constants.MENU_BUTTON,
                               upperActionButton: actionForRestart,
                               underActionButton: actionForMenu)
             }
             .padding(.bottom)
+            .offset(y: -40.VAdapted)
+
+                
+            }
+        .padding()
         }
     }
-}
+
 
 struct LevelFailedView_PreviewProvider : PreviewProvider {
     static var previews : some View {
