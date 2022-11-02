@@ -13,7 +13,7 @@ class MainGameBackground: SKSpriteNode, AnyNode {
     
     init(withSize size: CGSize, andLevel level: Int) {
         self.screenSize = size
-        let backgroundName = level >= 1 ? ImageConstants.DARK_MAIN_GAME_BACKGROUND : ImageConstants.MAIN_GAME_BACKGROUND
+        let backgroundName = level >= 3 ? ImageConstants.DARK_MAIN_GAME_BACKGROUND : ImageConstants.MAIN_GAME_BACKGROUND
         let backgroundTexture = SKTexture(imageNamed: backgroundName)
         super.init(texture: backgroundTexture, color: .white, size: size)
         setupNode()

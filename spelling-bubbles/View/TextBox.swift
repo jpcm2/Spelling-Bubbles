@@ -20,11 +20,13 @@ class TextBox: SKNode, AnyNode {
     var rockPosition: CGPoint?
     
     init(withLetter letter: String,
-         rockPosition position: CGPoint
+         rockPosition position: CGPoint,
+         andLevel level: Int
     ){
         super.init()
         self.letter = letter
-        self.image = SKSpriteNode(imageNamed: ImageConstants.TEXT_BOX)
+        let imageName = level >= 3 ? ImageConstants.DARK_TEXT_BOX : ImageConstants.TEXT_BOX
+        self.image = SKSpriteNode(imageNamed: imageName)
         self.rockPosition = position
         setupLetterInsideBox()
         setupNode()

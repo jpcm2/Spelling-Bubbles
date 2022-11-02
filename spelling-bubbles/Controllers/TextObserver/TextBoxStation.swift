@@ -13,6 +13,7 @@ class TextBoxStation: TextBoxStationSubscriber {
     private var letters: [TextBox] = []
     var word = ""
     var currentWord: String = ""
+    var level: Int = 0
     
     private var textBoxSize: CGRect {
         return SKSpriteNode(imageNamed: ImageConstants.TEXT_BOX).frame
@@ -22,8 +23,9 @@ class TextBoxStation: TextBoxStationSubscriber {
         return Double(textBoxSize.width)
     }
     
-    init(withWord word: String){
+    init(withWord word: String, andLevel level: Int){
         self.word = word
+        self.level = level
         self.currentWord = String(repeating: " ", count: self.word.count)
         setupTextBoxAtMiddle()
     }
@@ -40,7 +42,8 @@ class TextBoxStation: TextBoxStationSubscriber {
         currentWord.enumerated().forEach{ (index, letter) in
             let newXPosition = startXPoint + Double(index) * (textBoxWidth + 7.5)
             let newLetter = TextBox(withLetter: String(letter),
-                                    rockPosition: CGPoint(x: newXPosition, y: addToYPosition[index]))
+                                    rockPosition: CGPoint(x: newXPosition, y: addToYPosition[index]),
+                                    andLevel: self.level)
             letters.append(newLetter)
         }
     }
