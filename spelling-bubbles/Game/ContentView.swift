@@ -16,18 +16,17 @@ struct ContentView: View {
     let levelPage = LevelPage()
     
     var body: some View {
-        PlayButton()
-//        if viewManager.isGameRuning {
-//            GameView().ignoresSafeArea(.all)
-//        }
-//
-//        if viewManager.showingHomePage {
-//            homePage.ignoresSafeArea(.all)
-//        }
-//
-//        if viewManager.showingLevelPage {
-//            levelPage.ignoresSafeArea(.all)
-//        }
+        if viewManager.isGameRuning {
+            GameView().ignoresSafeArea(.all)
+        }
+
+        if viewManager.showingHomePage {
+            homePage.ignoresSafeArea(.all)
+        }
+
+        if viewManager.showingLevelPage {
+            levelPage.ignoresSafeArea(.all)
+        }
     }
 }
 

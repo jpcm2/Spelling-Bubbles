@@ -49,7 +49,7 @@ struct PlayButton : View {
     var midScreenWidth: CGFloat {
         return UIScreen.main.bounds.width/2
     }
-    
+        
     var body : some View {
     
         ZStack{
@@ -63,13 +63,6 @@ struct PlayButton : View {
                         triggerToChangeShell += 1
                     }
                 })
-                .onTapGesture{
-                    self.showTurtle = true
-                    triggerToChangeShell += 1
-                    self.isAnimating = true
-                    self.movingAllTurtle = true
-                    triggerMovingShell += 1
-                }
             
             Image(Constants.LEFT_ARM_TURTLE)
                 .resizable()
@@ -120,14 +113,24 @@ struct PlayButton : View {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                 withAnimation {
-                    offsetx += 3
-                    offsety += 5
+                    offsetx += 8
+                    offsety += 10
                     self.triggerMovingShell += 1
                 }
-
             }
         })
         .offset(x: offsetx, y: offsety)
+        .onAppear {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                self.showTurtle = true
+                triggerToChangeShell += 1
+                self.isAnimating = true
+                self.movingAllTurtle = true
+                triggerMovingShell += 1
+            }
+ 
+        }
     }
 }
 
