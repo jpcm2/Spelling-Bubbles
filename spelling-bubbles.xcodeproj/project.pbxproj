@@ -73,6 +73,7 @@
 		17FF04EE290F07F3008684D8 /* LevelCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF04ED290F07F3008684D8 /* LevelCompleteView.swift */; };
 		2725C2B129070C0B00057CF7 /* GameScene+TouchesBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */; };
 		27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27810D992901C93E00E167E1 /* SoundController.swift */; };
+		27AF738E2912A1EB0017DBA6 /* UIImage+scalePreservingAspectRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF738D2912A1EB0017DBA6 /* UIImage+scalePreservingAspectRatio.swift */; };
 		27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE65F2901B71400789B2A /* BubbleStation.swift */; };
 		27DDE6622901B74800789B2A /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6612901B74800789B2A /* Bubble.swift */; };
 		27DDE6642901B76300789B2A /* BubbleSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6632901B76300789B2A /* BubbleSubscriber.swift */; };
@@ -147,6 +148,7 @@
 		17FF04ED290F07F3008684D8 /* LevelCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCompleteView.swift; sourceTree = "<group>"; };
 		2725C2B029070C0B00057CF7 /* GameScene+TouchesBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene+TouchesBegan.swift"; sourceTree = "<group>"; };
 		27810D992901C93E00E167E1 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
+		27AF738D2912A1EB0017DBA6 /* UIImage+scalePreservingAspectRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+scalePreservingAspectRatio.swift"; sourceTree = "<group>"; };
 		27DDE65F2901B71400789B2A /* BubbleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStation.swift; sourceTree = "<group>"; };
 		27DDE6612901B74800789B2A /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		27DDE6632901B76300789B2A /* BubbleSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSubscriber.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				0D66710628FF23DF00DA1814 /* Int+Adapted.swift */,
 				0D686D2F28FF91AD00774265 /* UIFont+Rounded.swift */,
 				0D33EB05290F18C500474AFE /* UIDevice+Vibrate.swift */,
+				27AF738D2912A1EB0017DBA6 /* UIImage+scalePreservingAspectRatio.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				0D6670FF28FF236100DA1814 /* AvaiablePosition.swift in Sources */,
 				0D1D7ABD290ACBC100EE1179 /* LevelPage.swift in Sources */,
 				17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */,
+				27AF738E2912A1EB0017DBA6 /* UIImage+scalePreservingAspectRatio.swift in Sources */,
 				17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */,
 				0D686D2228FF65D200774265 /* ShakeHandler.swift in Sources */,
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
@@ -707,7 +711,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spelling-bubbles/Preview Content\"";
-				DEVELOPMENT_TEAM = 4UVYB4V5UN;
+				DEVELOPMENT_TEAM = V8K8MHSNH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -736,7 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spelling-bubbles/Preview Content\"";
-				DEVELOPMENT_TEAM = 4UVYB4V5UN;
+				DEVELOPMENT_TEAM = V8K8MHSNH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
