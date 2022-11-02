@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="./spelling-bubbles/Assets.xcassets/logo.imageset/Frame 1.png" alt="Logo" width="200" height="280">
+    <img src="./spelling-bubbles/Assets.xcassets/homePage/Logo 1.imageset/Logo.png" alt="Logo" width="100%">
   </a>
 
   <h3 align="center">Spelling Bubbles</h3>

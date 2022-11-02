@@ -44,6 +44,11 @@
 		0D81EAC22911A11300E1F1D7 /* Turtle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81EAC12911A11300E1F1D7 /* Turtle.swift */; };
 		0DC262A3290799100091A7F2 /* AddableGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A2290799100091A7F2 /* AddableGame.swift */; };
 		0DC262A529079A4F0091A7F2 /* TextBoxStationSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */; };
+		0DD5454E2912FE9D0078814C /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD5454D2912FE9D0078814C /* OnboardingManager.swift */; };
+		0DD545512912FF0E0078814C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD545502912FF0E0078814C /* OnboardingView.swift */; };
+		0DD545532912FF470078814C /* onboarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0DD545522912FF470078814C /* onboarding.mp4 */; };
+		0DD545552912FF660078814C /* OnboardingView+UIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD545542912FF660078814C /* OnboardingView+UIViewRepresentable.swift */; };
+		0DD54557291301020078814C /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD54556291301020078814C /* Onboarding.swift */; };
 		0DF9ECF9290D88D600F02341 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECF8290D88D600F02341 /* ViewManager.swift */; };
 		0DF9ECFC290D9A5800F02341 /* LevelPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFB290D9A5800F02341 /* LevelPosition.swift */; };
 		0DF9ECFE290DA5D500F02341 /* LevelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */; };
@@ -119,6 +124,11 @@
 		0D81EAC12911A11300E1F1D7 /* Turtle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turtle.swift; sourceTree = "<group>"; };
 		0DC262A2290799100091A7F2 /* AddableGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableGame.swift; sourceTree = "<group>"; };
 		0DC262A429079A4F0091A7F2 /* TextBoxStationSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxStationSubscriber.swift; sourceTree = "<group>"; };
+		0DD5454D2912FE9D0078814C /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
+		0DD545502912FF0E0078814C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0DD545522912FF470078814C /* onboarding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = onboarding.mp4; sourceTree = "<group>"; };
+		0DD545542912FF660078814C /* OnboardingView+UIViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView+UIViewRepresentable.swift"; sourceTree = "<group>"; };
+		0DD54556291301020078814C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		0DF9ECF8290D88D600F02341 /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
 		0DF9ECFB290D9A5800F02341 /* LevelPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPosition.swift; sourceTree = "<group>"; };
 		0DF9ECFD290DA5D500F02341 /* LevelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStatus.swift; sourceTree = "<group>"; };
@@ -195,6 +205,7 @@
 		0D6670E528FF1FB600DA1814 /* spelling-bubbles */ = {
 			isa = PBXGroup;
 			children = (
+				0DD545522912FF470078814C /* onboarding.mp4 */,
 				27AF738F2912B06E0017DBA6 /* Info.plist */,
 				0D81EABC2910AB2000E1F1D7 /* Game */,
 				0DF9ECFA290D995700F02341 /* Manager */,
@@ -310,6 +321,7 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DD5454F2912FF000078814C /* Onboarding */,
 				1725EEBB291040F40025BE6E /* LevelFailed */,
 				17FF04EC290F07E1008684D8 /* LevelComplete */,
 				17FF04EB290F06C2008684D8 /* SettingsView */,
@@ -361,12 +373,23 @@
 			path = Subscribers;
 			sourceTree = "<group>";
 		};
+		0DD5454F2912FF000078814C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0DD545502912FF0E0078814C /* OnboardingView.swift */,
+				0DD545542912FF660078814C /* OnboardingView+UIViewRepresentable.swift */,
+				0DD54556291301020078814C /* Onboarding.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		0DF9ECFA290D995700F02341 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				0D686D332902030400774265 /* GarbageManager.swift */,
 				0DF9ECF8290D88D600F02341 /* ViewManager.swift */,
 				0DF9ECFF290DA8AE00F02341 /* LevelManager.swift */,
+				0DD5454D2912FE9D0078814C /* OnboardingManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -505,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D6670EE28FF1FB600DA1814 /* Preview Assets.xcassets in Resources */,
+				0DD545532912FF470078814C /* onboarding.mp4 in Resources */,
 				0D6670EB28FF1FB600DA1814 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +542,7 @@
 			files = (
 				0D686D3028FF91AD00774265 /* UIFont+Rounded.swift in Sources */,
 				17C55245290860CF00929589 /* HomePage.swift in Sources */,
+				0DD5454E2912FE9D0078814C /* OnboardingManager.swift in Sources */,
 				27DDE6602901B71400789B2A /* BubbleStation.swift in Sources */,
 				0D66710C28FF242700DA1814 /* Moveable.swift in Sources */,
 				0D6670FC28FF233300DA1814 /* GameScene.swift in Sources */,
@@ -526,6 +551,7 @@
 				0D1D7ABD290ACBC100EE1179 /* LevelPage.swift in Sources */,
 				17BFB05129071194001FE918 /* SoundAndMusicView.swift in Sources */,
 				27AF738E2912A1EB0017DBA6 /* UIImage+scalePreservingAspectRatio.swift in Sources */,
+				0DD545512912FF0E0078814C /* OnboardingView.swift in Sources */,
 				17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */,
 				0D686D2228FF65D200774265 /* ShakeHandler.swift in Sources */,
 				0D66710728FF23DF00DA1814 /* Int+Adapted.swift in Sources */,
@@ -547,6 +573,7 @@
 				17BFB04F2907114E001FE918 /* PauseLabelView.swift in Sources */,
 				27DDE6622901B74800789B2A /* Bubble.swift in Sources */,
 				1725EEC1291083E30025BE6E /* GarbageStationDelegate.swift in Sources */,
+				0DD545552912FF660078814C /* OnboardingView+UIViewRepresentable.swift in Sources */,
 				17BFB0402901BE69001FE918 /* BoatHorizontalMovement.swift in Sources */,
 				17BFB04D2907112D001FE918 /* XButtonView.swift in Sources */,
 				0DF9ED02290DB4B200F02341 /* Level.swift in Sources */,
@@ -558,6 +585,7 @@
 				0D66710128FF237600DA1814 /* Garbage.swift in Sources */,
 				0D686D2B28FF806C00774265 /* ColorConstants.swift in Sources */,
 				0D686D342902030400774265 /* GarbageManager.swift in Sources */,
+				0DD54557291301020078814C /* Onboarding.swift in Sources */,
 				17FF04EE290F07F3008684D8 /* LevelCompleteView.swift in Sources */,
 				1725EEBF29107DBB0025BE6E /* PauseButtonDelegate.swift in Sources */,
 				0D66710E28FF244200DA1814 /* GarbageSubscriber.swift in Sources */,
@@ -713,7 +741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spelling-bubbles/Preview Content\"";
-				DEVELOPMENT_TEAM = V8K8MHSNH4;
+				DEVELOPMENT_TEAM = 4UVYB4V5UN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "spelling-bubbles/Info.plist";
@@ -744,7 +772,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spelling-bubbles/Preview Content\"";
-				DEVELOPMENT_TEAM = V8K8MHSNH4;
+				DEVELOPMENT_TEAM = 4UVYB4V5UN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "spelling-bubbles/Info.plist";

@@ -16,6 +16,11 @@ struct ContentView: View {
     let levelPage = LevelPage()
     
     var body: some View {
+        
+        if viewManager.showingOnboarding {
+            Onboarding().ignoresSafeArea(.all)
+        }
+
         if viewManager.isGameRuning {
             GameView().ignoresSafeArea(.all)
         }
