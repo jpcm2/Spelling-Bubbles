@@ -21,6 +21,16 @@ extension GameViewController : GameSceneDelegate {
         presentPauseMenuView()
     }
     
+    private func pauseGame() {
+        self.scene?.isGamePaused = true
+        self.scene?.isPaused = true
+    }
+    
+    private func resumeGame() {
+        self.scene?.isGamePaused = false
+        self.scene?.isPaused = false
+    }
+    
     func presentLevelCompleteView() {
         self.levelManager?.levelCompleted()
         let vc = UIHostingController(rootView: LevelCompleteView(

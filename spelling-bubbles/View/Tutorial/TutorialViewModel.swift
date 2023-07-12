@@ -8,10 +8,6 @@
 import Foundation
 
 
-//protocol TutorialDelegate {
-//    func userDidFinishTutorial()
-//}
-
 
 class TutorialViewModel: ObservableObject {
     

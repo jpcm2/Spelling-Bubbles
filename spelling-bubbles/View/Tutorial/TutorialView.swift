@@ -28,38 +28,39 @@ struct TutorialView: View {
                 .resizable()
                 .frame(width: 332, height: 497)
             
-            
             VStack(spacing: 17) {
+                
+                Spacer()
+                
                 Text(tutorialInfo.title)
                     .font(.custom("Fredoka", size: 34))
                     .fontWeight(.bold)
-                    .padding(.top, 30)
+                    .padding(.top, 120)
+                
+                Spacer()
                 
                 VStack {
                     imageView
                         .frame(height: 181)
              
-                    
                     Text(tutorialInfo.description)
-                        .font(.custom("Fredoka", size: 20))
-                        .padding(.horizontal, 45)
+                        .font(.custom("Fredoka", size: 18))
+                        .padding(.horizontal, 60)
+                        .padding(.vertical, 20)
                         .layoutPriority(1001)
                 }
+                         
+                Spacer()
                 
-                
-               
                 VStack(spacing: 18) {
                     pageControl
                     
                     bottomButtons
                 }
-                .padding(.top)
-
-               
+                .padding(.bottom, 50)
                 
-                
+                Spacer()
             }
-            .padding(.top, 30)
         }
 
     }
