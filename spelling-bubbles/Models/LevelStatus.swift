@@ -11,6 +11,6 @@ enum LevelStatus: String {
     
     case completed = "completedlevel-button"
     case blocked = "blockedlevel"
-    case currrent = "current-level"    
+    case currrent = "current-level"
 }
 

@@ -25,8 +25,9 @@ struct LevelPage : View {
                               trailing: 14.HAdapted)
     
     private func userCanPlatAt(_ level: Level) -> Bool {
-        return level.status == .currrent
+        return level.status != .blocked
     }
+    
     
     var body: some View {
         ZStack{
@@ -47,7 +48,13 @@ struct LevelPage : View {
                 let level = levelManager.allLevels[index]
                 LevelButton(position: level.position ,
                             didUserTap: {
-                    if userCanPlatAt(level) { viewManager.didUserTapToStartGame() }
+                    
+                    if userCanPlatAt(level){
+                        levelManager.didUserTap(level: index)
+                        viewManager.didUserTapToStartGame()
+                    }
+
+   
                 }, title: "\(index+1)", level: level.status)
             }
             

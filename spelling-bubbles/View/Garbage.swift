@@ -50,7 +50,7 @@ class Garbage: SKNode, AnyNode {
     }
     
     func setupPosition() {
-        self.zPosition = 20
+        self.zPosition = 300
     }
     
     func setupPhysicsBody() {
@@ -89,7 +89,7 @@ class Garbage: SKNode, AnyNode {
     
     func checkIndication() {
         guard let indication = self.isIndicated else {return}
-        if indication{
+        if indication {
             self.removeAllChildren()
             self.addChild(SKSpriteNode(imageNamed: ImageConstants.GARBAGE_INDICATOR_BG))
             guard let image = self.image else {return}
