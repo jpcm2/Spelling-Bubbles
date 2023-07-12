@@ -89,7 +89,7 @@ extension GameViewController : GameSceneDelegate {
     func presentTutorialView() {
         let onboardingManager = OnboardingManager.shared
         
-        if onboardingManager.wasTutorialCompleted {
+        if !onboardingManager.wasTutorialCompleted {
             
             let viewModel: TutorialViewModel = TutorialViewModel(userDidfinishTutorial: userCompletedTutorial)
             
