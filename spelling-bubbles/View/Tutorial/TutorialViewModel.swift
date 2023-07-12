@@ -21,7 +21,14 @@ class TutorialViewModel: ObservableObject {
         let description: String
     }
     
-    @Published var currentIndex = 0
+    @Published var currentIndex: Int
+    
+    var userDidfinishTutorial: () -> Void
+    
+    init(currentIndex: Int = 0, userDidfinishTutorial: @escaping () -> Void) {
+        self.currentIndex = currentIndex
+        self.userDidfinishTutorial = userDidfinishTutorial
+    }
     
     var currentInfo: TutorialCardInfo {
         tutorialInfoArray[currentIndex]
@@ -45,7 +52,7 @@ class TutorialViewModel: ObservableObject {
         if !isThirdCardInfoSelected {
             presentNextCard()
         } else {
-            print("else do delegate")
+            userDidfinishTutorial()
         }
         
     }

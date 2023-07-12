@@ -89,22 +89,31 @@ extension GameViewController : GameSceneDelegate {
     func presentTutorialView() {
         let onboardingManager = OnboardingManager.shared
         
-        if !onboardingManager.wasTutorialCompleted {
-            let vc = UIHostingController(rootView: TutorialView(userEndedTutorial: {
-                self.scene?.isGamePaused = false
-                self.scene?.isPaused = false
-                self.dismiss(animated: true, completion: nil)
-                
-                onboardingManager.userDidCompleteTutoria()
-            }))
+        if onboardingManager.wasTutorialCompleted {
+            
+            let viewModel: TutorialViewModel = TutorialViewModel(userDidfinishTutorial: userCompletedTutorial)
+            
+            let vc = UIHostingController(rootView: TutorialView(viewModel: viewModel))
             
             self.scene?.isGamePaused = true
+            self.scene?.isPaused = true
             vc.modalPresentationStyle = .overFullScreen
             vc.view.backgroundColor = .clear
             self.present(vc, animated:  true)
+            
         } else {
             print("user already seen tutorial")
         }
         
+    }
+    
+    private func userCompletedTutorial() {
+        let onboardingManager = OnboardingManager.shared
+        
+        self.scene?.isGamePaused = false
+        self.scene?.isPaused = false
+        self.dismiss(animated: true, completion: nil)
+        
+        onboardingManager.userDidCompleteTutoria()
     }
 }

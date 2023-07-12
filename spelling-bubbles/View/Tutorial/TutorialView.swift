@@ -9,15 +9,17 @@ import SwiftUI
 
 struct TutorialView: View {
     
-    @ObservedObject var viewModel = TutorialViewModel()
+    @ObservedObject var viewModel: TutorialViewModel
     @State var animating = false
-    
     
     var tutorialInfo: TutorialViewModel.TutorialCardInfo {
         viewModel.currentInfo
     }
     
-    var userEndedTutorial: (() -> Void)
+    init(viewModel: TutorialViewModel) {
+        self.viewModel = viewModel
+        self.animating = animating
+    }
     
     
     var body: some View {
@@ -115,14 +117,7 @@ struct TutorialView: View {
                 
                 Button(action: {
                     withAnimation {
-                        
-//                      // não consegui respeitar o padrão MVVM
-                        // Refatora aqui leki kkk
-                        if !viewModel.isThirdCardInfoSelected {
-                            viewModel.presentNextCard()
-                        } else {
-                            userEndedTutorial()
-                        }
+                        viewModel.continueButtonPressed()
                     }
                 }) {
                     Image("nextlevel-button")
@@ -155,6 +150,8 @@ struct TutorialView: View {
 
 struct TutorialView_Preview: PreviewProvider {
     static var previews: some View {
-        TutorialView(userEndedTutorial: {})
+        TutorialView(viewModel: TutorialViewModel(userDidfinishTutorial: {
+            print("Usuário chegou ao fim do tutorial")
+        }))
     }
 }
