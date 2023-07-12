@@ -8,6 +8,11 @@
 import Foundation
 
 
+//protocol TutorialDelegate {
+//    func userDidFinishTutorial()
+//}
+
+
 class TutorialViewModel: ObservableObject {
     
     struct TutorialCardInfo {
@@ -38,13 +43,22 @@ class TutorialViewModel: ObservableObject {
     
     func continueButtonPressed() {
         if !isThirdCardInfoSelected {
-            currentIndex += 1
+            presentNextCard()
+        } else {
+            print("else do delegate")
         }
         
     }
     
+    func presentNextCard() {
+        currentIndex += 1
+    }
+    
     func backButtonPressed() {
-        currentIndex -= 1
+        if currentIndex >= 0 {
+            currentIndex -= 1
+        }
+        
     }
     
     var tutorialInfoArray: [TutorialCardInfo] = [

@@ -85,4 +85,18 @@ extension GameViewController : GameSceneDelegate {
         vc.view.backgroundColor = .clear
         self.present(vc, animated: true)
     }
+    
+    func presentTutorialView() {
+        let vc = UIHostingController(rootView: TutorialView(userEndedTutorial: {
+            self.scene?.isGamePaused = false
+            self.scene?.isPaused = false
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.scene?.isGamePaused = true
+        vc.modalPresentationStyle = .overFullScreen
+        vc.view.backgroundColor = .clear
+        self.present(vc, animated:  true)
+        
+    }
 }
