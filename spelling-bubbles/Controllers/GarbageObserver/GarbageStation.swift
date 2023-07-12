@@ -21,9 +21,9 @@ class GarbageStation: GarbageSubscriber {
     
     private let objects: [String] = [
         "CAIXA", "BONECA",
-        "CARRO",
-        "COPO", "FRALDA", "GARFO", "MEIA",
-        "OCULOS", "PNEU", "SACOLA", "SAPATO"]
+        "CARRO", "COPO", "FRALDA", "GARFO", "MEIA",
+        "OCULOS", "PNEU", "SACOLA", "SAPATO"
+    ]
 
     struct Constants {
         static let RANDOM_RANGE_MOVEMENT = 100...900

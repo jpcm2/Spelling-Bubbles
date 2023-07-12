@@ -59,6 +59,10 @@ class LevelManager: ObservableObject {
         return startLevel + 1
     }
     
+    func didUserTap(level: Int){
+        UserDefaults.standard.set(level, forKey: Constants.LEVEL)
+    }
+    
     func levelCompleted(){
         allLevels[startLevel].status = .completed
         let nextLevel = startLevel + 1

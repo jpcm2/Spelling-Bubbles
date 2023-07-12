@@ -28,6 +28,7 @@ struct LevelPage : View {
         return level.status == .currrent
     }
     
+    
     var body: some View {
         ZStack{
             Image(Constants.BACKGROUND)
@@ -47,7 +48,9 @@ struct LevelPage : View {
                 let level = levelManager.allLevels[index]
                 LevelButton(position: level.position ,
                             didUserTap: {
-                    if userCanPlatAt(level) { viewManager.didUserTapToStartGame() }
+                    levelManager.didUserTap(level: index)
+                    viewManager.didUserTapToStartGame()
+   
                 }, title: "\(index+1)", level: level.status)
             }
             
