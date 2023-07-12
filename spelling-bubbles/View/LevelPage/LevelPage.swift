@@ -25,7 +25,12 @@ struct LevelPage : View {
                               trailing: 14.HAdapted)
     
     private func userCanPlatAt(_ level: Level) -> Bool {
-        return level.status == .currrent
+        if level.status == .blocked {
+            return false
+        } else {
+            return true
+        }
+
     }
     
     var body: some View {
