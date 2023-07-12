@@ -62,6 +62,8 @@
 		175CE6F42908D89600649C13 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F32908D89600649C13 /* PlantsView.swift */; };
 		175CE6F62908D8F100649C13 /* LogoAndStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F52908D8F100649C13 /* LogoAndStartView.swift */; };
 		175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175CE6F72908D92700649C13 /* TopbuttonsView.swift */; };
+		176927542A5D7CAC00D98E57 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176927532A5D7CAC00D98E57 /* TutorialView.swift */; };
+		17B8AA722A5D8355006FEB41 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8AA712A5D8355006FEB41 /* TutorialViewModel.swift */; };
 		17BC24D529100ECA0096AD59 /* WoodAndWaves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC24D429100ECA0096AD59 /* WoodAndWaves.swift */; };
 		17BFB03B2901BE2D001FE918 /* Boat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03A2901BE2D001FE918 /* Boat.swift */; };
 		17BFB03E2901BE5A001FE918 /* BoatVerticalMoviment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */; };
@@ -142,6 +144,8 @@
 		175CE6F32908D89600649C13 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
 		175CE6F52908D8F100649C13 /* LogoAndStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndStartView.swift; sourceTree = "<group>"; };
 		175CE6F72908D92700649C13 /* TopbuttonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopbuttonsView.swift; sourceTree = "<group>"; };
+		176927532A5D7CAC00D98E57 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		17B8AA712A5D8355006FEB41 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		17BC24D429100ECA0096AD59 /* WoodAndWaves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodAndWaves.swift; sourceTree = "<group>"; };
 		17BFB03A2901BE2D001FE918 /* Boat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boat.swift; sourceTree = "<group>"; };
 		17BFB03D2901BE5A001FE918 /* BoatVerticalMoviment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatVerticalMoviment.swift; sourceTree = "<group>"; };
@@ -321,6 +325,7 @@
 		0D66711D28FF2E8E00DA1814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				176927522A5D7C9300D98E57 /* Tutorial */,
 				0DD5454F2912FF000078814C /* Onboarding */,
 				1725EEBB291040F40025BE6E /* LevelFailed */,
 				17FF04EC290F07E1008684D8 /* LevelComplete */,
@@ -413,6 +418,15 @@
 				0D81EAC12911A11300E1F1D7 /* Turtle.swift */,
 			);
 			path = HomePage;
+			sourceTree = "<group>";
+		};
+		176927522A5D7C9300D98E57 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				176927532A5D7CAC00D98E57 /* TutorialView.swift */,
+				17B8AA712A5D8355006FEB41 /* TutorialViewModel.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		17BFB03C2901BE48001FE918 /* Boat */ = {
@@ -566,6 +580,7 @@
 				27810D9A2901C93E00E167E1 /* SoundController.swift in Sources */,
 				0D6670F328FF1FB600DA1814 /* spelling_bubbles.xcdatamodeld in Sources */,
 				17BFB04A2904CBA4001FE918 /* SettingsMenu.swift in Sources */,
+				176927542A5D7CAC00D98E57 /* TutorialView.swift in Sources */,
 				0DF9ECFE290DA5D500F02341 /* LevelStatus.swift in Sources */,
 				175CE6F82908D92700649C13 /* TopbuttonsView.swift in Sources */,
 				17BFB04429023913001FE918 /* PauseButton.swift in Sources */,
@@ -600,6 +615,7 @@
 				0D686D2428FF660100774265 /* GameScene+ShakeHandler.swift in Sources */,
 				17BC24D529100ECA0096AD59 /* WoodAndWaves.swift in Sources */,
 				0D81EABE2910AB4800E1F1D7 /* GameView+UIViewControllerRepresentable.swift in Sources */,
+				17B8AA722A5D8355006FEB41 /* TutorialViewModel.swift in Sources */,
 				17BFB0482904C258001FE918 /* PauseMenu.swift in Sources */,
 				0DF9ECFC290D9A5800F02341 /* LevelPosition.swift in Sources */,
 				0D81EAC22911A11300E1F1D7 /* Turtle.swift in Sources */,
@@ -741,7 +757,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spelling-bubbles/Preview Content\"";
-				DEVELOPMENT_TEAM = 4UVYB4V5UN;
+				DEVELOPMENT_TEAM = 749Q737TF5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "spelling-bubbles/Info.plist";
@@ -772,7 +788,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"spelling-bubbles/Preview Content\"";
-				DEVELOPMENT_TEAM = 4UVYB4V5UN;
+				DEVELOPMENT_TEAM = 749Q737TF5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "spelling-bubbles/Info.plist";
