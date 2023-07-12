@@ -11,6 +11,7 @@ class OnboardingManager {
     
     struct Constants {
         static let KEY = "onboarding"
+        static let TUTORIAL = "tutorial"
     }
     
     static let shared = OnboardingManager()
@@ -20,8 +21,20 @@ class OnboardingManager {
         return hasUserAlreadySeen != nil
     }
     
+    var wasTutorialCompleted: Bool {
+        return hasUserCompleteTutorial != nil
+    }
+    
     var hasUserAlreadySeen: String? {
         return UserDefaults.standard.string(forKey: Constants.KEY)
+    }
+    
+    var hasUserCompleteTutorial: String? {
+        return UserDefaults.standard.string(forKey: Constants.TUTORIAL)
+    }
+    
+    func userDidCompleteTutoria() {
+        UserDefaults.standard.set(Constants.TUTORIAL, forKey: Constants.TUTORIAL)
     }
     
     func userHasSeenOnboarding(){
