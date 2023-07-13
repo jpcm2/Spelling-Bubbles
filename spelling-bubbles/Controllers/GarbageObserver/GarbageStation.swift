@@ -20,9 +20,27 @@ class GarbageStation: GarbageSubscriber {
     private let garbageManager = GarbageManager()
     
     private let objects: [String] = [
-        "CAIXA", "BONECA",
-        "CARRO", "COPO", "FRALDA", "GARFO", "MEIA",
-        "OCULOS", "PNEU", "SACOLA", "SAPATO"
+        "BONECA",
+        "CADEIRA",
+        "CADERNO",
+        "CAIXA",
+        "CARRO",
+        "CELULAR",
+        "COPO",
+        "FRALDA",
+        "GARFO",
+        "GARRAFA",
+        "MEIA",
+        "OCULOS",
+        "PNEU",
+        "SACOLA",
+        "SAPATO",
+        
+//        "TELEFONE",
+//        "VASSOURA"
+        // palavras grandes demais
+        // os slots da letras ultrapassam o tamanho da tela
+        
     ]
 
     struct Constants {
