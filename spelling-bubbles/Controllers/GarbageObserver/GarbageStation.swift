@@ -20,9 +20,24 @@ class GarbageStation: GarbageSubscriber {
     private let garbageManager = GarbageManager()
     
     private let objects: [String] = [
-        "CAIXA", "BONECA",
-        "CARRO", "COPO", "FRALDA", "GARFO", "MEIA",
-        "OCULOS", "PNEU", "SACOLA", "SAPATO"
+        "Boneca",
+        "Cadeira",
+        "Caderno",
+        "CAIXA",
+        "Carro",
+        "Celular",
+        "Copo",
+        "Fralda",
+        "Garfo",
+        "GARRAFA",
+        "Meia",
+        "Oculos",
+        "Pneu",
+        "Sacola",
+        "Sapato",
+        "Telefone",
+        "Vassoura"
+        
     ]
 
     struct Constants {
