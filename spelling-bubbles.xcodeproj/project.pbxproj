@@ -772,7 +772,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.apfd.spelling-bubbles";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.lmb4.spelling-bubbles";
 				PRODUCT_NAME = Ecoletrando;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -806,7 +806,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.apfd.spelling-bubbles";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.lmb4.spelling-bubbles";
 				PRODUCT_NAME = Ecoletrando;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
