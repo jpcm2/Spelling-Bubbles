@@ -11,7 +11,7 @@ import SwiftUI
 
 class BubbleStation: BubbleSubscriber {
     
-    private var bubbles: [Bubble] = []
+    var bubbles: [Bubble] = []
     private let numberOfBubbles: Int
     private let possibleMovements = [VerticalWaveMovement(toSide: .left), VerticalWaveMovement(toSide: .right)]
     private var possiblePositions: [AvaiablePosition] = []

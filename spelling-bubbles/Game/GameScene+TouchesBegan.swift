@@ -14,15 +14,25 @@ extension GameScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            guard let touchedNode = self.atPoint(location) as? SKLabelNode else { return }
+            var touchedBubble: Bubble?
+            
+            guard let safeBubbleSation = bubbleStation else { return }
+            
+            for bubble in safeBubbleSation.bubbles {
+                if bubble.contains(location) {
+                    if !bubble.isHidden {
+                        touchedBubble = bubble
+                    }
+                }
+            }
+            
+            guard let touchedNode = touchedBubble else { return }
            
-            guard let selectedString = touchedNode.attributedText?.string else { return }
-
-            guard let touchedNodeParent = touchedNode.parent else {return}
+            let selectedString = touchedNode.letter
             
-            touchedNodeParent.isPaused = true
+            touchedNode.isPaused = true
             
-            touchedNodeParent.isHidden = true
+            touchedNode.isHidden = true
             
             guard let range = textbox?.currentWord.range(of: " ") else {return}
             
